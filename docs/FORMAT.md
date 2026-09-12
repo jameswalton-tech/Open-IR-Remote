@@ -45,6 +45,8 @@ V1 defines the interchange record. The optional behaviour metadata preserves obs
 
 ## Exporter contract
 
+Receiver exports must keep handset identity separate from receiver slots and action bindings. Command IDs identify the handset button and remain stable when a receiver reorders slots. Use optional namespaced `extensions` for vendor configuration, not `remote.manufacturer` or slot-based command IDs. See [exporting from a receiver](RECEIVER_EXPORTS.md) for unknown-button identities, grouped bindings, multi-remote configurations and round-trip checks.
+
 An optional top-level `export_source` identifies the software that produced the record:
 
 ```json

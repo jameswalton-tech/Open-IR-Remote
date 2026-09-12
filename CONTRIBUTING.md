@@ -20,6 +20,8 @@ Record the physical remote's printed name or best known name in `remote.name`. D
 
 ## Keep the record compact
 
+If your product learns IR into slots, read [exporting from a receiver](docs/RECEIVER_EXPORTS.md). Slots and receiver actions belong in vendor metadata; the core record still identifies the physical handset and its buttons. Use the separate receiver-export example for implementation testing, not as a real library submission.
+
 Put common protocol, carrier and duty-cycle settings in `defaults`; omit matching settings from individual signals. A signal can override a default when needed. Include one signal representation per button unless another equivalent representation is useful, and keep exactly one primary.
 
 Follow the [field and storage limits](docs/LIMITS.md): at most 128 commands, three signals per command and 1 MiB per JSON record. Remote names allow 120 Unicode code points, manufacturers 80 and models 100. Never truncate a reading or name to make validation pass; report values the format cannot represent. Keep required provenance and rights information, and omit optional metadata only when it is not needed.

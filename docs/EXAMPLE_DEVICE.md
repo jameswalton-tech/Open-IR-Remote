@@ -17,4 +17,6 @@ The key rules demonstrated are:
 
 See the [complete JSON file](../examples/example-device/remote.irr.json).
 
+For receiver developers, a separate [receiver-export example](../examples/receiver-export/remote.irr.json) shows a stable handset command linked to a vendor-owned slot and action. Read the [implementation guide](RECEIVER_EXPORTS.md). Both examples are validated but excluded from the discovery index and full-library download.
+
 The short raw sequence illustrates the structure only; it is not a captured NEC brightness command. Neither command is a transmission fixture for a real device. Protocol-specific integer parameters must fit the documented range; wider exact values can use `0x`-prefixed strings under a protocol-defined `_hex` key. Do not convert or discard imported hexadecimal source readings just to save a few bytes.

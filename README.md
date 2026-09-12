@@ -54,6 +54,7 @@ Open IR Remote v1 uses `format_version: "1.0.0"`. Its [field and storage limits]
 
 - [Format specification](docs/FORMAT.md)
 - [Complete example device](docs/EXAMPLE_DEVICE.md)
+- [Receiver exports and configuration bindings](docs/RECEIVER_EXPORTS.md)
 - [JSON Schema](schema/open-ir-remote-v1.schema.json)
 - [Contribution guide](CONTRIBUTING.md)
 - [Project Wiki](https://github.com/jameswalton-tech/Open-IR-Remote/wiki)

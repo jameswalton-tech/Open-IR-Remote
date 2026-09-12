@@ -166,6 +166,9 @@ class FormatTests(unittest.TestCase):
             schema = json.loads((ROOT/'schema/open-ir-remote-v1.schema.json').read_text(encoding='utf-8'))
             validator = Draft202012Validator(schema, format_checker=FormatChecker())
             library = json.loads((first/'library.json').read_text(encoding='utf-8'))
+            example_ids = {json.loads(path.read_text(encoding='utf-8'))['id'] for path in (ROOT/'examples').rglob('remote.irr.json')}
+            self.assertTrue(example_ids.isdisjoint(entry['id'] for entry in index['remotes']))
+            self.assertTrue(example_ids.isdisjoint(record['id'] for record in library['remotes']))
             for record in library['remotes']:
                 self.assertFalse(list(validator.iter_errors(record)))
 

@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schema/open-ir-remote-v1.schema.json",
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "record_kind": "example",
+  "id": "urn:uuid:8c46cbec-5c18-4930-95c6-ed6f62b7208e",
+  "updated": "2026-09-12",
+  "remote": {
+    "name": "ExampleCo Luma 4 Remote",
+    "manufacturer": "ExampleCo",
+    "model": "Luma 4",
+    "variant": "global",
+    "device_types": ["lighting"]
+  },
+  "locale": "en",
+  "defaults": {"protocol": "NEC", "carrier_hz": 38000},
+  "commands": [
+    {
+      "id": "power.toggle",
+      "labels": {"en": "Power"},
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {"address_hex": "0x00", "command_hex": "0x45"},
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    }
+  ],
+  "export_source": {"application": "Example Receiver Firmware", "version": "1.0.0"},
+  "provenance": [
+    {
+      "source_type": "device-export",
+      "source_path": "Fictional receiver-export documentation example",
+      "imported_at": "2026-09-12",
+      "rights": "CC0-1.0",
+      "notes": "Synthetic example only; not a capture from real hardware."
+    }
+  ],
+  "validation": {
+    "status": "imported-unverified",
+    "issues": ["Fictional documentation example; not physically tested."]
+  },
+  "extensions": {
+    "example_receiver": {
+      "config_version": 1,
+      "receiver_model": "Example Receiver",
+      "binding_groups": [
+        {
+          "bindings": [
+            {
+              "command_id": "power.toggle",
+              "slot": 1,
+              "receiver_label": "Desk light",
+              "action_id": "output.toggle"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
