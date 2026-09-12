@@ -29,7 +29,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x10",
@@ -49,7 +48,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x09",
@@ -69,7 +67,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x19",
@@ -89,7 +86,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x17",
@@ -109,7 +105,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x40",
@@ -129,7 +124,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x02",
@@ -149,7 +143,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x0A",
@@ -169,7 +162,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x03",
@@ -189,7 +181,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x1D",
@@ -209,7 +200,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x1B",
@@ -229,7 +219,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x12",
@@ -249,7 +238,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x48",
@@ -269,7 +257,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x05",
@@ -289,7 +276,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x1E",
@@ -309,7 +295,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x01",
@@ -329,7 +314,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x1F",
@@ -349,7 +333,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x11",
@@ -369,7 +352,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x16",
@@ -389,7 +371,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x04",
@@ -409,7 +390,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x54",
@@ -429,7 +409,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x0E",
@@ -449,7 +428,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x06",
@@ -469,7 +447,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x0D",
@@ -489,7 +466,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x4C",
@@ -509,7 +485,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x00",
@@ -529,7 +504,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "unknown",
           "parameters": {
             "address_hex": "0x01",
             "command_hex": "0x1A",

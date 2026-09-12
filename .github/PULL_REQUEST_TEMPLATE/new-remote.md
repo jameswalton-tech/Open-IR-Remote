@@ -30,6 +30,8 @@ about: Submit one physical remote or related variant family
 ## Checks
 
 - [ ] `python tools/validate.py` passes.
+- [ ] `python -m unittest discover -s tests -v` passes.
+- [ ] The record follows the field/storage limits and uses shared defaults where appropriate.
 - [ ] `python tools/build_api.py --check` passes after regenerating the API.
 - [ ] I searched for an existing matching remote or duplicate signals.
 - [ ] The PR changes one remote or one closely related variant family.

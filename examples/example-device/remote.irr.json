@@ -35,7 +35,6 @@
       "signals": [
         {
           "kind": "decoded",
-          "protocol": "NEC",
           "parameters": {
             "address_hex": "0x00",
             "command_hex": "0x45"
@@ -54,8 +53,7 @@
       "signals": [
         {
           "kind": "raw",
-          "carrier_hz": 38000,
-          "duty_cycle": 0.33,
+          "duty_cycle": 0.25,
           "intro_us": [
             9000,
             -4500,

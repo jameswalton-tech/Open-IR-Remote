@@ -1,5 +1,7 @@
 # API usage
 
+Resolve each signal's protocol, carrier and duty cycle from the record defaults unless it supplies an override. Follow the [field and storage limits](https://github.com/jameswalton-tech/Open-IR-Remote/blob/main/docs/LIMITS.md) for each remote. The full-library response contains multiple records; the single-record byte limit does not cap the whole library.
+
 Use the discovery endpoint for routine update checks:
 
 ```text

@@ -21,6 +21,8 @@ The index is the recommended polling target. It contains the library update date
 - Validate unknown fields leniently within the same major version.
 - Do not poll more frequently than once per hour unless a maintainer announces a different policy.
 - Do not infer that `device-tested` means tested on every device model that may use the same remote.
+- Resolve protocol, carrier and duty-cycle settings from each record's `defaults`, with signal-level values taking precedence. Missing settings are not zero values.
+- Apply the [field and storage limits](LIMITS.md) to individual records. The full library contains multiple records and is not subject to a single-record byte ceiling; small devices should fetch selected records through the index.
 
 ```javascript
 const response = await fetch(

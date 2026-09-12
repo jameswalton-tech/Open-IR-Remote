@@ -8,9 +8,13 @@ The key rules demonstrated are:
 
 - `remote.name` names the physical handset;
 - command IDs are stable and labels are human-facing;
-- decoded and raw commands can coexist in one remote, and a command may carry multiple equivalent representations;
-- command-level carrier values override record defaults;
+- decoded and raw commands can coexist, with one representation per button in this example;
+- the decoded command inherits `protocol: "NEC"`, while the raw command inherits `carrier_hz: 38000`;
+- the raw signal overrides the default duty cycle with `0.25`, without repeating the shared carrier;
+- text, numeric values, arrays and file size meet the [storage limits](LIMITS.md);
 - provenance and validation are separate;
 - the documentation example is excluded from the live library.
 
 See the [complete JSON file](../examples/example-device/remote.irr.json).
+
+The short raw sequence illustrates the structure only; it is not a captured NEC brightness command. Neither command is a transmission fixture for a real device. Protocol-specific integer parameters must fit the documented range; wider exact values can use `0x`-prefixed strings under a protocol-defined `_hex` key. Do not convert or discard imported hexadecimal source readings just to save a few bytes.

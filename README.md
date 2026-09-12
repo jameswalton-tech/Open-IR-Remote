@@ -50,7 +50,7 @@ IRR v1 represents decoded protocol parameters, raw mark/space timings or Pronto 
 
 A remote should not need several copies of the same information. Use shared defaults where supported, include one signal representation per button unless another is useful, and keep images outside the JSON file. Devices can store the command data they need without keeping the full catalogue description in working memory. Readable field names stay in the interchange file; they do not need to become part of a device's internal storage.
 
-The format is still a public draft. We are refining it in place before adoption, including consistent field limits and numeric ranges to help embedded developers plan storage. The existing version identifier stays unchanged during this work.
+The format is still a public draft. [Field and storage limits](docs/LIMITS.md) bound text, numeric values and collections, with up to 128 commands and 1 MiB of JSON per remote. These are import ceilings, not fixed memory allocations. Shared protocol and carrier settings can be inherited from record defaults. This refinement keeps the existing version identifier unchanged.
 
 - [Format specification](docs/FORMAT.md)
 - [Complete example device](docs/EXAMPLE_DEVICE.md)

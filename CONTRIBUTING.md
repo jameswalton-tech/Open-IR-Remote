@@ -18,6 +18,12 @@ Record the physical remote's printed name or best known name in `remote.name`. D
 6. Include source provenance and describe how the signal was captured or imported.
 7. Add test evidence when claiming `device-tested` or `community-verified`.
 
+## Keep the record compact
+
+Put common protocol, carrier and duty-cycle settings in `defaults`; omit matching settings from individual signals. A signal can override a default when needed. Include one signal representation per button unless another equivalent representation is useful, and keep exactly one primary.
+
+Follow the [field and storage limits](docs/LIMITS.md): at most 128 commands, three signals per command and 1 MiB per JSON record. Remote names allow 120 Unicode code points, manufacturers 80 and models 100. Never truncate a reading or name to make validation pass; report values the format cannot represent. Keep required provenance and rights information, and omit optional metadata only when it is not needed.
+
 ## Images
 
 Images are optional until their rights are clear. If included, the file must:
@@ -27,7 +33,7 @@ Images are optional until their rights are clear. If included, the file must:
 - use a transparent, plain-white or plain-neutral background;
 - contain no hands, packaging, room scene, controller box, cables, watermark or decorative backdrop;
 - be between 240 × 240 and 1600 × 1600 px;
-- be no larger than 512MB;
+- be no larger than 500 KiB;
 - have EXIF/GPS metadata removed;
 - include truthful holder, source and rights-basis information in the record.
 
@@ -46,6 +52,7 @@ Run:
 ```bash
 python -m pip install jsonschema pillow
 python tools/validate.py
+python -m unittest discover -s tests -v
 python tools/build_api.py
 git diff --check
 ```

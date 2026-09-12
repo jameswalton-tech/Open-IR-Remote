@@ -21,17 +21,62 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 ID_PATTERN = re.compile(r"^[a-z0-9]+(?:[.-][a-z0-9]+)*$")
+MAX_RECORD_BYTES = 1_048_576
+MAX_TIMINGS_PER_SIGNAL = 8192
+
+
+def unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON key {key!r}")
+        result[key] = value
+    return result
+
+
+def reject_nonfinite(value):
+    raise ValueError(f"{value} is not a JSON number")
+
+
+def validate_limits(record, errors, context="record"):
+    # Container depth counts objects and arrays, with the root object at depth 1.
+    pending = [(record, 0)]
+    while pending:
+        value, parent_depth = pending.pop()
+        if isinstance(value, (dict, list)):
+            depth = parent_depth + 1
+            if depth > 16:
+                fail(f"{context}: JSON nesting exceeds 16 containers", errors)
+                return False
+            children = value.values() if isinstance(value, dict) else value
+            pending.extend((child, depth) for child in children)
+    return True
 
 
 def fail(message, errors):
     errors.append(message)
 
 
-def validate_record(path, errors):
+def validate_record(path, errors, validator=None):
     try:
-        record = json.loads(path.read_text(encoding="utf-8"))
+        if path.stat().st_size > MAX_RECORD_BYTES:
+            fail(f"{path}: UTF-8 record exceeds 1 MiB", errors)
+            return
+        record = json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique_object, parse_constant=reject_nonfinite)
     except Exception as exc:
         fail(f"{path}: invalid JSON: {exc}", errors)
+        return
+
+    if not validate_limits(record, errors, str(path)):
+        return
+    if validator is None:
+        schema = json.loads((ROOT / "schema/open-ir-remote-v1.schema.json").read_text(encoding="utf-8"))
+        validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    schema_errors = list(validator.iter_errors(record))
+    for error in schema_errors:
+        location = ".".join(str(part) for part in error.absolute_path)
+        fail(f"{path}: schema {location}: {error.message}", errors)
+    if schema_errors:
         return
 
     for key in ("format", "format_version", "updated", "remote", "locale", "commands", "provenance", "validation"):
@@ -60,15 +105,19 @@ def validate_record(path, errors):
         if sum(signal.get("primary") is True for signal in signals) != 1:
             fail(f"{path}: {command_id} must have exactly one primary signal", errors)
         for signal in signals:
+            effective = {**record.get("defaults", {}), **signal}
+            timing_count = sum(len(signal.get(section, [])) for section in ('intro_us', 'repeat_us', 'ending_us'))
+            if timing_count > MAX_TIMINGS_PER_SIGNAL:
+                fail(f"{path}: {command_id} exceeds {MAX_TIMINGS_PER_SIGNAL} total timings", errors)
             for section in ('intro_us', 'repeat_us', 'ending_us'):
                 timings = signal.get(section, [])
                 if len(timings) % 2 or any(value <= 0 if i % 2 == 0 else value >= 0 for i, value in enumerate(timings)):
                     fail(f'{path}: {command_id} {section} must alternate positive marks and negative spaces, ending with a space', errors)
-            if signal.get("kind") == "decoded" and not signal.get("protocol"):
+            if signal.get("kind") == "decoded" and not effective.get("protocol"):
                 fail(f"{path}: {command_id} decoded signal has no protocol", errors)
-            if signal.get("protocol") == "unknown" and signal.get("source_complete") is not False:
+            if signal.get("kind") == "decoded" and effective.get("protocol") == "unknown" and signal.get("source_complete") is not False:
                 fail(f"{path}: {command_id} unknown protocol must set source_complete false", errors)
-            if signal.get("kind") == "raw" and not signal.get("carrier_hz"):
+            if signal.get("kind") == "raw" and not effective.get("carrier_hz"):
                 fail(f"{path}: {command_id} raw signal has no carrier_hz", errors)
     if len(ids) != len(set(ids)):
         fail(f"{path}: duplicate command IDs", errors)
@@ -86,7 +135,7 @@ def validate_record(path, errors):
             fail(f"{path}: image must be an existing WebP file", errors)
         else:
             if image_path.stat().st_size > 512_000:
-                fail(f"{path}: image exceeds 512,000 bytes", errors)
+                fail(f"{path}: image exceeds 500 KiB", errors)
             if not (240 <= image.get("width_px", 0) <= 1600 and 240 <= image.get("height_px", 0) <= 1600):
                 fail(f"{path}: image dimensions are outside 240–1600 px", errors)
             header = image_path.read_bytes()[:16]
@@ -99,6 +148,9 @@ def validate_record(path, errors):
             digest = hashlib.sha256(image_path.read_bytes()).hexdigest()
             if digest != image.get("sha256"):
                 fail(f"{path}: image SHA-256 mismatch", errors)
+            if image_path.stat().st_size != image.get("size_bytes"):
+                fail(f"{path}: declared image size does not match the file", errors)
+    return record
 
 
 def main():
@@ -106,17 +158,18 @@ def main():
     schema = json.loads((ROOT / "schema/open-ir-remote-v1.schema.json").read_text(encoding="utf-8"))
     records = list(ROOT.glob("remotes/**/remote.irr.json"))
     examples = list(ROOT.glob("examples/**/remote.irr.json"))
-    remote_ids = [json.loads(p.read_text(encoding='utf-8')).get('id') for p in records]
+    Draft202012Validator.check_schema(schema)
+    published_schema = json.loads((ROOT / "docs/schema/open-ir-remote-v1.schema.json").read_text(encoding="utf-8"))
+    if published_schema != schema:
+        fail('Published schema differs from the canonical schema', errors)
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    remote_ids = []
+    for path in records + examples:
+        instance = validate_record(path, errors, validator)
+        if instance is not None and path in records:
+            remote_ids.append(instance['id'])
     if len(remote_ids) != len(set(remote_ids)):
         fail('Duplicate remote IDs', errors)
-    for path in records + examples:
-        validate_record(path, errors)
-        if Draft202012Validator is not None:
-            instance = json.loads(path.read_text(encoding="utf-8"))
-            validator = Draft202012Validator(schema, format_checker=FormatChecker())
-            for error in validator.iter_errors(instance):
-                location = ".".join(str(part) for part in error.absolute_path)
-                fail(f"{path}: schema {location}: {error.message}", errors)
     if errors:
         print("\n".join(errors), file=sys.stderr)
         raise SystemExit(1)

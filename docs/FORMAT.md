@@ -14,13 +14,13 @@ Required top-level fields are `format`, `format_version`, `record_kind`, `id`, `
 
 The format should be easy to contribute to and practical to store on small devices. JSON is the interchange file, not a required in-memory layout. An importer may store supported command values as integers and timing arrays, without retaining JSON field names or loading images and catalogue metadata into working memory. Keep the original record separately if the application needs to export it again without losing information.
 
-Use record defaults where the schema allows them and override them only when a signal differs. Required signal fields still need to be present: decoded signals currently require their own protocol, and raw signals require their own carrier frequency. One signal representation per command is enough; additional equivalent representations are optional. Images remain separate files. Aliases, exporter details and extra descriptions can be omitted when they are not needed, but required identity, provenance and validation fields remain part of the interchange record.
+Use record defaults for `protocol`, `carrier_hz` and `duty_cycle`, and override them only when a signal differs. A decoded signal needs an effective protocol and a raw signal needs an effective carrier frequency, supplied either by the signal or by record defaults. Resolve each setting independently: a signal-level value wins, otherwise use the matching default. An explicit null is invalid, not a request to inherit. Default protocol has no decoding meaning for raw or Pronto payloads. One signal representation per command is enough; up to three equivalent representations are allowed, with exactly one primary. Images remain separate files. Aliases, exporter details and extra descriptions can be omitted when they are not needed, but required identity, provenance and validation fields remain part of the interchange record.
 
 Text limits are maximum lengths, not instructions to allocate fixed-size buffers. Existing limits include 120 characters for remote names and button labels, 80 for manufacturers and variants, and 100 for models and remote model numbers. A device may shorten a label on screen without changing the stored or exported value. Exporters should report values that exceed the schema limits rather than silently truncate them.
 
-Consistent limits for the remaining text fields, collection sizes and numeric values are part of the draft's next refinement. They are not all enforced by the current schema. Carrier frequency already uses integer hertz with a range of 1,000 to 1,000,000; raw timings use signed integer microseconds but do not yet have a defined storage-width bound. Do not assume all command values or timings fit in 16 bits. Protocol-specific values need ranges that preserve the original signal, not a smaller type chosen at the cost of accuracy.
+The schema and validator enforce the [field and storage limits](LIMITS.md), including 128 commands per remote and a 1 MiB ceiling for each standalone JSON record. Raw durations fit signed 32-bit storage; decoded integer parameters have explicit signed/unsigned 32-bit bounds, with bounded hexadecimal strings available for wider values. Do not assume all command values or timings fit in 16 bits. These are format ceilings, not a promise that every supported record fits every device. An importer with lower limits must report unsupported records without silently changing them.
 
-The aim is to avoid duplicated data and give implementations predictable bounds, not to shorten every JSON key or introduce a second binary interchange format. These refinements are being made within the current public draft, without a version bump.
+The aim is to avoid duplicated data and give implementations predictable bounds, not to shorten every JSON key or introduce a second binary interchange format. These refinements are part of the current public draft, without a version bump.
 
 ## Commands
 
@@ -31,7 +31,7 @@ Each command has:
 - `action`: optional behavioural classification;
 - `signals`: one or more decoded, raw or Pronto representations.
 
-A decoded signal records `protocol` and protocol-specific `parameters`. A raw signal records `carrier_hz` and signed microsecond timings, with positive marks and negative spaces. A Pronto signal records the Pronto Hex payload. A command may carry several equivalent representations, and exactly one should be marked `primary`. Record-level `defaults` reduce repetition; signal-level values override them.
+A decoded signal records protocol-specific `parameters` and supplies or inherits `protocol`. A raw signal supplies or inherits `carrier_hz` and records signed microsecond timings, with positive marks and negative spaces. A Pronto signal records the Pronto Hex payload. A command may carry up to three equivalent representations, and exactly one must be marked `primary`. Record-level `defaults` reduce repetition; signal-level values override them.
 
 `protocol: "unknown"` is valid only for preserving an incomplete import. Such a signal uses `source_complete: false`, retains the original fields and cannot be exported to a target that requires a known protocol unless another complete representation exists.
 
@@ -68,9 +68,9 @@ A conforming third-party exporter must:
 3. provide at least one signal representation per command;
 4. mark one representation as primary;
 5. set `source_complete` truthfully;
-6. include protocol and parameters for decoded data, or carrier and timings for raw data;
+6. include parameters for decoded data or timings for raw data, with the effective protocol or carrier supplied directly or through defaults;
 7. preserve repeat, toggle and stateful behaviour when the source can express it;
-8. include provenance naming the exporting application and version;
+8. preserve source provenance and use optional `export_source` to identify the latest exporting application and version;
 9. avoid inventing missing values;
 10. report information lost when exporting IRR to a less expressive target.
 
@@ -98,6 +98,8 @@ remote_name,manufacturer,remote_model,variant,locale,command_id,button_label,pro
 
 Import followed by export to the same profile must preserve all source fields. Exporters must report data that a target format cannot represent.
 
+CSV repeats effective protocol and carrier values on each row because it has no record-level defaults. Resolve JSON defaults before exporting CSV. Remote identity, labels, command IDs, carrier values and hexadecimal readings use the same field limits as JSON; one remote contains no more than 128 command rows. The checked-in seed CSVs preserve the original readings and need no textual changes for this refinement. CSV adapter implementations remain separate from the JSON validator.
+
 ## Compatibility
 
 - Flipper `.ir`: generated only when the decoded protocol is supported or raw timings are complete.
@@ -105,4 +107,4 @@ Import followed by export to the same profile must preserve all source fields. E
 - Pronto Hex: imported as a Pronto representation or decoded when conversion is reliable.
 - irdb CSV: mapped to decoded protocol parameters while preserving source provenance.
 
-Minor v1 additions remain backward compatible. Breaking changes require a new major API and format version.
+This is an unadopted public draft being refined in place with the existing `1.0.0` identifier and `/api/v1` path. Once the format is declared stable, minor additions must remain backward compatible and breaking changes will require a new major API and format version.
