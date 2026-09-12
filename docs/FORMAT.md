@@ -33,6 +33,22 @@ This first version is a public draft. The optional behaviour metadata preserves 
 
 ## Exporter contract
 
+An optional top-level `export_source` identifies the software that produced the record:
+
+```json
+"export_source": {
+  "application": "Example Remote Editor",
+  "version": "1.2.0",
+  "build": "example-build-42",
+  "url": "https://example.org/remote-editor",
+  "exported_at": "2026-09-12T12:00:00Z"
+}
+```
+
+When present, `application` and `version` are required. `build`, `url` and the UTC or offset-qualified export timestamp are optional. Version and build values are opaque strings; do not assume every application uses semantic versioning. This identifies the latest semantic exporter, while `provenance` preserves where the readings originally came from. A re-exporter replaces `export_source` with its own identity and preserves relevant prior export details in provenance. A catalog mirror that only distributes the unchanged record retains this object.
+
+Do not include account names, machine identifiers, serial numbers or access tokens. Hand-authored records may omit the object. Importers should include this metadata in useful error reports, but must validate the actual record and never execute or automatically fetch its URL. Any workaround for a known exporter bug must be explicit, narrowly versioned and reported; metadata alone must not silently change signal values. Export-source fields are excluded from signal fingerprints and duplicate-signal comparisons.
+
 A conforming third-party exporter must:
 
 1. emit a valid v1 record with stable remote and command IDs;

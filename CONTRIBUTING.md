@@ -35,6 +35,8 @@ Images remain the property of their respective copyright holders and are used on
 
 ## Excel and CSV submissions
 
+If your application exports the JSON file, include `export_source` with its name and version. This helps us reproduce conversion bugs. Include a build identifier when available; do not add personal or device identifiers. Leave the field out for hand-authored files rather than guessing.
+
 The preferred format is `remote.irr.json`. Existing Excel workflows can export one command per CSV row using the columns documented in `docs/FORMAT.md`. A legacy CSV containing only `name,address_hex,command_hex,code_hex` is accepted for migration only when the pull request supplies the remote identity, carrier, protocol status, provenance and validation details.
 
 ## Validate and submit

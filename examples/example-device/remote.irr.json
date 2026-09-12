@@ -3,6 +3,11 @@
   "format": "open-ir-remote",
   "format_version": "1.0.0",
   "record_kind": "example",
+  "export_source": {
+    "application": "Example Remote Editor",
+    "version": "1.2.0",
+    "build": "example-build-42"
+  },
   "id": "oir:exampleco:luma-4:global",
   "updated": "2026-09-12",
   "remote": {

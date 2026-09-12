@@ -19,6 +19,7 @@ about: Submit one physical remote or related variant family
 - [ ] I tested the claimed commands on the identified device.
 - Test equipment and method:
 - Test date:
+- Exporting application / version / build (if applicable):
 
 ## Image rights
 
