@@ -1,0 +1,59 @@
+{
+  "format": "open-ir-remote-index",
+  "api_version": "1",
+  "format_version": "1.0.0",
+  "updated": "2026-09-12",
+  "remote_count": 3,
+  "command_count": 70,
+  "library_url": "https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/library.json",
+  "remotes": [
+    {
+      "id": "oir:astera:arc1:default",
+      "remote_name": "Astera ARC1",
+      "manufacturer": "Astera",
+      "model": "ARC1",
+      "variant": "default",
+      "device_types": [
+        "lighting"
+      ],
+      "locale": "en",
+      "carrier_hz": 38000,
+      "validation_status": "device-tested",
+      "updated": "2026-09-12",
+      "sha256": "503faf066511742f82140c5c446987a02d7c474ab314bed52f9e8b984f532869",
+      "url": "https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/remotes/astera/arc1/default/remote.irr.json"
+    },
+    {
+      "id": "oir:astera:arc3:default",
+      "remote_name": "Astera ARC3",
+      "manufacturer": "Astera",
+      "model": "ARC3",
+      "variant": "default",
+      "device_types": [
+        "lighting"
+      ],
+      "locale": "en",
+      "carrier_hz": 38000,
+      "validation_status": "device-tested",
+      "updated": "2026-09-12",
+      "sha256": "6c3affce8b5d00e7fc34edef37bf95e1928393b4879d56ed4e41b95ccfe7d5c4",
+      "url": "https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/remotes/astera/arc3/default/remote.irr.json"
+    },
+    {
+      "id": "oir:generic:number-navigation-remote:default",
+      "remote_name": "Generic Number and Navigation Remote",
+      "manufacturer": "Generic",
+      "model": "Number and Navigation Remote",
+      "variant": "default",
+      "device_types": [
+        "generic"
+      ],
+      "locale": "en",
+      "carrier_hz": 38000,
+      "validation_status": "device-tested",
+      "updated": "2026-09-12",
+      "sha256": "cdf8cc197602661ae287b0ab527ec2601689bb348b6664abb54044f886d32f7f",
+      "url": "https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/remotes/generic/number-navigation-remote/default/remote.irr.json"
+    }
+  ]
+}

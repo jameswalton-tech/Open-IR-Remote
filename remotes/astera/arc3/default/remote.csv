@@ -1,0 +1,27 @@
+remote_name,manufacturer,remote_model,variant,locale,command_id,button_label,protocol,carrier_hz,address_hex,command_hex,code_hex,validation_status
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.2400k,2400k,unknown,38000,0x01,0x10,0x0110,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.2700k,2700k,unknown,38000,0x01,0x09,0x0109,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.3000k,3000k,unknown,38000,0x01,0x19,0x0119,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.3200k,3200k,unknown,38000,0x01,0x17,0x0117,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.3500k,3500k,unknown,38000,0x01,0x40,0x0140,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.4000k,4000k,unknown,38000,0x01,0x02,0x0102,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.4500k,4500k,unknown,38000,0x01,0x0A,0x010A,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.5000k,5000k,unknown,38000,0x01,0x03,0x0103,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.5500k,5500k,unknown,38000,0x01,0x1D,0x011D,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.6000k,6000k,unknown,38000,0x01,0x1B,0x011B,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.6500k,6500k,unknown,38000,0x01,0x12,0x0112,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.10000k,10000k,unknown,38000,0x01,0x48,0x0148,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.up,CCT+,unknown,38000,0x01,0x05,0x0105,device-tested
+Astera ARC3,Astera,ARC3,default,en,colour-temperature.down,CCT-,unknown,38000,0x01,0x1E,0x011E,device-tested
+Astera ARC3,Astera,ARC3,default,en,brightness.set.10-percent,10%,unknown,38000,0x01,0x01,0x0101,device-tested
+Astera ARC3,Astera,ARC3,default,en,brightness.set.20-percent,20%,unknown,38000,0x01,0x1F,0x011F,device-tested
+Astera ARC3,Astera,ARC3,default,en,brightness.set.40-percent,40%,unknown,38000,0x01,0x11,0x0111,device-tested
+Astera ARC3,Astera,ARC3,default,en,brightness.set.60-percent,60%,unknown,38000,0x01,0x16,0x0116,device-tested
+Astera ARC3,Astera,ARC3,default,en,brightness.set.100-percent,100%,unknown,38000,0x01,0x04,0x0104,device-tested
+Astera ARC3,Astera,ARC3,default,en,brightness.up,DIM+,unknown,38000,0x01,0x54,0x0154,device-tested
+Astera ARC3,Astera,ARC3,default,en,brightness.down,DIM-,unknown,38000,0x01,0x0E,0x010E,device-tested
+Astera ARC3,Astera,ARC3,default,en,power.on,Power On,unknown,38000,0x01,0x06,0x0106,device-tested
+Astera ARC3,Astera,ARC3,default,en,power.off,Power Off,unknown,38000,0x01,0x0D,0x010D,device-tested
+Astera ARC3,Astera,ARC3,default,en,blue-mode.1-of-2,Blue Mode 1/2,unknown,38000,0x01,0x4C,0x014C,device-tested
+Astera ARC3,Astera,ARC3,default,en,blue-mode.2-of-2,Blue Mode 2/2,unknown,38000,0x01,0x00,0x0100,device-tested
+Astera ARC3,Astera,ARC3,default,en,runtime.max,Max Runtime,unknown,38000,0x01,0x1A,0x011A,device-tested

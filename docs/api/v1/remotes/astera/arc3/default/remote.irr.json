@@ -1,0 +1,579 @@
+{
+  "$schema": "https://jameswalton-tech.github.io/Open-IR-Remote/schema/open-ir-remote-v1.schema.json",
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "record_kind": "canonical",
+  "id": "oir:astera:arc3:default",
+  "updated": "2026-09-12",
+  "remote": {
+    "name": "Astera ARC3",
+    "manufacturer": "Astera",
+    "model": "ARC3",
+    "variant": "default",
+    "device_types": [
+      "lighting"
+    ]
+  },
+  "locale": "en",
+  "defaults": {
+    "protocol": "unknown",
+    "carrier_hz": 38000
+  },
+  "commands": [
+    {
+      "id": "colour-temperature.2400k",
+      "labels": {
+        "en": "2400k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x10",
+            "code_hex": "0x0110"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.2700k",
+      "labels": {
+        "en": "2700k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x09",
+            "code_hex": "0x0109"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.3000k",
+      "labels": {
+        "en": "3000k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x19",
+            "code_hex": "0x0119"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.3200k",
+      "labels": {
+        "en": "3200k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x17",
+            "code_hex": "0x0117"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.3500k",
+      "labels": {
+        "en": "3500k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x40",
+            "code_hex": "0x0140"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.4000k",
+      "labels": {
+        "en": "4000k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x02",
+            "code_hex": "0x0102"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.4500k",
+      "labels": {
+        "en": "4500k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x0A",
+            "code_hex": "0x010A"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.5000k",
+      "labels": {
+        "en": "5000k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x03",
+            "code_hex": "0x0103"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.5500k",
+      "labels": {
+        "en": "5500k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x1D",
+            "code_hex": "0x011D"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.6000k",
+      "labels": {
+        "en": "6000k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x1B",
+            "code_hex": "0x011B"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.6500k",
+      "labels": {
+        "en": "6500k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x12",
+            "code_hex": "0x0112"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.10000k",
+      "labels": {
+        "en": "10000k"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x48",
+            "code_hex": "0x0148"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.up",
+      "labels": {
+        "en": "CCT+"
+      },
+      "action": "increment",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x05",
+            "code_hex": "0x0105"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colour-temperature.down",
+      "labels": {
+        "en": "CCT-"
+      },
+      "action": "decrement",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x1E",
+            "code_hex": "0x011E"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "brightness.set.10-percent",
+      "labels": {
+        "en": "10%"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x01",
+            "code_hex": "0x0101"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "brightness.set.20-percent",
+      "labels": {
+        "en": "20%"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x1F",
+            "code_hex": "0x011F"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "brightness.set.40-percent",
+      "labels": {
+        "en": "40%"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x11",
+            "code_hex": "0x0111"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "brightness.set.60-percent",
+      "labels": {
+        "en": "60%"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x16",
+            "code_hex": "0x0116"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "brightness.set.100-percent",
+      "labels": {
+        "en": "100%"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x04",
+            "code_hex": "0x0104"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "brightness.up",
+      "labels": {
+        "en": "DIM+"
+      },
+      "action": "increment",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x54",
+            "code_hex": "0x0154"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "brightness.down",
+      "labels": {
+        "en": "DIM-"
+      },
+      "action": "decrement",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x0E",
+            "code_hex": "0x010E"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "power.on",
+      "labels": {
+        "en": "Power On"
+      },
+      "action": "on",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x06",
+            "code_hex": "0x0106"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "power.off",
+      "labels": {
+        "en": "Power Off"
+      },
+      "action": "off",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x0D",
+            "code_hex": "0x010D"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "blue-mode.1-of-2",
+      "labels": {
+        "en": "Blue Mode 1/2"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x4C",
+            "code_hex": "0x014C"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "blue-mode.2-of-2",
+      "labels": {
+        "en": "Blue Mode 2/2"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x00",
+            "code_hex": "0x0100"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "runtime.max",
+      "labels": {
+        "en": "Max Runtime"
+      },
+      "action": "select",
+      "signals": [
+        {
+          "kind": "decoded",
+          "protocol": "unknown",
+          "parameters": {
+            "address_hex": "0x01",
+            "command_hex": "0x1A",
+            "code_hex": "0x011A"
+          },
+          "source_complete": false,
+          "primary": true
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "source_type": "csv-import",
+      "source_path": "Astera_ARC3_Remote/lightly-ir-remote-Astera ARC3.csv",
+      "imported_at": "2026-09-12",
+      "rights": "unknown",
+      "notes": "Imported from the existing Lightly Excel/CSV reading format. The source does not identify the IR protocol or carrier frequency."
+    }
+  ],
+  "validation": {
+    "status": "device-tested",
+    "tested_at": "2026-09-12",
+    "tester": "Repository contributor",
+    "evidence": [
+      "Verified in the contributor's test setup using a 38 kHz carrier."
+    ],
+    "issues": [
+      "IR protocol is not recorded in the source CSV."
+    ]
+  },
+  "image": {
+    "path": "remote.webp",
+    "media_type": "image/webp",
+    "width_px": 1024,
+    "height_px": 1024,
+    "size_bytes": 42220,
+    "sha256": "ea62a5436f368bdf11f53a377e5a5d1bdabf61c8df4d00f25b95054ac9d7b48e",
+    "background": "transparent",
+    "rights": {
+      "basis": "identification-only",
+      "holder": "Respective copyright holder",
+      "notice": "Copyright belongs to the respective rights holder. This image is included only to identify the physical remote."
+    },
+    "alt": "Front view of Astera ARC3"
+  }
+}

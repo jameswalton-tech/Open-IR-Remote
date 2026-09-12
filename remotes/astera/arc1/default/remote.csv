@@ -1,0 +1,29 @@
+remote_name,manufacturer,remote_model,variant,locale,command_id,button_label,protocol,carrier_hz,address_hex,command_hex,code_hex,validation_status
+Astera ARC1,Astera,ARC1,default,en,effect.rainbow,Rainbow,unknown,38000,0x00,0x10,0x0010,device-tested
+Astera ARC1,Astera,ARC1,default,en,effect.pastel,Pastel,unknown,38000,0x00,0x03,0x0003,device-tested
+Astera ARC1,Astera,ARC1,default,en,effect.garden,Garden,unknown,38000,0x00,0x01,0x0001,device-tested
+Astera ARC1,Astera,ARC1,default,en,power.on,Power On,unknown,38000,0x00,0x06,0x0006,device-tested
+Astera ARC1,Astera,ARC1,default,en,effect.disco,Disco,unknown,38000,0x00,0x09,0x0009,device-tested
+Astera ARC1,Astera,ARC1,default,en,effect.fire,Fire,unknown,38000,0x00,0x1D,0x001D,device-tested
+Astera ARC1,Astera,ARC1,default,en,effect.ice,Ice,unknown,38000,0x00,0x1F,0x001F,device-tested
+Astera ARC1,Astera,ARC1,default,en,power.off,Power Off,unknown,38000,0x00,0x0D,0x000D,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.red,red,unknown,38000,0x00,0x19,0x0019,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.orange,orange,unknown,38000,0x00,0x17,0x0017,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.yellow,yellow,unknown,38000,0x00,0x40,0x0040,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.green,green,unknown,38000,0x00,0x02,0x0002,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.cyan,cyan,unknown,38000,0x00,0x0A,0x000A,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.white.warm,warm white,unknown,38000,0x00,0x1B,0x001B,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.white.cool,cold white,unknown,38000,0x00,0x12,0x0012,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.pink,pink,unknown,38000,0x00,0x48,0x0048,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.magenta,magenta,unknown,38000,0x00,0x05,0x0005,device-tested
+Astera ARC1,Astera,ARC1,default,en,colour.blue,blue,unknown,38000,0x00,0x1E,0x001E,device-tested
+Astera ARC1,Astera,ARC1,default,en,playback.stop,stop,unknown,38000,0x00,0x0E,0x000E,device-tested
+Astera ARC1,Astera,ARC1,default,en,speed.slow,slow,unknown,38000,0x00,0x54,0x0054,device-tested
+Astera ARC1,Astera,ARC1,default,en,speed.medium,medium,unknown,38000,0x00,0x04,0x0004,device-tested
+Astera ARC1,Astera,ARC1,default,en,speed.fast,fast,unknown,38000,0x00,0x16,0x0016,device-tested
+Astera ARC1,Astera,ARC1,default,en,speed.fastest,fastest,unknown,38000,0x00,0x11,0x0011,device-tested
+Astera ARC1,Astera,ARC1,default,en,fade.on,fade on,unknown,38000,0x00,0x15,0x0015,device-tested
+Astera ARC1,Astera,ARC1,default,en,fade.off,fade off,unknown,38000,0x00,0x4C,0x004C,device-tested
+Astera ARC1,Astera,ARC1,default,en,brightness.high,bright,unknown,38000,0x00,0x00,0x0000,device-tested
+Astera ARC1,Astera,ARC1,default,en,brightness.medium,mid,unknown,38000,0x00,0x4D,0x004D,device-tested
+Astera ARC1,Astera,ARC1,default,en,brightness.low,dim,unknown,38000,0x00,0x1A,0x001A,device-tested
