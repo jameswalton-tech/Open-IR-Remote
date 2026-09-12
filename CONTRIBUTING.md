@@ -27,7 +27,7 @@ Images are optional until their rights are clear. If included, the file must:
 - use a transparent, plain-white or plain-neutral background;
 - contain no hands, packaging, room scene, controller box, cables, watermark or decorative backdrop;
 - be between 240 × 240 and 1600 × 1600 px;
-- be no larger than 512,000 bytes;
+- be no larger than 512MB;
 - have EXIF/GPS metadata removed;
 - include truthful holder, source and rights-basis information in the record.
 
