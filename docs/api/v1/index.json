@@ -20,7 +20,7 @@
       "carrier_hz": 38000,
       "validation_status": "device-tested",
       "updated": "2026-09-12",
-      "sha256": "503faf066511742f82140c5c446987a02d7c474ab314bed52f9e8b984f532869",
+      "sha256": "91f4c9c133ea48365c4d7d68f55be39643d5829684503232cbc9539a0968d815",
       "url": "https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/remotes/astera/arc1/default/remote.irr.json"
     },
     {
@@ -36,7 +36,7 @@
       "carrier_hz": 38000,
       "validation_status": "device-tested",
       "updated": "2026-09-12",
-      "sha256": "6c3affce8b5d00e7fc34edef37bf95e1928393b4879d56ed4e41b95ccfe7d5c4",
+      "sha256": "f830f2b4b2dee9861a08eb9b0374b52423b185a947bd9140e8544c3ab356d9e1",
       "url": "https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/remotes/astera/arc3/default/remote.irr.json"
     },
     {
@@ -52,7 +52,7 @@
       "carrier_hz": 38000,
       "validation_status": "device-tested",
       "updated": "2026-09-12",
-      "sha256": "cdf8cc197602661ae287b0ab527ec2601689bb348b6664abb54044f886d32f7f",
+      "sha256": "d51b75e89565208901c9236f64c26cae6cef6a3b8e52d7e4d3bdcacc1205ed4b",
       "url": "https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/remotes/generic/number-navigation-remote/default/remote.irr.json"
     }
   ]

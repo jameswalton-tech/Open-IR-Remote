@@ -39,7 +39,7 @@ def build(destination: Path):
         api_relative = Path("remotes") / relative_dir / "remote.irr.json"
         target = destination / api_relative
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        target.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
         if record.get("image"):
             image_name = record["image"]["path"]
             if image_name != 'remote.webp':
@@ -85,8 +85,8 @@ def build(destination: Path):
         "remote_count": len(complete_records),
         "remotes": complete_records,
     }
-    (destination / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (destination / "library.json").write_text(json.dumps(library, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (destination / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+    (destination / "library.json").write_text(json.dumps(library, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
 
 
 def compare_directories(expected: Path, actual: Path):
