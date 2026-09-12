@@ -10,6 +10,18 @@ Required top-level fields are `format`, `format_version`, `record_kind`, `id`, `
 
 `remote.name` is the required human-facing identity of the physical handset. `remote.manufacturer`, `remote.model`, `remote.variant` and `remote.device_types` support browsing and matching. Paths are lowercase hyphenated indexes; they are not the permanent identity of a record.
 
+## Compact storage and embedded devices
+
+The format should be easy to contribute to and practical to store on small devices. JSON is the interchange file, not a required in-memory layout. An importer may store supported command values as integers and timing arrays, without retaining JSON field names or loading images and catalogue metadata into working memory. Keep the original record separately if the application needs to export it again without losing information.
+
+Use record defaults where the schema allows them and override them only when a signal differs. Required signal fields still need to be present: decoded signals currently require their own protocol, and raw signals require their own carrier frequency. One signal representation per command is enough; additional equivalent representations are optional. Images remain separate files. Aliases, exporter details and extra descriptions can be omitted when they are not needed, but required identity, provenance and validation fields remain part of the interchange record.
+
+Text limits are maximum lengths, not instructions to allocate fixed-size buffers. Existing limits include 120 characters for remote names and button labels, 80 for manufacturers and variants, and 100 for models and remote model numbers. A device may shorten a label on screen without changing the stored or exported value. Exporters should report values that exceed the schema limits rather than silently truncate them.
+
+Consistent limits for the remaining text fields, collection sizes and numeric values are part of the draft's next refinement. They are not all enforced by the current schema. Carrier frequency already uses integer hertz with a range of 1,000 to 1,000,000; raw timings use signed integer microseconds but do not yet have a defined storage-width bound. Do not assume all command values or timings fit in 16 bits. Protocol-specific values need ranges that preserve the original signal, not a smaller type chosen at the cost of accuracy.
+
+The aim is to avoid duplicated data and give implementations predictable bounds, not to shorten every JSON key or introduce a second binary interchange format. These refinements are being made within the current public draft, without a version bump.
+
 ## Commands
 
 Each command has:

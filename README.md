@@ -1,6 +1,6 @@
 # Open IR Remote
 
-Open IR Remote is a public, versioned interchange standard and community library for infrared remote-control codes. It gives applications one predictable format to import, export and poll instead of maintaining incompatible private spreadsheets.
+Open IR Remote is an open interchange format and community library for infrared remote-control codes. It gives applications one predictable format to import, export and poll, with readable files for contributors and compact storage in mind for embedded devices.
 
 If somebody has already learned and tested a remote, the next project should be able to reuse that work. This repository is intended to grow through small, well-documented contributions from people building real hardware and software.
 
@@ -49,6 +49,10 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full submission and review proce
 ## Format support
 
 IRR v1 represents decoded protocol parameters, raw mark/space timings or Pronto Hex. It supports record and command-level carrier settings, semantic command IDs, localized labels, provenance and validation status. CSV remains a supported flat profile for Excel-based capture workflows.
+
+A remote should not need several copies of the same information. Use shared defaults where supported, include one signal representation per button unless another is useful, and keep images outside the JSON file. Devices can store the command data they need without keeping the full catalogue description in working memory. Readable field names stay in the interchange file; they do not need to become part of a device's internal storage.
+
+The format is still a public draft. We are refining it in place before adoption, including consistent field limits and numeric ranges to help embedded developers plan storage. The existing version identifier stays unchanged during this work.
 
 - [Format specification](docs/FORMAT.md)
 - [Complete example device](docs/EXAMPLE_DEVICE.md)

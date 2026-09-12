@@ -19,3 +19,9 @@ Every record contains:
 Record defaults reduce duplication. Command-level signal values override defaults. Unknown values are represented explicitly and exporters must not guess them.
 
 Normative specification: [docs/FORMAT.md](https://github.com/jameswalton-tech/Open-IR-Remote/blob/main/docs/FORMAT.md).
+
+## Small-device storage
+
+JSON is the shared file format, not a required memory layout. Devices can keep the supported commands as integers and timing arrays while leaving images and catalogue descriptions out of working memory. Applications that need a lossless re-export should retain the original record separately.
+
+Use shared defaults where supported and include additional signal representations only when useful. Text limits are upper bounds, not fixed buffer sizes. Consistent limits for the remaining fields, collection sizes and numeric ranges are still being worked into the current draft; they are not all enforced yet. This work does not introduce a second binary format or change the current version identifier.
