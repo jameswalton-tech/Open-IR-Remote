@@ -4,7 +4,7 @@ Open IR Remote is an open interchange format and community library for infrared 
 
 If somebody has already learned and tested a remote, the next project should be able to reuse that work. This project is intended to grow through small, well-documented contributions from people building real hardware, software and hobby projects.
 
-## Public API (work in progress)
+## Public API
 
 Applications can poll:
 
@@ -50,7 +50,7 @@ IRR v1 represents decoded protocol parameters, raw mark/space timings or Pronto 
 
 A remote should not need several copies of the same information. Use shared defaults where supported, include one signal representation per button unless another is useful, and keep images outside the JSON file. Devices can store the command data they need without keeping the full catalogue description in working memory. Readable field names stay in the interchange file; they do not need to become part of a device's internal storage.
 
-The format is still a public draft. [Field and storage limits](docs/LIMITS.md) bound text, numeric values and collections, with up to 128 commands and 1 MiB of JSON per remote. These are import ceilings, not fixed memory allocations. Shared protocol and carrier settings can be inherited from record defaults. This refinement keeps the existing version identifier unchanged.
+Open IR Remote v1 uses `format_version: "1.0.0"`. Its [field and storage limits](docs/LIMITS.md) bound text, numeric values and collections, with up to 128 commands and 1 MiB of JSON per remote. These are import ceilings, not fixed memory allocations. Shared protocol and carrier settings can be inherited from record defaults.
 
 - [Format specification](docs/FORMAT.md)
 - [Complete example device](docs/EXAMPLE_DEVICE.md)

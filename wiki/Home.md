@@ -1,6 +1,6 @@
 # Open IR Remote
 
-Open IR Remote is an open interchange standard and community library for infrared remote-control codes.
+Open IR Remote v1 is an open interchange standard and community library for infrared remote-control codes. Records use `format_version: "1.0.0"`.
 
 ## Start here
 

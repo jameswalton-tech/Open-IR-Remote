@@ -1,4 +1,4 @@
-"""Draft conformance checks, including boundary and invalid export cases."""
+"""V1 conformance checks, including boundary and invalid export cases."""
 import copy
 import csv
 import hashlib

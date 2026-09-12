@@ -20,7 +20,7 @@ Text limits are maximum lengths, not instructions to allocate fixed-size buffers
 
 The schema and validator enforce the [field and storage limits](LIMITS.md), including 128 commands per remote and a 1 MiB ceiling for each standalone JSON record. Raw durations fit signed 32-bit storage; decoded integer parameters have explicit signed/unsigned 32-bit bounds, with bounded hexadecimal strings available for wider values. Do not assume all command values or timings fit in 16 bits. These are format ceilings, not a promise that every supported record fits every device. An importer with lower limits must report unsupported records without silently changing them.
 
-The aim is to avoid duplicated data and give implementations predictable bounds, not to shorten every JSON key or introduce a second binary interchange format. These refinements are part of the current public draft, without a version bump.
+V1 avoids duplicated data and gives implementations predictable bounds while retaining readable JSON keys. It defines one JSON interchange format, not a separate binary format.
 
 ## Commands
 
@@ -41,7 +41,7 @@ For ordinary button presses, omit `behaviour`. Omission means no extra behaviour
 
 Raw arrays alternate positive marks and negative spaces, start with a mark and end with a space. The final space includes the gap before the next sequence. Do not add that gap twice. Raw data represents the captured sequence, not a promise of general stateful replay support.
 
-This first version is a public draft. The optional behaviour metadata preserves observations; protocol-specific rendering, full state models and variant inheritance still need adapter implementations and conformance fixtures. Do not claim universal transmission support from schema validity alone.
+V1 defines the interchange record. The optional behaviour metadata preserves observations; protocol-specific rendering and full state models require adapter implementations and conformance fixtures that this repository does not supply. Variant inheritance is not defined by v1. Do not claim universal transmission support from schema validity alone.
 
 ## Exporter contract
 
@@ -98,7 +98,7 @@ remote_name,manufacturer,remote_model,variant,locale,command_id,button_label,pro
 
 Import followed by export to the same profile must preserve all source fields. Exporters must report data that a target format cannot represent.
 
-CSV repeats effective protocol and carrier values on each row because it has no record-level defaults. Resolve JSON defaults before exporting CSV. Remote identity, labels, command IDs, carrier values and hexadecimal readings use the same field limits as JSON; one remote contains no more than 128 command rows. The checked-in seed CSVs preserve the original readings and need no textual changes for this refinement. CSV adapter implementations remain separate from the JSON validator.
+CSV repeats effective protocol and carrier values on each row because it has no record-level defaults. Resolve JSON defaults before exporting CSV. Remote identity, labels, command IDs, carrier values and hexadecimal readings use the same field limits as JSON; one remote contains no more than 128 command rows. The checked-in seed CSVs preserve the original readings. CSV adapter implementations remain separate from the JSON validator.
 
 ## Compatibility
 
@@ -107,4 +107,4 @@ CSV repeats effective protocol and carrier values on each row because it has no 
 - Pronto Hex: imported as a Pronto representation or decoded when conversion is reliable.
 - irdb CSV: mapped to decoded protocol parameters while preserving source provenance.
 
-This is an unadopted public draft being refined in place with the existing `1.0.0` identifier and `/api/v1` path. Once the format is declared stable, minor additions must remain backward compatible and breaking changes will require a new major API and format version.
+Open IR Remote v1 uses the `1.0.0` format identifier and `/api/v1` distribution path. Minor additions must remain backward compatible. Breaking changes require a new major format version and, where the distribution contract changes, a new major API version.

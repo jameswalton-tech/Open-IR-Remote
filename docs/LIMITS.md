@@ -1,6 +1,6 @@
 # Storage and field limits
 
-These limits are part of the current draft. They keep imports bounded without making every device reserve space for the largest possible remote. A small device can support less, but should explain what it cannot import rather than truncate names, drop commands or change timings silently.
+These limits are part of Open IR Remote v1. They keep imports bounded without making every device reserve space for the largest possible remote. A small device can support less, but should explain what it cannot import rather than truncate names, drop commands or change timings silently.
 
 ## Text
 
@@ -76,4 +76,4 @@ Images stay outside the record. An optional `remote.webp` must be **240–1,600 
 
 KiB and MiB use binary units: 1 MiB is 1,024 KiB. The machine-readable `size_bytes` field stays an exact integer byte count; display file sizes in KiB or MiB in user interfaces.
 
-The [JSON Schema](../schema/open-ir-remote-v1.schema.json), [validator](../tools/validate.py) and [boundary tests](../tests/test_format.py) implement these rules. The draft remains `1.0.0`; no new format or API version is introduced by this refinement.
+The [JSON Schema](../schema/open-ir-remote-v1.schema.json), [validator](../tools/validate.py) and [boundary tests](../tests/test_format.py) implement these v1 rules. Records use `format_version: "1.0.0"` and the public API is served under `/api/v1`.
