@@ -1,0 +1,43 @@
+{
+  "node": "v24.18.0",
+  "platform": "win32",
+  "runtimeDependencies": 0,
+  "files": {
+    "dist/browser.js": {
+      "bytes": 136880,
+      "gzip": 19162,
+      "brotli": 15497
+    },
+    "dist/irdb.browser.js": {
+      "bytes": 142388,
+      "gzip": 21437,
+      "brotli": 17422
+    },
+    "src/schema-validator.js": {
+      "bytes": 129692,
+      "gzip": 15948,
+      "brotli": 12828
+    },
+    "vendor/schema/open-ir-remote-v1.schema.json": {
+      "bytes": 21355,
+      "gzip": 2828,
+      "brotli": 2320
+    }
+  },
+  "examples": {
+    "normal": {
+      "prettyUtf8": 1905,
+      "compactUtf8": 1207
+    },
+    "irdb": {
+      "sourceCsvUtf8": 132,
+      "compactWithArchiveUtf8": 2121
+    }
+  },
+  "notes": [
+    "Browser bundles include the compiled pinned schema and its helper code.",
+    "The irdb bundle also includes the core validator; do not add bundle sizes if bundling shared modules together.",
+    "gzip and Brotli use Node defaults. Transfer bytes are not runtime RAM measurements.",
+    "No protocol renderer, hardware adapter, Python interpreter or Python dependencies are included in browser bundles."
+  ]
+}

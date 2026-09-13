@@ -1,0 +1,9 @@
+node_modules/
+dist/
+src/record.ts
+src/schema-validator.js
+__pycache__/
+*.tgz
+PACK-FOOTPRINT.json
+TEST-RESULTS.txt
+MEASURE-RESULTS.txt

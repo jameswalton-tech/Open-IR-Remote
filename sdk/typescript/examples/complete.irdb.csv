@@ -1,0 +1,5 @@
+functionname,protocol,device,subdevice,function
+"Power, ""main""
+Éclair",NEC1,0001,-1,+002
+Other,NEC2,1,-1,2
+Other,NEC2,1,-1,2

@@ -21,6 +21,12 @@ Clients should cache responses and use conditional HTTP requests rather than pol
 
 See [API usage](docs/API.md) for implementation details and versioning guarantees.
 
+## TypeScript SDK prototype
+
+The [TypeScript SDK](sdk/typescript/README.md) provides validated JSON parsing, compact serialization, lossless record editing and a strict irdb-profile importer. It preserves IDs, labels, provenance and extensions. The importer currently ignores whole submissions that are incomplete or exceed 128 commands. It does not render protocols or apply receiver configuration.
+
+Run `npm ci` and `npm test` from `sdk/typescript` after installing the Python dependencies listed there. This is a local integration prototype, not a published npm package or a playback guarantee.
+
 ## Repo layout
 
 ```text
