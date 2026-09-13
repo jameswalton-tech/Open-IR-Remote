@@ -54,7 +54,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full submission and review proce
 
 ## Format support
 
-IRR v1 represents decoded protocol parameters, raw mark/space timings or Pronto Hex. It supports record and command-level carrier settings, semantic command IDs, localized labels and validation status. CSV remains a supported flat profile for Excel-based capture workflows.
+IRR v1 represents decoded protocol parameters, raw mark/space timings or Pronto Hex. It supports record and command-level carrier settings, semantic command IDs, localized labels and validation status. A generic CSV compatibility profile is also available; JSON is the canonical interchange format.
 
 A remote should not need several copies of the same information. Use shared defaults where supported, include one signal representation per button unless another is useful, and keep images outside the JSON file. Devices can store the command data they need without keeping the full catalogue description in working memory. Readable field names stay in the interchange file; they do not need to become part of a device's internal storage.
 

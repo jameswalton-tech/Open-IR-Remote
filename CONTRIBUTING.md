@@ -41,11 +41,11 @@ Images are optional until their rights are clear. If included, the file must:
 
 Images remain the property of their respective copyright holders and are used only to identify the physical handset. An identification-only claim is not a substitute for provenance; maintainers may decline or remove an image where the basis is unclear.
 
-## Excel and CSV submissions
+## JSON and CSV submissions
 
 If your application exports the JSON file, include `export_source` with its name and version. This helps us reproduce conversion bugs. Include a build identifier when available; do not add personal or device identifiers. Leave the field out for hand-authored files rather than guessing.
 
-The preferred format is `remote.irr.json`. Existing Excel workflows can export one command per CSV row using the columns documented in `docs/FORMAT.md`. A legacy CSV containing only `name,address_hex,command_hex,code_hex` is accepted for migration only when the pull request supplies the remote identity, carrier, protocol status, provenance and validation details.
+The preferred format is `remote.irr.json`. CSV submissions use one command per row with the columns documented in `docs/FORMAT.md`. Include the remote identity, carrier, protocol status, provenance and validation details needed to create a complete record.
 
 ## Validate and submit
 

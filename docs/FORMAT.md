@@ -94,7 +94,7 @@ Validation states are:
 
 ## CSV profile
 
-The Excel-friendly CSV profile uses one command per row and repeats remote identity so the file is self-contained. CSV is a compatibility profile; JSON is canonical because one CSV row cannot cleanly carry several signal representations or structured behaviour.
+The CSV compatibility profile uses one command per row and repeats remote identity so the file is self-contained. JSON is canonical because one CSV row cannot cleanly carry several signal representations or structured behaviour.
 
 ```text
 remote_name,manufacturer,remote_model,variant,locale,command_id,button_label,protocol,carrier_hz,address_hex,command_hex,code_hex,validation_status
