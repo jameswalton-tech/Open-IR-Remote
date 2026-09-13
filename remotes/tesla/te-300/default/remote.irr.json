@@ -1,0 +1,410 @@
+{
+  "$schema": "../../../../schema/open-ir-remote-v1.schema.json",
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "record_kind": "canonical",
+  "id": "oir:tesla:te-300:default",
+  "updated": "2026-09-13",
+  "remote": {
+    "name": "Remote for Tesla TE-300",
+    "manufacturer": "Tesla",
+    "model": "Unknown",
+    "variant": "default",
+    "device_types": [
+      "set-top-box"
+    ],
+    "controlled_devices": [
+      {
+        "manufacturer": "Tesla",
+        "model": "TE-300",
+        "device_type": "set-top-box"
+      }
+    ]
+  },
+  "locale": "en",
+  "commands": [
+    {
+      "id": "power",
+      "labels": {
+        "en": "Power"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x000023DC"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.up",
+      "labels": {
+        "en": "Vol_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00003EC1"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.dn",
+      "labels": {
+        "en": "Vol_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00006699"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "mute",
+      "labels": {
+        "en": "Mute"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x0000639C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "play",
+      "labels": {
+        "en": "Play"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x000027D8"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "stop",
+      "labels": {
+        "en": "Stop"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00002BD4"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "ok",
+      "labels": {
+        "en": "Ok"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x000031CE"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "exit",
+      "labels": {
+        "en": "Exit"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00003AC5"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "labels": {
+        "en": "Menu"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00006A95"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "ch.next",
+      "labels": {
+        "en": "Ch_next"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x000035CA"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "ch.prev",
+      "labels": {
+        "en": "Ch_prev"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00002DD2"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "forward",
+      "labels": {
+        "en": "Forward"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00002AD5"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "backward",
+      "labels": {
+        "en": "Backward"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x000039C6"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "skip.forward",
+      "labels": {
+        "en": "Skip_forward"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00006F90"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "skip.backward",
+      "labels": {
+        "en": "Skip_backward"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00007986"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "labels": {
+        "en": "Audio"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00007B84"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "info",
+      "labels": {
+        "en": "Info"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00002FD0"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "epg",
+      "labels": {
+        "en": "Epg"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x000029D6"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "record",
+      "labels": {
+        "en": "Record"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00007F80"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "favorite",
+      "labels": {
+        "en": "Favorite"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x00007788"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "subtitles",
+      "labels": {
+        "en": "Subtitles"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000FD01",
+            "command_hex": "0x0000659A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "source_type": "upstream-reference",
+      "source_path": "https://github.com/Lucaslhm/Flipper-IRDB/blob/d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d/DVB-T/Tesla/Tesla_TE-300.ir",
+      "source_revision": "d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d",
+      "imported_at": "2026-09-13",
+      "rights": "CC0-1.0",
+      "notes": "Flipper-IRDB contributors. File introduced in 93dd5ce700b84a8c1dee84b228267b23b35bada1 after the upstream CC0 cutoff. Original source.ir SHA-256: 4868e24dab86ab48ddea4f393407f964f6888a5c004ddef9296bf2600267b8ba. Source comments are preserved in source.ir. No image rights are asserted."
+    }
+  ],
+  "validation": {
+    "status": "imported-unverified",
+    "issues": [
+      "Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred.",
+      "The source identifies the controlled equipment, not a printed handset model number."
+    ]
+  },
+  "extensions": {
+    "flipper": {
+      "file_version": 1,
+      "parameter_encoding": "Four little-endian source bytes converted to unsigned numeric hexadecimal; protocol names unchanged."
+    }
+  },
+  "defaults": {
+    "protocol": "NECext"
+  }
+}

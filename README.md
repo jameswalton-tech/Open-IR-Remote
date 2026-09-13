@@ -78,6 +78,8 @@ See [the comparison](docs/COMPACTNESS.md). This acknowledgement does not imply a
 
 ## Licensing
 
+Thanks also to [Flipper-IRDB and its contributors](https://github.com/Lucaslhm/Flipper-IRDB) for the selected community captures. The [import review](sources/flipper-irdb/README.md) lists source credits, licence evidence and the limits of these untested imports.
+
 Repository software is licensed under GPL-3.0 [LICENSE](LICENSE). The format specification is published under CC0-1.0. Remote data and images require explicit record-level rights information; see [DATA-LICENSE.md](DATA-LICENSE.md).
 
 Remote images remain the property of their respective copyright holders and are included only to identify the physical handset/emitter device; see [NOTICE.md](NOTICE.md).
