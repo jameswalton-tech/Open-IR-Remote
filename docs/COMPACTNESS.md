@@ -4,9 +4,15 @@ The goal is a small, portable remote definition, not the shortest file at any co
 
 ## What we can learn from irdb
 
+Credit to [probonopd and the irdb contributors](https://github.com/probonopd/irdb) for building an openly accessible, community-maintained resource. Its simple contribution format and economical representation of decoded signals are strengths worth learning from. It informed our work on compact distribution; Open IR Remote is not affiliated with or endorsed by irdb.
+
 [irdb](https://github.com/probonopd/irdb) uses a concise decoded-code CSV: function name, protocol, device, subdevice and function. Manufacturer and device category are carried in its directory structure. Its [Samsung TV example](https://github.com/probonopd/irdb/blob/master/codes/Samsung/TV/7%2C7.csv) illustrates that approach. It is a useful design for a decoded signal database.
 
 Open IR Remote serves a different interchange need: a self-contained handset identity, stable command IDs, localized labels, raw or Pronto alternatives, source/rights information and optional receiver configuration. Those fields cost space but allow a file to travel outside its original repository without losing its context. A stripped CSV and a complete IRR record are not equivalent payloads. We do not claim a larger feature set makes every use case better served by JSON.
+
+For example, moving learned buttons from one receiver to another is more than looking up their signals: the receiving application may need to know which handset they belong to, retain their identities, and distinguish original button labels from local action assignments. An irdb-based integration can support that workflow with additional metadata and a shared mapping convention. IRR makes room for that information in the transfer record, while keeping vendor configuration optional. Neither format guarantees that a different receiver supports the same actions or can transmit every protocol.
+
+Linking and crediting irdb is not a licence grant to copy its database. Any future data import must retain applicable upstream attribution and comply with its licence; the comparison here does not add irdb records to our library.
 
 ## V1 distribution
 
