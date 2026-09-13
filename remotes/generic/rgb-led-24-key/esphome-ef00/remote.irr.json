@@ -1,0 +1,534 @@
+{
+  "commands": [
+    {
+      "action": "on",
+      "id": "power.on",
+      "labels": {
+        "en": "Remote ON"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xFC03",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "off",
+      "id": "power.off",
+      "labels": {
+        "en": "Remote OFF"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xFD02",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "increment",
+      "id": "brightness.up",
+      "labels": {
+        "en": "Remote BRIGHTUP"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xFF00",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "decrement",
+      "id": "brightness.down",
+      "labels": {
+        "en": "Remote BRIGHTDOWN"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xFE01",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.red",
+      "labels": {
+        "en": "Remote RED"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xFB04",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.red.preset2",
+      "labels": {
+        "en": "Remote RED2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF708",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.red.preset3",
+      "labels": {
+        "en": "Remote RED3"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF30C",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.red.preset4",
+      "labels": {
+        "en": "Remote RED4"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xEF10",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.red.preset5",
+      "labels": {
+        "en": "Remote RED5"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xEB14",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.green",
+      "labels": {
+        "en": "Remote GREEN"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xFA05",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.green.preset2",
+      "labels": {
+        "en": "Remote GREEN2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF609",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.green.preset3",
+      "labels": {
+        "en": "Remote GREEN3"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF20D",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.green.preset4",
+      "labels": {
+        "en": "Remote GREEN4"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xEE11",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.green.ea15",
+      "labels": {
+        "en": "Remote GREEN"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xEA15",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.blue",
+      "labels": {
+        "en": "Remote BLUE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF906",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.blue.preset2",
+      "labels": {
+        "en": "Remote BLUE2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF50A",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.blue.preset3",
+      "labels": {
+        "en": "Remote BLUE3"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF10E",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.blue.preset4",
+      "labels": {
+        "en": "Remote BLUE4"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xED12",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.blue.preset5",
+      "labels": {
+        "en": "Remote BLUE5"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xE916",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "color.white",
+      "labels": {
+        "en": "Remote WHITE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF807",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "effect.flash",
+      "labels": {
+        "en": "Remote FLASH"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF40B",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "effect.strobe",
+      "labels": {
+        "en": "Remote STROBE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xF00F",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "effect.fade",
+      "labels": {
+        "en": "Remote FADE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xEC13",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "id": "effect.smooth",
+      "labels": {
+        "en": "Remote SMOOTH"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0xEF00",
+            "command_hex": "0xE817",
+            "parameter_profile": "esphome-nec-16bit"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    }
+  ],
+  "defaults": {
+    "protocol": "NEC"
+  },
+  "export_source": {
+    "application": "Open IR SDK",
+    "build": "68ee94f6145f2fbd9c5e31c1dca5ec3de69e1107",
+    "url": "https://github.com/jameswalton-tech/Open-IR-Remote/tree/68ee94f6145f2fbd9c5e31c1dca5ec3de69e1107/sdk/typescript",
+    "version": "0.0.0"
+  },
+  "extensions": {
+    "org.openir.source": {
+      "label_policy": "Original ESPHome names retained, including duplicate labels.",
+      "parameter_profile": "esphome-nec-16bit",
+      "profile_notes": "ESPHome NEC uses a 16-bit address and a 16-bit command. Values are not bit-reversed, truncated or combined by this import.",
+      "repository": "mxbchr/esphome_rgb_led_remote",
+      "sha256": "3da410442328fe0447ac70d8ad854d1aae287d4031d7606329cc1bc6bdbf1f1b"
+    }
+  },
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "id": "oir:generic:rgb-led-24-key:esphome-ef00",
+  "image": {
+    "alt": "Front of the white 24-button RGB LED remote shown in the source project",
+    "background": "plain-white",
+    "height_px": 1000,
+    "media_type": "image/webp",
+    "path": "remote.webp",
+    "rights": {
+      "basis": "identification-only",
+      "holder": "Respective copyright holder; not identified in the source README",
+      "notice": "Image linked by the source project to identify this handset. Copyright remains with its respective holder. Included for maintainer review on an identification-only basis; no separate open image licence is claimed.",
+      "source_url": "https://user-images.githubusercontent.com/75482460/271792515-ac66b39f-d364-421e-a01e-a51c2b40d3e0.jpg"
+    },
+    "sha256": "85ae6bd9b846bc857e089cc8d71e2848753c9d822c36d73a17ef603479289f17",
+    "size_bytes": 195008,
+    "width_px": 1000
+  },
+  "locale": "en",
+  "provenance": [
+    {
+      "imported_at": "2026-09-13",
+      "notes": "All 24 NEC receiver definitions are preserved, including the repeated Remote GREEN label. The source README identifies the pictured generic RGB LED handset. Names describe source configuration entries, not necessarily printed button wording.",
+      "rights": "GPL-3.0, mxbchr/esphome_rgb_led_remote contributors. See source/LICENSE. This imported record is not CC0.",
+      "source_path": "https://github.com/mxbchr/esphome_rgb_led_remote/blob/a683da09ff1c1e18188ccd233e58abf352fdcb73/esphome_rgb_led_remote.yaml",
+      "source_revision": "a683da09ff1c1e18188ccd233e58abf352fdcb73",
+      "source_type": "upstream-reference"
+    }
+  ],
+  "record_kind": "canonical",
+  "remote": {
+    "device_types": [
+      "lighting",
+      "led-strip"
+    ],
+    "manufacturer": "Generic",
+    "model": "24-key RGB LED Remote",
+    "name": "Generic 24-key RGB LED Remote",
+    "variant": "ESPHome EF00 source variant"
+  },
+  "updated": "2026-09-13",
+  "validation": {
+    "evidence": [
+      "https://github.com/mxbchr/esphome_rgb_led_remote/blob/a683da09ff1c1e18188ccd233e58abf352fdcb73/esphome_rgb_led_remote.yaml",
+      "Source photo shows a 24-button handset; all 24 source definitions have a name, NEC address and command. Source values are retained verbatim.",
+      "https://esphome.io/components/remote_transmitter/#remote-transmitter-transmit-nec-action"
+    ],
+    "issues": [
+      "Not tested on physical hardware by this contributor. Exact manufacturer, printed model number and measured carrier frequency are not supplied by the source.",
+      "Remote GREEN occurs at commands 0xFA05 and 0xEA15. Both source labels are retained; the latter uses a code-qualified ID rather than a guessed corrected label.",
+      "The esphome-nec-16bit profile retains both full 16-bit fields, including command inverse bits. A transmitter must implement this profile; do not treat command_hex as an 8-bit command.",
+      "Physical key-to-code mapping and compatibility with visually similar remotes remain unverified."
+    ],
+    "status": "imported-unverified"
+  }
+}
