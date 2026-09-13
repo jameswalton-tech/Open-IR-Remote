@@ -14,7 +14,12 @@ for (const [file, hash] of Object.entries(pins.sha256)) {
 }
 const schema = JSON.parse(await readFile('vendor/schema/open-ir-remote-v1.schema.json','utf8'));
 const ajv = new Ajv2020({strict:false,allErrors:true,ownProperties:true,code:{source:true}});
-addFormats(ajv, {mode:'full'});
+// Ajv's date/time rules differ from the pinned Python helpers on years,
+// separators, offsets and leap seconds. The record layer checks these formats
+// against the authority's behaviour; keep URI validation compiled here.
+addFormats(ajv, {mode:'full',formats:['uri']});
+ajv.addFormat('date',true);
+ajv.addFormat('date-time',true);
 const validationCode=standalone(ajv,ajv.compile(schema));
 // Resolve generated Ajv helper imports from this package, then bundle them into one browser file.
 await build({stdin:{contents:validationCode,resolveDir:process.cwd()},bundle:true,platform:'browser',format:'esm',outfile:'src/schema-validator.js',minify:true});
@@ -22,5 +27,3 @@ await writeFile('src/record.ts', await compile({...schema,title:'OpenIrRecord'},
 execFileSync(process.execPath,['node_modules/typescript/bin/tsc'],{stdio:'inherit'});
 await build({entryPoints:['src/index.ts'],bundle:true,minify:true,platform:'browser',format:'esm',outfile:'dist/browser.js'});
 await build({entryPoints:['src/irdb.ts'],bundle:true,minify:true,platform:'browser',format:'esm',outfile:'dist/irdb.browser.js'});
-
-

@@ -22,9 +22,10 @@ for(const n of [0,1,128,129])add(`command count ${n}`,r=>r.commands=Array.from({
 for(const n of [120,121])add(`translated label ${n}`,r=>r.commands[0].labels.fr='é'.repeat(n));
 for(const value of [0,0.1,1,1.1])add(`duty ${value}`,r=>r.defaults.duty_cycle=value);
 for(const value of [999,1000,1000000,1000001])add(`carrier ${value}`,r=>r.defaults.carrier_hz=value);
-for(const value of ['2026-09-13','2026-02-30','2024-02-29','2025-02-29','2026-9-13','not-a-date'])add(`date ${value}`,r=>r.updated=value);
+for(const value of ['2026-09-13','2026-02-30','2024-02-29','2025-02-29','2026-9-13','not-a-date','0000-01-01','0001-01-01','9999-12-31','2026-09-13\n'])add(`date ${value}`,r=>r.updated=value);
 for(const value of ['https://example.org/path','urn:example:test','relative/path','https://exa mple.org'])add(`URI ${value}`,r=>r.export_source={application:'test',version:'0',url:value});
-for(const value of ['2026-09-13T10:10:10Z','2026-09-13t10:10:10z','2026-02-30T10:10:10Z','not-a-time'])add(`timestamp ${value}`,r=>r.export_source={application:'test',version:'0',exported_at:value});
+for(const value of ['2026-09-13T10:10:10Z','2026-09-13t10:10:10z','2026-02-30T10:10:10Z','not-a-time','0000-01-01T00:00:00Z','0001-01-01T00:00:00Z','2026-09-13 10:10:10Z','2026-09-13T10:10:10+01','2026-09-13T23:59:60Z','2026-09-13T10:10:10+23:59','2026-09-13T10:10:10+24:00','2026-09-13T10:10:10Z\n','2026-09-13T10:10:10Z\r\n','2026-09-13T10:10:10.123456Z'])add(`timestamp ${value}`,r=>r.export_source={application:'test',version:'0',exported_at:value});
+for(const path of ['provenance','validation'])add(`invalid date at ${path}`,r=>{if(path==='provenance')r.provenance[0].imported_at='0000-01-01';else r.validation.tested_at='0000-01-01';});
 add('duplicate IDs',r=>r.commands[1].id=r.commands[0].id);
 add('ID newline',r=>r.commands[0].id='power.toggle\n');
 add('unknown direct incomplete',r=>{r.commands[0].signals[0].protocol='unknown';r.commands[0].signals[0].source_complete=false;});
@@ -68,4 +69,3 @@ test('full file validation checks synthetic image assets; browser reports them u
     await rm(imagePath);assert.equal((await validateFile(path)).valid,false);
   }finally{await rm(directory,{recursive:true,force:true});}
 });
-

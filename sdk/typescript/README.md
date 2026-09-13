@@ -16,7 +16,7 @@ npm run example
 npm run measure
 ```
 
-The build creates the dist directory, generated types and standalone validator. Generated files are not committed. JavaScript consumers need no npm runtime dependencies. Building uses pinned development dependencies from package-lock.json. The optional Node validation bridge needs Python, jsonschema and Pillow. It does not install them itself.
+The build creates the dist directory, generated types and standalone validator. Generated files are not committed. JavaScript consumers need no npm runtime dependencies. Building uses pinned development dependencies from package-lock.json. The optional Node validation bridge needs Python and the complete pinned requirements.txt, including date-time and URI format helpers. It does not install them itself.
 
 ## Parse, edit and serialize
 
@@ -147,9 +147,9 @@ The synthetic example changes from 1,905 pretty JSON bytes to 1,207 compact byte
 
 ## Evidence and remaining limits
 
-The build checks SHA-256 pins for the copied authority at revision fb4c569fdf9fdef789cad9c2c4288541cec72e44. The schema and Python validator are unmodified. Twenty-two test groups pass in the repository, including 103 synthetic acceptance cases compared directly with Python, explicit numeric divergence, source restoration, image checks and browser bundles executed without Node globals and a byte-for-byte check against the repository authority. The browser smoke test is an isolated JavaScript context, not a cross-browser matrix or a hardware test.
+The build checks SHA-256 pins for the copied authority at revision fb4c569fdf9fdef789cad9c2c4288541cec72e44. The schema and Python validator are unmodified. Twenty-two test groups pass in the repository, including 119 synthetic acceptance cases compared directly with Python, explicit numeric divergence, source restoration, image checks and browser bundles executed without Node globals and a byte-for-byte check against the repository authority. The browser smoke test is an isolated JavaScript context, not a cross-browser matrix or a hardware test.
 
-The schema's date and URI checks are delegated to ajv-formats in the browser and Python's FormatChecker in the authority. The differential corpus covers common and malformed cases but is not an exhaustive proof that the two engines agree on every format string. Use validateFile when the exact authority decision and image checks are required. The standard's Python validator itself is the reference for that claim.
+The browser uses explicit calendar and timestamp checks matching the pinned Python helpers; URI checks use ajv-formats. The Python bridge requires the pinned format helpers and fails as an environment error if they are missing or the wrong version. The differential corpus covers the review's year-zero, timestamp separator, offset, leap-second and terminal-newline cases, but is not an exhaustive proof of URI-format parity. Use validateFile when the exact authority decision and image checks are required. The standard's Python validator itself is the reference for that claim.
 
 The JSON reader is hand-written to detect duplicates and numeric loss before JSON.parse would erase evidence. Its tests are bounded regression coverage, not a completed fuzzing or security audit. Large in-memory JavaScript objects are serialized for checking and can consume more RAM than the wire size; the prototype is not a streaming parser. Image I/O or corrupt-image exceptions raised by Python reject the Node promise as execution failures and must be handled by its caller.
 

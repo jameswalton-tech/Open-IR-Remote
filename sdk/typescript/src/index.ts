@@ -1,4 +1,5 @@
 import schemaValidator from './schema-validator.js';
+import {recordFormatIssues} from './formats.js';
 import {readJson, encodeJson, OpenIrError, pointer, type Issue} from './json.js';
 import type {OpenIrRecord} from './record.js';
 export {OpenIrError, MAX_BYTES, type Issue} from './json.js';
@@ -32,6 +33,7 @@ export function validate(value: unknown): ValidationReport {
     return result();
   }
   const record = value as OpenIrRecord;
+  issues.push(...recordFormatIssues(record));
   const ids = new Set<string>();
   record.commands.forEach((command,c) => {
     const base = `/commands/${c}`;
@@ -94,4 +96,3 @@ export function assessCapabilities(record: OpenIrRecord, accepts: (signal: Signa
   }));
   return report;
 }
-

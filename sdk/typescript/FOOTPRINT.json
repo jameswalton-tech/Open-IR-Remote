@@ -4,19 +4,19 @@
   "runtimeDependencies": 0,
   "files": {
     "dist/browser.js": {
-      "bytes": 136884,
-      "gzip": 18854,
-      "brotli": 15287
+      "bytes": 136880,
+      "gzip": 19162,
+      "brotli": 15497
     },
     "dist/irdb.browser.js": {
-      "bytes": 142390,
-      "gzip": 21135,
-      "brotli": 17193
+      "bytes": 142388,
+      "gzip": 21437,
+      "brotli": 17422
     },
     "src/schema-validator.js": {
-      "bytes": 130677,
-      "gzip": 16034,
-      "brotli": 12859
+      "bytes": 129692,
+      "gzip": 15948,
+      "brotli": 12828
     },
     "vendor/schema/open-ir-remote-v1.schema.json": {
       "bytes": 21355,
