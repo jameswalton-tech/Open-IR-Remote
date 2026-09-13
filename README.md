@@ -17,7 +17,9 @@ https://jameswalton-tech.github.io/Open-IR-Remote/api/v1/library.json
 - `library.json` contains the complete current library in one response.
 - Individual record URLs are listed in the index.
 
-Clients should cache responses and use conditional HTTP requests rather than polling continuously. The API is static, requires no key and is served with GitHub Pages' normal HTTPS and CORS behaviour. Consumers that cannot use Pages can read the equivalent files from the repo or a GitHub CDN.
+The index is the manifest for application imports and local caches. Each entry has a stable remote ID, download URL and SHA-256 for detecting changes. GitHub Actions validates and rebuilds the hosted library automatically whenever a change is merged or pushed to `main`. See [local caching guidance](docs/API.md#local-caching-and-project-imports) for offline use and safe project updates.
+
+Clients should cache responses and use conditional HTTP requests rather than polling continuously. The API is static, requires no key and is served with GitHub Pages' normal HTTPS and CORS behaviour. Consumers that cannot use Pages can obtain the source records from `remotes/` in the repository and build their own manifest. Checked-in generated API files are development snapshots, not the live distribution.
 
 See [API usage](docs/API.md) for implementation details and versioning guarantees.
 

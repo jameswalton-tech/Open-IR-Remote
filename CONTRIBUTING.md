@@ -59,6 +59,6 @@ python tools/build_api.py
 git diff --check
 ```
 
-Commit the record, any accepted image and regenerated `docs/api/v1` files. Push the branch and open a pull request. Complete every applicable item in the PR template, including physical-device testing and rights declarations.
+Commit the source record and any accepted image. Push the branch and open a pull request. Complete every applicable item in the PR template, including physical-device testing and rights declarations. Running the generator locally is useful for inspection, but committing generated API files is not required: GitHub Actions rebuilds and publishes the library after merging to `main`.
 
 Automated checks validate the schema, semantic IDs, image constraints, duplicate IDs and generated API. Maintainers may request clearer provenance, stronger evidence or a merge with an existing record.
