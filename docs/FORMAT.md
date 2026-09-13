@@ -4,6 +4,8 @@
 
 The canonical record is UTF-8 JSON named `remote.irr.json`. It validates against `schema/open-ir-remote-v1.schema.json`. Unknown information must be represented explicitly and must never be inferred merely to satisfy an exporter.
 
+Whitespace is insignificant: formatted source records and compact API records are the same v1 format. Exporters may use compact JSON without renaming fields or removing required metadata. See [compact distribution and irdb comparison](COMPACTNESS.md).
+
 Required top-level fields are `format`, `format_version`, `record_kind`, `id`, `updated`, `remote`, `locale`, `commands`, `provenance` and `validation`.
 
 `id` is stable across renames and path corrections. Repository records use an `oir:` identifier. A third-party product creating an export before it knows the canonical library ID may use a UUID URN. `record_kind` distinguishes canonical library records, product exports, preserved legacy imports and documentation examples.

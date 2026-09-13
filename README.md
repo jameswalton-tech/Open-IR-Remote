@@ -53,6 +53,7 @@ A remote should not need several copies of the same information. Use shared defa
 Open IR Remote v1 uses `format_version: "1.0.0"`. Its [field and storage limits](docs/LIMITS.md) bound text, numeric values and collections, with up to 128 commands and 1 MiB of JSON per remote. These are import ceilings, not fixed memory allocations. Shared protocol and carrier settings can be inherited from record defaults.
 
 - [Format specification](docs/FORMAT.md)
+- [Compactness and comparison with irdb](docs/COMPACTNESS.md)
 - [Complete example device](docs/EXAMPLE_DEVICE.md)
 - [Receiver exports and configuration bindings](docs/RECEIVER_EXPORTS.md)
 - [JSON Schema](schema/open-ir-remote-v1.schema.json)

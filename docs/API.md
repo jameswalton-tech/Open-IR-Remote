@@ -35,4 +35,6 @@ const index = await response.json();
 
 GitHub Pages is the convenience distribution endpoint. The Git repository remains the source of truth.
 
+Published JSON is compact UTF-8 with a final newline; canonical repository records remain formatted for review. Parsers must not depend on indentation or line numbers. This preserves the v1 structure and every value while reducing transfer size. See [compactness measurements](COMPACTNESS.md). Index hashes cover the exact published bytes, so formatting-only changes can alter hashes without changing remote identity.
+
 Each index entry includes a SHA-256 for the individual JSON response, so clients can detect changes even when the calendar date is unchanged. In `library.json`, image paths are absolute URLs; in individual records they resolve relative to the record URL. Image identification notices do not grant an open redistribution licence. Signal records whose provenance says `unknown` also require a rights check by consumers before redistribution.

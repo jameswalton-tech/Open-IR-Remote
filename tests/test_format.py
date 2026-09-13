@@ -11,11 +11,18 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from validate import validate_record, MAX_RECORD_BYTES
-from build_api import build, compare_directories
+from build_api import build, compare_directories, encode_record
 from jsonschema import Draft202012Validator, FormatChecker
 
 
 class FormatTests(unittest.TestCase):
+    def test_compact_encoding_preserves_values(self):
+        value = {'label': 'Brightness + / éclair', 'parameters': {'value': 4294967295, 'code_hex': '0x0045'}, 'flags': [True, False]}
+        compact = encode_record(value)
+        self.assertEqual(json.loads(compact), value)
+        self.assertEqual(compact.count('\n'), 1)
+        self.assertLess(len(compact.encode('utf-8')), len(json.dumps(value, indent=2, ensure_ascii=False).encode('utf-8')))
+
     def setUp(self):
         self.record = json.loads((ROOT / 'examples/example-device/remote.irr.json').read_text(encoding='utf-8'))
 
