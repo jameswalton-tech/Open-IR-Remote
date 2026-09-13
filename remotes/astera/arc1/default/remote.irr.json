@@ -559,7 +559,7 @@
       "source_path": "Astera_ARC1_Remote/lightly-ir-remote-Astera ARC1.csv",
       "imported_at": "2026-09-12",
       "rights": "unknown",
-      "notes": "Imported from the existing Lightly Excel/CSV reading format. The source does not identify the IR protocol or carrier frequency."
+      "notes": "Imported from contributed CSV readings. The source does not identify the IR protocol or carrier frequency."
     }
   ],
   "validation": {
