@@ -1,0 +1,1481 @@
+{
+  "$schema": "../../../../schema/open-ir-remote-v1.schema.json",
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "record_kind": "canonical",
+  "id": "oir:sony:rm-pj1000:default",
+  "updated": "2026-09-13",
+  "remote": {
+    "name": "Sony RM-PJ1000",
+    "manufacturer": "Sony",
+    "model": "RM-PJ1000",
+    "variant": "default",
+    "device_types": [
+      "projector"
+    ],
+    "remote_model_number": "RM-PJ1000",
+    "controlled_devices": [
+      {
+        "manufacturer": "Sony",
+        "model": "VPH-D50",
+        "device_type": "projector"
+      }
+    ]
+  },
+  "locale": "en",
+  "commands": [
+    {
+      "id": "power.on",
+      "labels": {
+        "en": "Power_ON"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "power.off",
+      "labels": {
+        "en": "Power_OFF"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "status.on",
+      "labels": {
+        "en": "Status_ON"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000025"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "status.off",
+      "labels": {
+        "en": "Status_OFF"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000026"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "muting.pic",
+      "labels": {
+        "en": "Muting_PIC"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000024"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "muting.audio",
+      "labels": {
+        "en": "Muting_AUDIO"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000014"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "memory",
+      "labels": {
+        "en": "MEMORY"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000005E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "up",
+      "labels": {
+        "en": "Up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000035"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "down",
+      "labels": {
+        "en": "Down"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000036"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "left",
+      "labels": {
+        "en": "Left"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000034"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "right",
+      "labels": {
+        "en": "Right"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000033"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "labels": {
+        "en": "MENU"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000029"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "enter",
+      "labels": {
+        "en": "ENTER"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000005A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "reset",
+      "labels": {
+        "en": "RESET"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000007B"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "blkg",
+      "labels": {
+        "en": "BLKG"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000058"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "centr",
+      "labels": {
+        "en": "CENTR"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000049"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "rgb.size",
+      "labels": {
+        "en": "RGB_SIZE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000047"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "shift",
+      "labels": {
+        "en": "SHIFT"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000048"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "sharp.up",
+      "labels": {
+        "en": "Sharp_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000022"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "sharp.dn",
+      "labels": {
+        "en": "Sharp_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000023"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "hue.up",
+      "labels": {
+        "en": "Hue_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000020"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "hue.dn",
+      "labels": {
+        "en": "Hue_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000021"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "color.up",
+      "labels": {
+        "en": "Color_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000001A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "color.dn",
+      "labels": {
+        "en": "Color_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000001B"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.up",
+      "labels": {
+        "en": "Vol_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000012"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.dn",
+      "labels": {
+        "en": "Vol_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000013"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "light.on",
+      "labels": {
+        "en": "Light_ON"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000001C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "light.off",
+      "labels": {
+        "en": "Light_OFF"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000001D"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "normal",
+      "labels": {
+        "en": "Normal"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000007D"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "pattern",
+      "labels": {
+        "en": "Pattern"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000007E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "lcd.zoom.up",
+      "labels": {
+        "en": "Lcd_zoom_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000077"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "lcd.zoom.dn",
+      "labels": {
+        "en": "Lcd_zoom_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000078"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "lcd.shift.up",
+      "labels": {
+        "en": "Lcd_shift_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000072"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "lcd.shift.dn",
+      "labels": {
+        "en": "Lcd_shift_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000073"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "lcd.focus.up",
+      "labels": {
+        "en": "Lcd_focus_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000074"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "lcd.focus.dn",
+      "labels": {
+        "en": "Lcd_focus_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000075"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "input.select.video",
+      "labels": {
+        "en": "Input_select_video"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "input.select.select",
+      "labels": {
+        "en": "Input_select_select"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000005F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "a.index",
+      "labels": {
+        "en": "A_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002B"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "b.index",
+      "labels": {
+        "en": "B_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "c.index",
+      "labels": {
+        "en": "C_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000006F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "d.index",
+      "labels": {
+        "en": "D_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000070"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "1.index",
+      "labels": {
+        "en": "1_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000061"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "2.index",
+      "labels": {
+        "en": "2_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000062"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "3.index",
+      "labels": {
+        "en": "3_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000063"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "4.index",
+      "labels": {
+        "en": "4_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000064"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "5.index",
+      "labels": {
+        "en": "5_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000065"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "6.index",
+      "labels": {
+        "en": "6_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000066"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "7.index",
+      "labels": {
+        "en": "7_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000067"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "8.index",
+      "labels": {
+        "en": "8_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000068"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "9.index",
+      "labels": {
+        "en": "9_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000069"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "0.index",
+      "labels": {
+        "en": "0_Index"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000060"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "a.switcher",
+      "labels": {
+        "en": "A_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002B"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "b.switcher",
+      "labels": {
+        "en": "B_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "c.switcher",
+      "labels": {
+        "en": "C_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000006F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "d.switcher",
+      "labels": {
+        "en": "D_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000070"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "1.switcher",
+      "labels": {
+        "en": "1_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000000A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "2.switcher",
+      "labels": {
+        "en": "2_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000000B"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "3.switcher",
+      "labels": {
+        "en": "3_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000000C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "4.switcher",
+      "labels": {
+        "en": "4_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000000D"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "5.switcher",
+      "labels": {
+        "en": "5_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000000E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "6.switcher",
+      "labels": {
+        "en": "6_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000000F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "7.switcher",
+      "labels": {
+        "en": "7_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000010"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "8.switcher",
+      "labels": {
+        "en": "8_Switcher"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000011"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cut.off.r",
+      "labels": {
+        "en": "Cut_off_r"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000044"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cut.off.g",
+      "labels": {
+        "en": "Cut_off_g"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000045"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cut.off.b",
+      "labels": {
+        "en": "Cut_off_b"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000046"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cut.off.cent",
+      "labels": {
+        "en": "Cut_off_cent"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000002D"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cut.off.size",
+      "labels": {
+        "en": "Cut_off_size"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000004C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cut.off.lin",
+      "labels": {
+        "en": "Cut_off_lin"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000004D"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "adj.r",
+      "labels": {
+        "en": "Adj_r"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000041"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "adj.g",
+      "labels": {
+        "en": "Adj_g"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000042"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "adj.b",
+      "labels": {
+        "en": "Adj_b"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000043"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "adj.skew",
+      "labels": {
+        "en": "Adj_skew"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000004E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "adj.bow",
+      "labels": {
+        "en": "Adj_bow"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x0000004F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "adj.key",
+      "labels": {
+        "en": "Adj_key"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000050"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "wb.bias",
+      "labels": {
+        "en": "Wb_bias"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000053"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "wb.gain",
+      "labels": {
+        "en": "Wb_gain"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000052"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "wb.pin",
+      "labels": {
+        "en": "Wb_pin"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000051"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "wb.zone",
+      "labels": {
+        "en": "Wb_zone"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000056"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "focus.mg.focus",
+      "labels": {
+        "en": "Focus_mg_focus"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000054"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "focus.lens",
+      "labels": {
+        "en": "Focus_lens"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000055"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "position.dn",
+      "labels": {
+        "en": "Position_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000032"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "position.up",
+      "labels": {
+        "en": "Position_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000054",
+            "command_hex": "0x00000031"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "source_type": "upstream-reference",
+      "source_path": "https://github.com/Lucaslhm/Flipper-IRDB/blob/d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d/Projectors/Sony/Sony_RM_PJ1000.ir",
+      "source_revision": "d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d",
+      "imported_at": "2026-09-13",
+      "rights": "CC0-1.0",
+      "notes": "Flipper-IRDB contributors. File introduced in e1db0d40fcbe95ea02d8691a60cb95ed58ae320f after the upstream CC0 cutoff. Original source.ir SHA-256: 50aa5a17334bade4883a05b21cfd0e42d8b34399ffbbfb0db6a5d66851a9138f. Source comments are preserved in source.ir. No image rights are asserted."
+    }
+  ],
+  "validation": {
+    "status": "imported-unverified",
+    "issues": [
+      "Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred."
+    ]
+  },
+  "extensions": {
+    "flipper": {
+      "file_version": 1,
+      "parameter_encoding": "Four little-endian source bytes converted to unsigned numeric hexadecimal; protocol names unchanged."
+    }
+  },
+  "defaults": {
+    "protocol": "SIRC15"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../../schema/open-ir-remote-v1.schema.json",
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "record_kind": "canonical",
+  "id": "oir:dimplex:optiflame:default",
+  "updated": "2026-09-13",
+  "remote": {
+    "name": "Remote for Dimplex Optiflame (on/off)",
+    "manufacturer": "Dimplex",
+    "model": "Unknown",
+    "variant": "default",
+    "device_types": [
+      "fireplace"
+    ],
+    "controlled_devices": [
+      {
+        "manufacturer": "Dimplex",
+        "model": "Optiflame",
+        "device_type": "fireplace"
+      }
+    ]
+  },
+  "locale": "en",
+  "commands": [
+    {
+      "id": "fire.on",
+      "labels": {
+        "en": "Fire_on"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000000",
+            "command_hex": "0x00000040"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "fire.off",
+      "labels": {
+        "en": "Fire_off"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000000",
+            "command_hex": "0x00000015"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "source_type": "upstream-reference",
+      "source_path": "https://github.com/Lucaslhm/Flipper-IRDB/blob/d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d/Fireplaces/Dimplex/Dimplex_Optiflame_Fireplace.ir",
+      "source_revision": "d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d",
+      "imported_at": "2026-09-13",
+      "rights": "CC0-1.0",
+      "notes": "Flipper-IRDB contributors. File introduced in a1a7a987d1a880913ad3619319614409ed2d070f after the upstream CC0 cutoff. Original source.ir SHA-256: 2418323ead8f86a7c43341cbe4365d1f3cb4dfb9651e3a8eced16ae2f1de745e. Source comments are preserved in source.ir. No image rights are asserted."
+    }
+  ],
+  "validation": {
+    "status": "imported-unverified",
+    "issues": [
+      "Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred.",
+      "The source identifies the controlled equipment, not a printed handset model number.",
+      "This source has only fire on/off commands. Its comments list several Optiflame models; compatibility and any other functions remain unverified."
+    ]
+  },
+  "extensions": {
+    "flipper": {
+      "file_version": 1,
+      "parameter_encoding": "Four little-endian source bytes converted to unsigned numeric hexadecimal; protocol names unchanged."
+    }
+  },
+  "defaults": {
+    "protocol": "NEC"
+  }
+}

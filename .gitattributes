@@ -1,2 +1,4 @@
 * text=auto eol=lf
 *.webp binary
+# Keep archived signal files byte-for-byte identical to their upstream hashes.
+remotes/**/source.ir -text

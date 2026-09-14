@@ -1,0 +1,128 @@
+{
+  "repository": "https://github.com/Lucaslhm/Flipper-IRDB",
+  "revision": "d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d",
+  "licence_cutoff_commit": "2319685f2cbf0cd3f809609622cade14d24fb819",
+  "imported_at": "2026-09-13",
+  "entries": [
+    {
+      "source_path": "VCR/LG/LG DVX7900.ir",
+      "record_path": "remotes/lg/6711r1p073b/default/remote.irr.json",
+      "source_sha256": "ce9d5a26ef0f0df9416792638a3ad0fa5a39b7d5ebe467c5ab753de01d57f48a",
+      "introduced_commit": "cf838560a65b16d2b97a9082de0fd588114bcde8",
+      "introduced_date": "2026-01-02",
+      "manufacturer": "LG",
+      "model": "6711R1P073B",
+      "name": "LG 6711R1P073B",
+      "device_type": "dvd-vcr",
+      "controlled_model": "DVX7900"
+    },
+    {
+      "source_path": "TVs/ContinentalEdison/ContinentalEdison_CELD55SQLDV24B6.ir",
+      "record_path": "remotes/continental-edison/celd55sqldv24b6/default/remote.irr.json",
+      "source_sha256": "9b6d9d2261dac03538c4af87a05bc6242e9f6039c47cc3a05b7d98258475a4e1",
+      "introduced_commit": "c7d00dc8743ad48e82e6c94f3cd71e5bedb6ab29",
+      "introduced_date": "2026-04-02",
+      "manufacturer": "Continental Edison",
+      "model": "Unknown",
+      "name": "Remote for Continental Edison CELD55SQLDV24B6",
+      "device_type": "television",
+      "controlled_model": "CELD55SQLDV24B6"
+    },
+    {
+      "source_path": "TVs/Hotels/Hilton_Connected_Room_Remote.ir",
+      "record_path": "remotes/unknown/hilton-connected-room/default/remote.irr.json",
+      "source_sha256": "44a2f68b37682f5732d18f058c1f23f53fc50d7c005a80fc61627664f6d99365",
+      "introduced_commit": "75edf01cd1c61d87e2dbbf170743258073d4f205",
+      "introduced_date": "2026-02-25",
+      "manufacturer": "Unknown",
+      "model": "Unknown",
+      "name": "Hilton Connected Room remote",
+      "device_type": "set-top-box",
+      "controlled_model": "Hilton Connected Room edge computer"
+    },
+    {
+      "source_path": "Projectors/Sony/Sony_RM_PJ1000.ir",
+      "record_path": "remotes/sony/rm-pj1000/default/remote.irr.json",
+      "source_sha256": "50aa5a17334bade4883a05b21cfd0e42d8b34399ffbbfb0db6a5d66851a9138f",
+      "introduced_commit": "e1db0d40fcbe95ea02d8691a60cb95ed58ae320f",
+      "introduced_date": "2026-03-15",
+      "manufacturer": "Sony",
+      "model": "RM-PJ1000",
+      "name": "Sony RM-PJ1000",
+      "device_type": "projector",
+      "controlled_model": "VPH-D50"
+    },
+    {
+      "source_path": "Audio_and_Video_Receivers/Philips/Philips Soundbar-HTL2060_94.ir",
+      "record_path": "remotes/philips/htl2060-94/default/remote.irr.json",
+      "source_sha256": "b5ec5deba9c014f4bb7dfa343be3498efbe4ca7905788ebb66d99b70d9b7e966",
+      "introduced_commit": "3ae0c1473d9e96dd06fd33eeaea8d9b30b748b78",
+      "introduced_date": "2026-04-09",
+      "manufacturer": "Philips",
+      "model": "Unknown",
+      "name": "Remote for Philips HTL2060/94",
+      "device_type": "soundbar",
+      "controlled_model": "HTL2060/94"
+    },
+    {
+      "source_path": "Audio_and_Video_Receivers/Fosi_Audio/Fosi_Audio_ZD3.ir",
+      "record_path": "remotes/fosi-audio/zd3/default/remote.irr.json",
+      "source_sha256": "99371db1de55e84afe8578af78015b584c082bac956abe32b597414fd3a616f4",
+      "introduced_commit": "95dbd0f6cde9587fa9d3ea337eebbefbd4035e33",
+      "introduced_date": "2026-02-25",
+      "manufacturer": "Fosi Audio",
+      "model": "Unknown",
+      "name": "Remote for Fosi Audio ZD3",
+      "device_type": "audio-system",
+      "controlled_model": "ZD3"
+    },
+    {
+      "source_path": "Audio_and_Video_Receivers/Fossi Audio/Fossi_Audio_ZH3.ir",
+      "record_path": "remotes/fosi-audio/zh3/default/remote.irr.json",
+      "source_sha256": "02c6007caf743aa7d93571e443f005c9d7f4b6b15bbbac9ef6612add42b2915c",
+      "introduced_commit": "703192d23eb127c607e5374de85fe2ea8c7e0331",
+      "introduced_date": "2026-01-01",
+      "manufacturer": "Fosi Audio",
+      "model": "Unknown",
+      "name": "Remote for Fosi Audio ZH3",
+      "device_type": "audio-system",
+      "controlled_model": "ZH3"
+    },
+    {
+      "source_path": "Audio_and_Video_Receivers/Nakamichi/NAKAMICHI_RM_4TA.ir",
+      "record_path": "remotes/nakamichi/rm-4ta/default/remote.irr.json",
+      "source_sha256": "6d68098a6a2979cfd1069f9f83135a172f68b6709a92fab4ed3ae75637f871ca",
+      "introduced_commit": "886a37296bc6d18f1e479cba30615afeb187a9ad",
+      "introduced_date": "2025-11-05",
+      "manufacturer": "Nakamichi",
+      "model": "Unknown",
+      "name": "Nakamichi RM-4TA source listing",
+      "device_type": "av-receiver",
+      "controlled_model": null
+    },
+    {
+      "source_path": "DVB-T/Tesla/Tesla_TE-300.ir",
+      "record_path": "remotes/tesla/te-300/default/remote.irr.json",
+      "source_sha256": "4868e24dab86ab48ddea4f393407f964f6888a5c004ddef9296bf2600267b8ba",
+      "introduced_commit": "93dd5ce700b84a8c1dee84b228267b23b35bada1",
+      "introduced_date": "2025-09-20",
+      "manufacturer": "Tesla",
+      "model": "Unknown",
+      "name": "Remote for Tesla TE-300",
+      "device_type": "set-top-box",
+      "controlled_model": "TE-300"
+    },
+    {
+      "source_path": "Fireplaces/Dimplex/Dimplex_Optiflame_Fireplace.ir",
+      "record_path": "remotes/dimplex/optiflame/default/remote.irr.json",
+      "source_sha256": "2418323ead8f86a7c43341cbe4365d1f3cb4dfb9651e3a8eced16ae2f1de745e",
+      "introduced_commit": "a1a7a987d1a880913ad3619319614409ed2d070f",
+      "introduced_date": "2026-02-25",
+      "manufacturer": "Dimplex",
+      "model": "Unknown",
+      "name": "Remote for Dimplex Optiflame (on/off)",
+      "device_type": "fireplace",
+      "controlled_model": "Optiflame"
+    }
+  ]
+}

@@ -1,0 +1,761 @@
+{
+  "$schema": "../../../../schema/open-ir-remote-v1.schema.json",
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "record_kind": "canonical",
+  "id": "oir:nakamichi:rm-4ta:default",
+  "updated": "2026-09-13",
+  "remote": {
+    "name": "Nakamichi RM-4TA source listing",
+    "manufacturer": "Nakamichi",
+    "model": "Unknown",
+    "variant": "default",
+    "device_types": [
+      "av-receiver"
+    ]
+  },
+  "locale": "en",
+  "commands": [
+    {
+      "id": "power",
+      "labels": {
+        "en": "Power"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000000"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "mute",
+      "labels": {
+        "en": "Mute"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000001"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.dn",
+      "labels": {
+        "en": "Vol_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000003"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.up",
+      "labels": {
+        "en": "Vol_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000002"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "speakers.a",
+      "labels": {
+        "en": "Speakers_A"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000040"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "speakers.b",
+      "labels": {
+        "en": "Speakers_B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000041"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "speakers.ab",
+      "labels": {
+        "en": "Speakers_AB"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000042"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "speakers.off",
+      "labels": {
+        "en": "Speakers_OFF"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000043"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "phono",
+      "labels": {
+        "en": "Phono"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000044"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd",
+      "labels": {
+        "en": "CD"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000045"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tuner",
+      "labels": {
+        "en": "Tuner"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000046"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "video.1",
+      "labels": {
+        "en": "Video_1"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000047"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "video.2",
+      "labels": {
+        "en": "Video_2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000048"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.1",
+      "labels": {
+        "en": "Tape_1"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000049"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.2",
+      "labels": {
+        "en": "Tape_2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x0000004A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.3.vcr",
+      "labels": {
+        "en": "Tape_3_VCR"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x0000004B"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "am",
+      "labels": {
+        "en": "AM"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000006"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "fm",
+      "labels": {
+        "en": "FM"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000007"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "preset.dn",
+      "labels": {
+        "en": "Preset_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000013"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "preset.up",
+      "labels": {
+        "en": "Preset_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000012"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "seek.dn",
+      "labels": {
+        "en": "Seek_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000005"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "seek.up",
+      "labels": {
+        "en": "Seek_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000004"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.rw",
+      "labels": {
+        "en": "CD_rw"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C1"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.ff",
+      "labels": {
+        "en": "CD_ff"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C7"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.bk",
+      "labels": {
+        "en": "CD_bk"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C2"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.fw",
+      "labels": {
+        "en": "CD_fw"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C8"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "disc.scan",
+      "labels": {
+        "en": "Disc_Scan"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x00000093"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.stop",
+      "labels": {
+        "en": "CD_Stop"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C5"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.pause",
+      "labels": {
+        "en": "CD_Pause"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000CB"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.play",
+      "labels": {
+        "en": "CD_Play"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C6"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.random",
+      "labels": {
+        "en": "CD_Random"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000DB"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "cd.disc",
+      "labels": {
+        "en": "CD_Disc"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x0000008F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.azimuth.bk",
+      "labels": {
+        "en": "Tape_Azimuth_bk"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x0000005A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.azimuth.fw",
+      "labels": {
+        "en": "Tape_Azimuth_fw"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000059"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.rw",
+      "labels": {
+        "en": "Tape_rw"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000055"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.ff",
+      "labels": {
+        "en": "Tape_ff"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C7"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.bk",
+      "labels": {
+        "en": "Tape_bk"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00000067",
+            "command_hex": "0x000000C2"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.fw",
+      "labels": {
+        "en": "Tape_fw"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000015"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.rec",
+      "labels": {
+        "en": "Tape_Rec"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000014"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.cue",
+      "labels": {
+        "en": "Tape_Cue"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000056"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.stop",
+      "labels": {
+        "en": "Tape_Stop"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000017"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "tape.pause",
+      "labels": {
+        "en": "Tape_Pause"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x0000005C",
+            "command_hex": "0x00000016"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "source_type": "upstream-reference",
+      "source_path": "https://github.com/Lucaslhm/Flipper-IRDB/blob/d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d/Audio_and_Video_Receivers/Nakamichi/NAKAMICHI_RM_4TA.ir",
+      "source_revision": "d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d",
+      "imported_at": "2026-09-13",
+      "rights": "CC0-1.0",
+      "notes": "Flipper-IRDB contributors. File introduced in 886a37296bc6d18f1e479cba30615afeb187a9ad after the upstream CC0 cutoff. Original source.ir SHA-256: 6d68098a6a2979cfd1069f9f83135a172f68b6709a92fab4ed3ae75637f871ca. Source comments are preserved in source.ir. No image rights are asserted."
+    }
+  ],
+  "validation": {
+    "status": "imported-unverified",
+    "issues": [
+      "Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred.",
+      "The source identifies the controlled equipment, not a printed handset model number.",
+      "The source calls this RM-4TA but does not clearly distinguish handset and equipment identity. The handset model is left unknown pending confirmation."
+    ]
+  },
+  "extensions": {
+    "flipper": {
+      "file_version": 1,
+      "parameter_encoding": "Four little-endian source bytes converted to unsigned numeric hexadecimal; protocol names unchanged."
+    }
+  },
+  "defaults": {
+    "protocol": "NEC"
+  }
+}

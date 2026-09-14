@@ -1,0 +1,461 @@
+{
+  "$schema": "../../../../schema/open-ir-remote-v1.schema.json",
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "record_kind": "canonical",
+  "id": "oir:continental-edison:celd55sqldv24b6:default",
+  "updated": "2026-09-13",
+  "remote": {
+    "name": "Remote for Continental Edison CELD55SQLDV24B6",
+    "manufacturer": "Continental Edison",
+    "model": "Unknown",
+    "variant": "default",
+    "device_types": [
+      "television"
+    ],
+    "controlled_devices": [
+      {
+        "manufacturer": "Continental Edison",
+        "model": "CELD55SQLDV24B6",
+        "device_type": "television"
+      }
+    ]
+  },
+  "locale": "en",
+  "commands": [
+    {
+      "id": "power",
+      "labels": {
+        "en": "Power"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000EA15"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.up",
+      "labels": {
+        "en": "Vol_up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E41B"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "vol.dn",
+      "labels": {
+        "en": "Vol_dn"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E51A"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "mute",
+      "labels": {
+        "en": "Mute"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E916"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "ch.next",
+      "labels": {
+        "en": "Ch_next"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E619"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "up",
+      "labels": {
+        "en": "Up"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000F30C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "down",
+      "labels": {
+        "en": "Down"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000F20D"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "right",
+      "labels": {
+        "en": "Right"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000F10E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "left",
+      "labels": {
+        "en": "Left"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000F00F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "ok",
+      "labels": {
+        "en": "OK"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000EE11"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "input",
+      "labels": {
+        "en": "Input"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000ED12"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "satellite",
+      "labels": {
+        "en": "Satellite"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E718"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "usb",
+      "labels": {
+        "en": "USB"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000B34C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "labels": {
+        "en": "Settings"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E817"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "app.menu",
+      "labels": {
+        "en": "App_Menu"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000DA25"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "account",
+      "labels": {
+        "en": "Account"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000DE21"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "labels": {
+        "en": "Home"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000BD42"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "exit",
+      "labels": {
+        "en": "Exit"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000CD32"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "record",
+      "labels": {
+        "en": "Record"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000DB24"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "netflix",
+      "labels": {
+        "en": "Netflix"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000AF50"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "youtube",
+      "labels": {
+        "en": "YouTube"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000B04F"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "prime.video",
+      "labels": {
+        "en": "Prime_Video"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E31C"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "disney.plus",
+      "labels": {
+        "en": "Disney_Plus"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000E11E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    },
+    {
+      "id": "pair.remote",
+      "labels": {
+        "en": "Pair_Remote"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "address_hex": "0x00007F00",
+            "command_hex": "0x0000B14E"
+          },
+          "primary": true,
+          "source_complete": true
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "source_type": "upstream-reference",
+      "source_path": "https://github.com/Lucaslhm/Flipper-IRDB/blob/d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d/TVs/ContinentalEdison/ContinentalEdison_CELD55SQLDV24B6.ir",
+      "source_revision": "d126fb1b6f1e114c52b4a8c19839ea65e3a9c24d",
+      "imported_at": "2026-09-13",
+      "rights": "CC0-1.0",
+      "notes": "Flipper-IRDB contributors. File introduced in c7d00dc8743ad48e82e6c94f3cd71e5bedb6ab29 after the upstream CC0 cutoff. Original source.ir SHA-256: 9b6d9d2261dac03538c4af87a05bc6242e9f6039c47cc3a05b7d98258475a4e1. Source comments are preserved in source.ir. No image rights are asserted."
+    }
+  ],
+  "validation": {
+    "status": "imported-unverified",
+    "issues": [
+      "Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred.",
+      "The source identifies the controlled equipment, not a printed handset model number."
+    ]
+  },
+  "extensions": {
+    "flipper": {
+      "file_version": 1,
+      "parameter_encoding": "Four little-endian source bytes converted to unsigned numeric hexadecimal; protocol names unchanged."
+    }
+  },
+  "defaults": {
+    "protocol": "NECext"
+  }
+}
