@@ -68,14 +68,6 @@ Open IR Remote v1 uses `format_version: "1.0.0"`. Its [field and storage limits]
 - [Contribution guide](CONTRIBUTING.md)
 - [Project Wiki](https://github.com/jameswalton-tech/Open-IR-Remote/wiki)
 
-## Thanks to irdb
-
-[irdb](https://github.com/probonopd/irdb), maintained by probonopd and its contributors, is a great resource for discovering and reusing infrared codes. Its compact decoded-code CSV files are easy to inspect and contribute to, and its protocol-based approach avoids storing long timing captures when decoded parameters will do. Credit to that community for the database and for informing our compactness work.
-
-Different jobs need different information. An irdb code file is useful for looking up signals, but transferring a learned remote between devices can also require handset identity, stable button IDs, capture details and receiver-specific bindings. Some of irdb's context lives in its directory structure; a standalone transfer needs to carry that context with it. Open IR Remote focuses on that self-contained exchange. This does not make irdb unsuitable for device integrations—it means applications need an agreed mapping or additional metadata for those transfers.
-
-See [the comparison](docs/COMPACTNESS.md). This acknowledgement does not imply affiliation or endorsement, and it does not change the licence of any upstream data.
-
 ## Licensing
 
 Thanks also to [Flipper-IRDB and its contributors](https://github.com/Lucaslhm/Flipper-IRDB) for the selected community captures. The [import review](sources/flipper-irdb/README.md) lists source credits, licence evidence and the limits of these untested imports.
