@@ -156,8 +156,13 @@ def validate_record(path, errors, validator=None):
 def main():
     errors = []
     schema = json.loads((ROOT / "schema/open-ir-remote-v1.schema.json").read_text(encoding="utf-8"))
-    records = list(ROOT.glob("remotes/**/remote.irr.json"))
-    examples = list(ROOT.glob("examples/**/remote.irr.json"))
+    records = list(ROOT.glob("remotes/**/remote.irr"))
+    examples = list(ROOT.glob("examples/**/remote.irr"))
+    for folder in ('remotes', 'examples'):
+        for obsolete in (ROOT / folder).rglob('*.irr.json'):
+            fail(f'{obsolete}: rename this record to use the .irr extension', errors)
+    if not records or not examples:
+        fail('Expected library records and examples using the .irr extension', errors)
     Draft202012Validator.check_schema(schema)
     published_schema = json.loads((ROOT / "docs/schema/open-ir-remote-v1.schema.json").read_text(encoding="utf-8"))
     if published_schema != schema:

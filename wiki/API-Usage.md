@@ -25,7 +25,7 @@ Cache responses and use conditional HTTP requests. Keep the last validated libra
 Individual records and their images use:
 
 ```text
-/api/v1/remotes/<manufacturer>/<model>/<variant>/remote.irr.json
+/api/v1/remotes/<manufacturer>/<model>/<variant>/remote.irr
 /api/v1/remotes/<manufacturer>/<model>/<variant>/remote.webp
 ```
 

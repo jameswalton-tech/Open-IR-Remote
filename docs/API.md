@@ -7,10 +7,12 @@ Open IR Remote publishes a static, versioned JSON API through GitHub Pages.
 ```text
 GET /api/v1/index.json
 GET /api/v1/library.json
-GET /api/v1/remotes/<manufacturer>/<model>/<variant>/remote.irr.json
+GET /api/v1/remotes/<manufacturer>/<model>/<variant>/remote.irr
 ```
 
 The index is the recommended polling target. It contains the library update date, record count, lightweight metadata and canonical URLs. Download `library.json` only when an application needs every full record at once.
+
+Individual remote downloads use `.irr` and contain UTF-8 JSON. The manifest and library bundle keep their `.json` extensions. Follow the manifest URLs rather than constructing filenames. Static hosts may serve `.irr` as `application/octet-stream`; clients should parse the response as JSON and validate the record instead of requiring a JSON Content-Type header. Import file pickers should include `.irr`.
 
 `index.json` is the library manifest. It lists every published remote, not developer examples. Use `id` as the cache key, `sha256` as the change detector and `url` as the download location. The `updated` date is informational: two changes on one day can have the same date but different hashes.
 

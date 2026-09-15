@@ -11,7 +11,7 @@ schema=json.loads((Path(__file__).resolve().parents[1]/'vendor/schema/open-ir-re
 validator=Draft202012Validator(schema,format_checker=FormatChecker())
 results=[]
 with tempfile.TemporaryDirectory() as tmp:
-    path=Path(tmp)/'remote.irr.json'
+    path=Path(tmp)/'remote.irr'
     for text in json.load(sys.stdin):
         path.write_bytes(text.encode('utf-8'))
         errors=[]

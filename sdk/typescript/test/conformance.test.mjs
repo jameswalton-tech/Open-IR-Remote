@@ -64,7 +64,7 @@ test('full file validation checks synthetic image assets; browser reports them u
     const imagePath=join(directory,'remote.webp');execFileSync('python',['-c',script,imagePath]);
     const bytes=await readFile(imagePath),{createHash}=await import('node:crypto');
     const r=fixture();r.image={path:'remote.webp',media_type:'image/webp',width_px:240,height_px:240,size_bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex'),background:'plain-white',rights:{basis:'public-domain',holder:'Synthetic test',notice:'Generated solid white fixture'},alt:'Synthetic white square'};
-    const path=join(directory,'remote.irr.json');await writeFile(path,JSON.stringify(r));
+    const path=join(directory,'remote.irr');await writeFile(path,JSON.stringify(r));
     assert.equal(validate(r).assets,'unchecked');assert.equal((await validateFile(path)).valid,true);
     await rm(imagePath);assert.equal((await validateFile(path)).valid,false);
   }finally{await rm(directory,{recursive:true,force:true});}

@@ -4,7 +4,7 @@ import {tryImportIrdb,restoreIrdbSource} from '../dist/irdb.js';
 
 // This file contains invented readings for API demonstration. They are not a
 // capture from a real handset and must not be used as a playback qualification.
-const text=await readFile(new URL('./remote.irr.json',import.meta.url),'utf8');
+const text=await readFile(new URL('./remote.irr',import.meta.url),'utf8');
 try {
   const remote=parse(text);
   const originalId=remote.commands[0].id;

@@ -12,7 +12,7 @@ REMOTE = ROOT / 'remotes/generic/rgb-led-24-key/esphome-ef00'
 
 class RgbLedSourceTests(unittest.TestCase):
     def setUp(self):
-        self.record = json.loads((REMOTE / 'remote.irr.json').read_text(encoding='utf-8'))
+        self.record = json.loads((REMOTE / 'remote.irr').read_text(encoding='utf-8'))
 
     def test_archived_source_hash(self):
         source = (REMOTE / 'source/esphome_rgb_led_remote.yaml').read_bytes()

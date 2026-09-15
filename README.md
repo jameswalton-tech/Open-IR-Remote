@@ -32,11 +32,11 @@ Run `npm ci` and `npm test` from `sdk/typescript` after installing the Python de
 ## Repo layout
 
 ```text
-remotes/<manufacturer>/<model>/<variant>/remote.irr.json
+remotes/<manufacturer>/<model>/<variant>/remote.irr
 schema/open-ir-remote-v1.schema.json
 docs/api/v1/index.json
 docs/api/v1/library.json
-examples/example-device/remote.irr.json
+examples/example-device/remote.irr
 ```
 
 `remote.name` is required and identifies the physical handset/emitter device. Printed button text belongs in localized labels; command IDs remain stable for software integrations.
@@ -44,8 +44,8 @@ examples/example-device/remote.irr.json
 ## Adding a new controller
 
 1. Fork this repository.
-2. Copy the [complete example](examples/example-device/remote.irr.json).
-3. Create `remotes/<manufacturer>/<model>/<variant>/remote.irr.json`.
+2. Copy the [complete example](examples/example-device/remote.irr).
+3. Create `remotes/<manufacturer>/<model>/<variant>/remote.irr`.
 4. Optionally add `remote.webp` following the [image rules](CONTRIBUTING.md#images), with its source and rights information.
 5. Install `jsonschema` and `pillow`, then run `python tools/validate.py`, `python -m unittest discover -s tests -v` and `python tools/build_api.py`.
 6. Open a pull request using the supplied template.
