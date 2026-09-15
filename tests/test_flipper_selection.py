@@ -9,14 +9,14 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from import_flipper_selection import make_record, parse_source, read_u32
+from import_flipper_selection import load_selection, make_record, parse_source, read_u32
 from build_api import build
 
 
 class FlipperSelectionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.manifest = json.loads((ROOT / 'sources/flipper-irdb/selection.json').read_text(encoding='utf-8'))
+        cls.manifest = load_selection()
 
     def test_reviewed_batch_and_reproducibility(self):
         self.assertEqual(len(self.manifest['entries']), 10)

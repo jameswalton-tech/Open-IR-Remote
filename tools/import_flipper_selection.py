@@ -2,7 +2,7 @@
 
 This is a reviewed batch importer, not a general raw-signal converter. Unsupported
 input fails instead of silently omitting a button or inventing a trailing gap.
-The selection file owns handset identities; equipment model names are not used
+Existing records own handset identities; equipment model names are not used
 as handset model numbers unless the source explicitly identifies them that way.
 """
 import argparse
@@ -10,9 +10,50 @@ import hashlib
 import json
 import re
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_selection():
+    entries = []
+    manifests = set()
+    repository = 'https://github.com/Lucaslhm/Flipper-IRDB'
+    for source in sorted((ROOT / 'remotes').glob('**/source.ir')):
+        path = source.with_name('remote.irr.json')
+        record = json.loads(path.read_text(encoding='utf-8'))
+        provenance = [p for p in record['provenance'] if p.get('source_path', '').startswith(repository + '/blob/')]
+        if not provenance:
+            continue
+        if len(provenance) != 1:
+            raise ValueError(f'Ambiguous source provenance: {path}')
+        evidence = provenance[0]
+        revision = evidence['source_revision']
+        prefix = f'{repository}/blob/{revision}/'
+        if not evidence['source_path'].startswith(prefix):
+            raise ValueError(f'Source revision mismatch: {path}')
+        added = re.search(r'File introduced in ([0-9a-f]{40}) after', evidence['notes'])
+        fingerprint = re.search(r'SHA-256: ([0-9a-f]{64})', evidence['notes'])
+        if not added or not fingerprint:
+            raise ValueError(f'Missing source evidence: {path}')
+        remote = record['remote']
+        devices = remote.get('controlled_devices', [])
+        entries.append({
+            'record_path': path.relative_to(ROOT).as_posix(),
+            'source_path': unquote(evidence['source_path'][len(prefix):]),
+            'source_sha256': fingerprint[1],
+            'introduced_commit': added[1],
+            'manufacturer': remote['manufacturer'],
+            'model': remote['model'],
+            'name': remote['name'],
+            'device_type': remote['device_types'][0],
+            'controlled_model': devices[0]['model'] if devices else None,
+        })
+        manifests.add((revision, evidence['imported_at']))
+    if len(manifests) != 1:
+        raise ValueError('Expected one reviewed source snapshot')
+    revision, imported_at = manifests.pop()
+    return {'repository': repository, 'revision': revision, 'imported_at': imported_at, 'entries': entries}
 
 
 def parse_source(text):
@@ -117,7 +158,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check',action='store_true',help='Check reproducibility without writing records')
     args = parser.parse_args()
-    manifest = json.loads((ROOT/'sources/flipper-irdb/selection.json').read_text(encoding='utf-8'))
+    manifest = load_selection()
     for entry in manifest['entries']:
         path = ROOT/entry['record_path']
         record = make_record(entry,manifest)
