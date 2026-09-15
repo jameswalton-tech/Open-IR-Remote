@@ -547,7 +547,7 @@
   "extensions": {
     "org.openir.sdk.irdb": {
       "header": "strict",
-      "identity_notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "license_text": [
         "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
         "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
@@ -684,7 +684,14 @@
         [
           "functionname,protocol,device,subdevice,function\nGREEN +,NEC1,2,189,0\nBLUE +,NEC1,2,189,1\nSOUND MODE,NEC1,2,189,2\nGREEN -,NEC1,2,189,3\nBLUE -,NEC1,2,189,4\nWHITE,NEC1,2,189,5\nMEMORY 2,NEC1,2,189,6\nMEMORY 3,NEC1,2,189,7\nMEMORY 4,NEC1,2,189,8\nMEMORY 6,NEC1,2,189,9\nPAUSE,NEC1,2,189,10\nSTEP,NEC1,2,189,11\n100 %,NEC1,2,189,13\nRED +,NEC1,2,189,14\nMEMORY 1,NEC1,2,189,15\nSLEEP TIMER,NEC1,2,189,16\nCOLOR,NEC1,2,189,17\nFAST SPEED (1 SEC),NEC1,2,189,19\nPOWER: OFF,NEC1,2,189,20\nFADE,NEC1,2,189,21\nMEMORY 7,NEC1,2,189,22\nMEMORY,NEC1,2,189,23\nSLOW SPEED (60 SEC),NEC1,2,189,24\nPOWER: ON,NEC1,2,189,25\nMEMORY 5,NEC1,2,189,26\n25%,NEC1,2,189,27\nMEDIUM SPEED (5 SEC),NEC1,2,189,28\n75%,NEC1,2,189,29\n50%,NEC1,2,189,30\nRED -,NEC1,2,189,31\n"
         ]
-      ]
+      ],
+      "source_tree": {
+        "path": "codes/Cyron/Lighting Controller/2,189.csv",
+        "manufacturer": "Cyron",
+        "device_label": "Lighting Controller",
+        "code_set": "2,189",
+        "identity_basis": "IRDB source directory; not a printed handset model"
+      }
     }
   },
   "format": "open-ir-remote",
@@ -694,7 +701,7 @@
   "provenance": [
     {
       "imported_at": "2026-09-15",
-      "notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
       "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/Cyron/Lighting%20Controller/2%2C189.csv",
       "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
