@@ -53,6 +53,15 @@ class FlipperSelectionTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 read_u32(value)
 
+    def test_hilton_brand_preserves_identity_and_equipment_metadata(self):
+        entry = next(e for e in self.manifest['entries'] if 'hilton-connected-room' in e['record_path'])
+        record = make_record(entry, self.manifest)
+        self.assertEqual(record['remote']['manufacturer'], 'Hilton')
+        self.assertEqual(record['id'], 'oir:unknown:hilton-connected-room:default')
+        self.assertEqual(record['remote']['controlled_devices'][0]['manufacturer'], 'Unknown')
+        self.assertEqual(record['updated'], '2026-09-15')
+        self.assertEqual(record['provenance'][0]['imported_at'], '2026-09-13')
+
     def test_unsupported_input_is_not_silently_dropped(self):
         valid = 'Filetype: IR signals file\nVersion: 1\nname: Power\ntype: parsed\nprotocol: NEC\naddress: 00 00 00 00\ncommand: 01 00 00 00\n'
         for invalid in (valid.replace('parsed', 'raw'), valid + 'command: 02 00 00 00\n', valid.replace('Version: 1', 'Version: 2'), valid.replace('protocol: NEC\n', ''), valid.replace('name: Power', 'name:')):

@@ -40,6 +40,7 @@ def load_selection():
         devices = remote.get('controlled_devices', [])
         entries.append({
             'record_path': path.relative_to(ROOT).as_posix(),
+            'updated': record['updated'],
             'source_path': unquote(evidence['source_path'][len(prefix):]),
             'source_sha256': fingerprint[1],
             'introduced_commit': added[1],
@@ -48,6 +49,7 @@ def load_selection():
             'name': remote['name'],
             'device_type': remote['device_types'][0],
             'controlled_model': devices[0]['model'] if devices else None,
+            'controlled_manufacturer': devices[0]['manufacturer'] if devices else None,
         })
         manifests.add((revision, evidence['imported_at']))
     if len(manifests) != 1:
@@ -130,9 +132,9 @@ def make_record(entry, manifest):
     else:
         remote['remote_model_number'] = entry['model']
     if entry['controlled_model']:
-        remote['controlled_devices'] = [{'manufacturer':entry['manufacturer'],'model':entry['controlled_model'],'device_type':entry['device_type']}]
+        remote['controlled_devices'] = [{'manufacturer':entry['controlled_manufacturer'],'model':entry['controlled_model'],'device_type':entry['device_type']}]
     if 'Hilton' in entry['name']:
-        issues.append('Upstream describes a Connected Room edge computer, not direct control of every hotel TV. Hilton is a service brand here; handset manufacturer and model are unknown. Compatibility with other rooms is not established.')
+        issues.append('Upstream describes a Connected Room edge computer, not direct control of every hotel TV. The handset is listed under the Hilton brand; its printed model number is unknown. Compatibility with other rooms is not established.')
     if entry['manufacturer'] == 'Nakamichi':
         issues.append('The source calls this RM-4TA but does not clearly distinguish handset and equipment identity. The handset model is left unknown pending confirmation.')
     if entry['manufacturer'] == 'Dimplex':
@@ -151,6 +153,7 @@ def make_record(entry, manifest):
         record['defaults'] = {'protocol':next(iter(protocols))}
         for command in commands:
             del command['signals'][0]['protocol']
+    record['updated'] = entry['updated']
     return record
 
 

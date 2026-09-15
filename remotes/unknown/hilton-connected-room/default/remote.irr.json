@@ -4,10 +4,10 @@
   "format_version": "1.0.0",
   "record_kind": "canonical",
   "id": "oir:unknown:hilton-connected-room:default",
-  "updated": "2026-09-13",
+  "updated": "2026-09-15",
   "remote": {
     "name": "Hilton Connected Room remote",
-    "manufacturer": "Unknown",
+    "manufacturer": "Hilton",
     "model": "Unknown",
     "variant": "default",
     "device_types": [
@@ -328,7 +328,7 @@
     "issues": [
       "Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred.",
       "The source identifies the controlled equipment, not a printed handset model number.",
-      "Upstream describes a Connected Room edge computer, not direct control of every hotel TV. Hilton is a service brand here; handset manufacturer and model are unknown. Compatibility with other rooms is not established."
+      "Upstream describes a Connected Room edge computer, not direct control of every hotel TV. The handset is listed under the Hilton brand; its printed model number is unknown. Compatibility with other rooms is not established."
     ]
   },
   "extensions": {

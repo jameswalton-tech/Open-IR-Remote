@@ -46,8 +46,8 @@ examples/example-device/remote.irr.json
 1. Fork this repository.
 2. Copy the [complete example](examples/example-device/remote.irr.json).
 3. Create `remotes/<manufacturer>/<model>/<variant>/remote.irr.json`.
-4. Add an image you have permission to use or created yourself `remote.webp` that meets the image rules.
-5. Install `jsonschema` and `pillow`, then run `python tools/validate.py` and `python tools/build_api.py`. (An ai generated tool that checks the format).
+4. Optionally add `remote.webp` following the [image rules](CONTRIBUTING.md#images), with its source and rights information.
+5. Install `jsonschema` and `pillow`, then run `python tools/validate.py`, `python -m unittest discover -s tests -v` and `python tools/build_api.py`.
 6. Open a pull request using the supplied template.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full submission and review process.
