@@ -70,7 +70,7 @@ Open IR Remote v1 uses `format_version: "1.0.0"`. Its [field and storage limits]
 
 ## Licensing
 
-Thanks also to [Flipper-IRDB and its contributors](https://github.com/Lucaslhm/Flipper-IRDB) for the selected community captures. The [import review](sources/flipper-irdb/README.md) lists source credits, licence evidence and the limits of these untested imports.
+Thanks also to [Flipper-IRDB and its contributors](https://github.com/Lucaslhm/Flipper-IRDB) for the selected community captures. Source credits and validation status are recorded with each imported remote.
 
 Repository software is licensed under GPL-3.0 [LICENSE](LICENSE). The format specification is published under CC0-1.0. Remote data and images require explicit record-level rights information; see [DATA-LICENSE.md](DATA-LICENSE.md).
 
