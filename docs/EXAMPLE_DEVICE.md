@@ -1,6 +1,6 @@
 # Complete example device
 
-The repository includes a fictional, rights-clear example at `examples/example-device/remote.irr.json`. It is deliberately not added to the public API index.
+The repository includes a fictional, rights-clear example at `examples/example-device/remote.irr`. It is deliberately not added to the public API index.
 
 Use it as a submission template. It includes a decoded command, a raw command, record defaults, localized labels, provenance and validation evidence. Replace every fictional value with observed data before submitting a real remote.
 
@@ -15,8 +15,8 @@ The key rules demonstrated are:
 - provenance and validation are separate;
 - the documentation example is excluded from the live library.
 
-See the [complete JSON file](../examples/example-device/remote.irr.json).
+See the [complete JSON file](../examples/example-device/remote.irr).
 
-For receiver developers, a separate [receiver-export example](../examples/receiver-export/remote.irr.json) shows a stable handset command linked to a vendor-owned slot and action. Read the [implementation guide](RECEIVER_EXPORTS.md). Both examples are validated but excluded from the discovery index and full-library download.
+For receiver developers, a separate [receiver-export example](../examples/receiver-export/remote.irr) shows a stable handset command linked to a vendor-owned slot and action. Read the [implementation guide](RECEIVER_EXPORTS.md). Both examples are validated but excluded from the discovery index and full-library download.
 
 The short raw sequence illustrates the structure only; it is not a captured NEC brightness command. Neither command is a transmission fixture for a real device. Protocol-specific integer parameters must fit the documented range; wider exact values can use `0x`-prefixed strings under a protocol-defined `_hex` key. Do not convert or discard imported hexadecimal source readings just to save a few bytes.

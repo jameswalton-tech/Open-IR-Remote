@@ -2,7 +2,9 @@
 
 ## Canonical file
 
-The canonical record is UTF-8 JSON named `remote.irr.json`. It validates against `schema/open-ir-remote-v1.schema.json`. Unknown information must be represented explicitly and must never be inferred merely to satisfy an exporter.
+The canonical record is UTF-8 JSON named `remote.irr`. It validates against `schema/open-ir-remote-v1.schema.json`. Unknown information must be represented explicitly and must never be inferred merely to satisfy an exporter.
+
+Exporters should use the `.irr` extension, for example `living-room.irr`. This is a filename change, not a new encoding or schema version. Importers must parse the JSON and validate its `format` and `format_version`; a filename alone does not establish validity. Applications may accept older `.irr.json` files for compatibility, but new exports and repository submissions use `.irr`.
 
 Whitespace is insignificant: formatted source records and compact API records are the same v1 format. Exporters may use compact JSON without renaming fields or removing required metadata. See [compact distribution and irdb comparison](COMPACTNESS.md).
 

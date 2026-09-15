@@ -20,7 +20,7 @@ def load_selection():
     manifests = set()
     repository = 'https://github.com/Lucaslhm/Flipper-IRDB'
     for source in sorted((ROOT / 'remotes').glob('**/source.ir')):
-        path = source.with_name('remote.irr.json')
+        path = source.with_name('remote.irr')
         record = json.loads(path.read_text(encoding='utf-8'))
         provenance = [p for p in record['provenance'] if p.get('source_path', '').startswith(repository + '/blob/')]
         if not provenance:

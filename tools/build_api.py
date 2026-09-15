@@ -23,7 +23,7 @@ def encode_record(value):
 
 def read_records():
     records = []
-    for source in sorted(REMOTE_ROOT.glob("**/remote.irr.json")):
+    for source in sorted(REMOTE_ROOT.glob("**/remote.irr")):
         record = json.loads(source.read_text(encoding="utf-8"))
         record['$schema'] = 'https://jameswalton-tech.github.io/Open-IR-Remote/schema/open-ir-remote-v1.schema.json'
         relative_dir = source.parent.relative_to(REMOTE_ROOT)
@@ -41,7 +41,7 @@ def build(destination: Path):
     complete_records = []
     for relative_dir, record in records:
         record = json.loads(json.dumps(record))
-        api_relative = Path("remotes") / relative_dir / "remote.irr.json"
+        api_relative = Path("remotes") / relative_dir / "remote.irr"
         target = destination / api_relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(encode_record(record), encoding="utf-8", newline="\n")

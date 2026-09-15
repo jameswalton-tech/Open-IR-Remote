@@ -70,7 +70,7 @@ class FlipperSelectionTests(unittest.TestCase):
 
     def test_record_path_cannot_escape_library(self):
         entry = copy.deepcopy(self.manifest['entries'][0])
-        entry['record_path'] = '../outside/remote.irr.json'
+        entry['record_path'] = '../outside/remote.irr'
         with self.assertRaises(ValueError):
             make_record(entry, self.manifest)
 

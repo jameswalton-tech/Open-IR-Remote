@@ -7,6 +7,8 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
+import validate as validation_module
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
@@ -16,6 +18,22 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 class FormatTests(unittest.TestCase):
+    def test_obsolete_extension_is_not_silently_skipped(self):
+        import shutil
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            for relative in ('schema/open-ir-remote-v1.schema.json', 'docs/schema/open-ir-remote-v1.schema.json', 'examples/example-device/remote.irr'):
+                target = root / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(ROOT / relative, target)
+            obsolete = root / 'remotes/test/remote.irr.json'
+            obsolete.parent.mkdir(parents=True)
+            obsolete.write_text(json.dumps(self.record), encoding='utf-8')
+            with patch.object(validation_module, 'ROOT', root), patch('sys.stderr') as stderr:
+                with self.assertRaises(SystemExit):
+                    validation_module.main()
+                self.assertIn('rename this record', str(stderr.write.call_args_list))
+
     def test_compact_encoding_preserves_values(self):
         value = {'label': 'Brightness + / éclair', 'parameters': {'value': 4294967295, 'code_hex': '0x0045'}, 'flags': [True, False]}
         compact = encode_record(value)
@@ -24,11 +42,11 @@ class FormatTests(unittest.TestCase):
         self.assertLess(len(compact.encode('utf-8')), len(json.dumps(value, indent=2, ensure_ascii=False).encode('utf-8')))
 
     def setUp(self):
-        self.record = json.loads((ROOT / 'examples/example-device/remote.irr.json').read_text(encoding='utf-8'))
+        self.record = json.loads((ROOT / 'examples/example-device/remote.irr').read_text(encoding='utf-8'))
 
     def errors(self, record=None, text=None):
         with tempfile.TemporaryDirectory() as temp:
-            path = Path(temp) / 'remote.irr.json'
+            path = Path(temp) / 'remote.irr'
             path.write_text(text if text is not None else json.dumps(record, ensure_ascii=False), encoding='utf-8', newline='\n')
             errors = []
             validate_record(path, errors)
@@ -160,10 +178,14 @@ class FormatTests(unittest.TestCase):
             build(first)
             build(second)
             self.assertTrue(compare_directories(first, second))
-            for path in first.rglob('*.json'):
+            for path in list(first.rglob('*.json')) + list(first.rglob('*.irr')):
                 self.assertNotIn(b'\r\n', path.read_bytes())
             index = json.loads((first/'index.json').read_text(encoding='utf-8'))
+            self.assertEqual(len(list((ROOT/'remotes').rglob('remote.irr'))), index['remote_count'])
+            self.assertGreater(index['remote_count'], 0)
+            self.assertFalse(list(first.rglob('*.irr.json')))
             for entry in index['remotes']:
+                self.assertTrue(entry['url'].endswith('/remote.irr'))
                 relative = entry['url'].split('/api/v1/')[1]
                 path = first / relative
                 self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), entry['sha256'])
@@ -173,7 +195,7 @@ class FormatTests(unittest.TestCase):
             schema = json.loads((ROOT/'schema/open-ir-remote-v1.schema.json').read_text(encoding='utf-8'))
             validator = Draft202012Validator(schema, format_checker=FormatChecker())
             library = json.loads((first/'library.json').read_text(encoding='utf-8'))
-            example_ids = {json.loads(path.read_text(encoding='utf-8'))['id'] for path in (ROOT/'examples').rglob('remote.irr.json')}
+            example_ids = {json.loads(path.read_text(encoding='utf-8'))['id'] for path in (ROOT/'examples').rglob('remote.irr')}
             self.assertTrue(example_ids.isdisjoint(entry['id'] for entry in index['remotes']))
             self.assertTrue(example_ids.isdisjoint(record['id'] for record in library['remotes']))
             for record in library['remotes']:
@@ -181,7 +203,7 @@ class FormatTests(unittest.TestCase):
 
     def test_seed_csv_readings_match_effective_json(self):
         for path in (ROOT/'remotes').rglob('remote.csv'):
-            record = json.loads(path.with_name('remote.irr.json').read_text(encoding='utf-8'))
+            record = json.loads(path.with_name('remote.irr').read_text(encoding='utf-8'))
             with path.open(encoding='utf-8', newline='') as source:
                 rows = list(csv.DictReader(source))
             self.assertEqual(len(rows), len(record['commands']))

@@ -68,7 +68,7 @@ Extension values may be null, booleans, bounded strings, integers in the decoded
 
 ## Whole records and images
 
-A standalone `remote.irr.json` must be at most **1 MiB** when encoded as UTF-8, including whitespace. JSON object keys must be unique. Nesting is limited to **16 object/array containers**, counting the root object as depth 1. The validator checks file size before parsing and checks depth before schema validation. Applications should apply equivalent input limits; passing the schema alone does not check file size, total timing count, nesting depth or timing alternation.
+A standalone `remote.irr` must be at most **1 MiB** when encoded as UTF-8, including whitespace. JSON object keys must be unique. Nesting is limited to **16 object/array containers**, counting the root object as depth 1. The validator checks file size before parsing and checks depth before schema validation. Applications should apply equivalent input limits; passing the schema alone does not check file size, total timing count, nesting depth or timing alternation.
 
 The file-size ceiling is an interchange limit, not a recommended RAM allocation. Read the index first, fetch only the remotes needed, and use bounded or streaming parsing where appropriate. The full-library API response contains many records and is not subject to a single-record size or command limit.
 

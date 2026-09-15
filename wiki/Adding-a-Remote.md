@@ -3,7 +3,7 @@
 1. Search the repository for the remote name, printed model number and manufacturer.
 2. Fork the repository and create a branch.
 3. Copy the complete example record.
-4. Add `remotes/<manufacturer>/<model>/<variant>/remote.irr.json`.
+4. Add `remotes/<manufacturer>/<model>/<variant>/remote.irr`.
 5. Use stable command IDs and preserve printed labels separately.
 6. Include carrier, protocol or raw timings without guessing missing information.
 7. Record provenance and physical-device test evidence.

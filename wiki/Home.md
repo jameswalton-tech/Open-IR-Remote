@@ -7,7 +7,7 @@ Open IR Remote v1 is an open interchange standard and community library for infr
 - [Format reference](Format-Reference)
 - [Add a remote](Adding-a-Remote)
 - [API usage](API-Usage)
-- [Complete example device](https://github.com/jameswalton-tech/Open-IR-Remote/blob/main/examples/example-device/remote.irr.json)
+- [Complete example device](https://github.com/jameswalton-tech/Open-IR-Remote/blob/main/examples/example-device/remote.irr)
 
 Applications can use the static v1 API without an account or API key. Contributors add and verify remotes through pull requests.
 

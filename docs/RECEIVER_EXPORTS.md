@@ -62,7 +62,7 @@ A generic remote import should not automatically apply vendor bindings to live o
 
 ## One receiver can use several remotes
 
-An IRR record represents one physical handset, not an arbitrary bank of learned slots. If a receiver learns buttons from different handsets, keep separate remote records. Bindings inside a record refer to its commands. A device-wide backup can carry those records and reference both remote IDs and command IDs in an application-specific container. V1 does not define that backup container, and it must not be presented as a single standard `remote.irr.json`.
+An IRR record represents one physical handset, not an arbitrary bank of learned slots. If a receiver learns buttons from different handsets, keep separate remote records. Bindings inside a record refer to its commands. A device-wide backup can carry those records and reference both remote IDs and command IDs in an application-specific container. V1 does not define that backup container, and it must not be presented as a single standard `remote.irr`.
 
 If the device cannot establish which handset supplied each learned command, preserve that uncertainty in its own backup until the user groups the commands. Do not silently invent a single physical remote.
 
@@ -86,4 +86,4 @@ If the device cannot establish which handset supplied each learned command, pres
 7. Test a receiver containing buttons from two handsets: it must not merge their identities.
 8. Check whether a restore really restores actions and settings, rather than only codes and labels.
 
-The [complete receiver-export example](../examples/receiver-export/remote.irr.json) uses a fictional integration and is validated alongside other examples. Like all files under `examples/`, it is excluded from both public library endpoints.
+The [complete receiver-export example](../examples/receiver-export/remote.irr) uses a fictional integration and is validated alongside other examples. Like all files under `examples/`, it is excluded from both public library endpoints.
