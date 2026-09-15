@@ -8,10 +8,10 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
-import validate as validation_module
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
+import validate as validation_module
 from validate import validate_record, MAX_RECORD_BYTES
 from build_api import build, compare_directories, encode_record
 from jsonschema import Draft202012Validator, FormatChecker
