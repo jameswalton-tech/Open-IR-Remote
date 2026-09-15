@@ -1,0 +1,266 @@
+{
+  "commands": [
+    {
+      "id": "irdb.row.2",
+      "labels": {
+        "en": "8"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 127,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.3",
+      "labels": {
+        "en": "7"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 191,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.4",
+      "labels": {
+        "en": "6"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 223,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.5",
+      "labels": {
+        "en": "5"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 239,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.6",
+      "labels": {
+        "en": "4"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 247,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.7",
+      "labels": {
+        "en": "3"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 251,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.8",
+      "labels": {
+        "en": "2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 253,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.9",
+      "labels": {
+        "en": "1"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 254,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.10",
+      "labels": {
+        "en": "9"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 130,
+            "function": 255,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    }
+  ],
+  "defaults": {
+    "protocol": "NEC1-f16"
+  },
+  "extensions": {
+    "org.openir.sdk.irdb": {
+      "header": "strict",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
+      "license_text": [
+        "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
+        "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      ],
+      "notification_url": "https://github.com/probonopd/irdb/issues/225",
+      "profile": "irdb-source-v1",
+      "rows": [
+        [
+          {
+            "command_id": "irdb.row.2",
+            "source_row": 2
+          },
+          {
+            "command_id": "irdb.row.3",
+            "source_row": 3
+          },
+          {
+            "command_id": "irdb.row.4",
+            "source_row": 4
+          },
+          {
+            "command_id": "irdb.row.5",
+            "source_row": 5
+          },
+          {
+            "command_id": "irdb.row.6",
+            "source_row": 6
+          },
+          {
+            "command_id": "irdb.row.7",
+            "source_row": 7
+          },
+          {
+            "command_id": "irdb.row.8",
+            "source_row": 8
+          },
+          {
+            "command_id": "irdb.row.9",
+            "source_row": 9
+          },
+          {
+            "command_id": "irdb.row.10",
+            "source_row": 10
+          }
+        ],
+        []
+      ],
+      "source_sha256": "edc11afe037af2d994955f4125574f130c959daaa7f2557086838ba52cce3eda",
+      "source_text": [
+        [
+          "functionname,protocol,device,subdevice,function\n8,NEC1-f16,130,-1,127\n7,NEC1-f16,130,-1,191\n6,NEC1-f16,130,-1,223\n5,NEC1-f16,130,-1,239\n4,NEC1-f16,130,-1,247\n3,NEC1-f16,130,-1,251\n2,NEC1-f16,130,-1,253\n1,NEC1-f16,130,-1,254\n9,NEC1-f16,130,-1,255\n"
+        ]
+      ],
+      "source_tree": {
+        "path": "codes/LiteTouch/Lighting Controller/130,-1.csv",
+        "manufacturer": "LiteTouch",
+        "device_label": "Lighting Controller",
+        "code_set": "130,-1",
+        "identity_basis": "IRDB source directory; not a printed handset model"
+      }
+    }
+  },
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "id": "oir:litetouch:lighting-controller-5fb25f80406f:irdb",
+  "locale": "en",
+  "provenance": [
+    {
+      "imported_at": "2026-09-15",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
+      "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
+      "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/LiteTouch/Lighting%20Controller/130%2C-1.csv",
+      "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
+      "source_type": "csv-import"
+    }
+  ],
+  "record_kind": "legacy-import",
+  "remote": {
+    "device_types": [
+      "lighting"
+    ],
+    "manufacturer": "LiteTouch",
+    "model": "Unknown",
+    "name": "LiteTouch Lighting Controller remote (130,-1)",
+    "variant": "IRDB 130,-1"
+  },
+  "updated": "2026-09-15",
+  "validation": {
+    "issues": [
+      "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."
+    ],
+    "status": "imported-unverified"
+  }
+}
