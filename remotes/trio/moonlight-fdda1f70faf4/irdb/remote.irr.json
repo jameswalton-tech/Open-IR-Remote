@@ -133,7 +133,7 @@
   "extensions": {
     "org.openir.sdk.irdb": {
       "header": "strict",
-      "identity_notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "license_text": [
         "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
         "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
@@ -178,7 +178,15 @@
         [
           "functionname,protocol,device,subdevice,function\nlight up,nec1,4,172,21\nmode,nec1,4,172,30\n100%,nec1,4,172,31\non off,nec1,4,172,74\nright,nec1,4,172,78\nlight down,nec1,4,172,79\nleft,nec1,4,172,85\n"
         ]
-      ]
+      ],
+      "source_tree": {
+        "path": "codes/Trio/MoonLight/4,172.csv",
+        "manufacturer": "Trio",
+        "device_label": "MoonLight",
+        "code_set": "4,172",
+        "identity_basis": "IRDB source directory; not a printed handset model",
+        "model_basis": "MoonLight product name in source directory; exact handset model unknown"
+      }
     }
   },
   "format": "open-ir-remote",
@@ -188,7 +196,7 @@
   "provenance": [
     {
       "imported_at": "2026-09-15",
-      "notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
       "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/Trio/MoonLight/4%2C172.csv",
       "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
@@ -203,7 +211,14 @@
     "manufacturer": "Trio",
     "model": "Unknown",
     "name": "Trio MoonLight remote (4,172)",
-    "variant": "IRDB 4,172"
+    "variant": "IRDB 4,172",
+    "controlled_devices": [
+      {
+        "manufacturer": "Trio",
+        "model": "MoonLight",
+        "device_type": "lighting"
+      }
+    ]
   },
   "updated": "2026-09-15",
   "validation": {
