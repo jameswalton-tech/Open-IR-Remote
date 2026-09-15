@@ -557,7 +557,7 @@
         "path": "codes/General/Unknown IR RGB Controller A010/0,-1.csv.csv",
         "manufacturer": "General",
         "device_label": "IR RGB Controller A010",
-        "code_set": "0,-1.csv",
+        "code_set": "0,-1",
         "identity_basis": "IRDB source directory; not a printed handset model",
         "model_basis": "A010 controller designation in source directory; exact handset model unknown"
       }
@@ -584,7 +584,7 @@
     ],
     "manufacturer": "General",
     "model": "Unknown",
-    "name": "General IR RGB Controller A010 remote (0,-1.csv)",
+    "name": "General IR RGB Controller A010 remote (0,-1)",
     "variant": "IRDB 0,-1",
     "controlled_devices": [
       {
