@@ -439,7 +439,7 @@
   "extensions": {
     "org.openir.sdk.irdb": {
       "header": "strict",
-      "identity_notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "license_text": [
         "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
         "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
@@ -552,7 +552,15 @@
         [
           "functionname,protocol,device,subdevice,function\nBrighter,NEC1,0,-1,5\nDarker,NEC1,0,-1,4\nOff,NEC1,0,-1,6\nOn,NEC1,0,-1,7\nWhite,NEC1,0,-1,11\nFlash,NEC1,0,-1,15\nStrobe,NEC1,0,-1,23\nFade,NEC1,0,-1,27\nSmooth,NEC1,0,-1,19\nRed,NEC1,0,-1,9\nGreen,NEC1,0,-1,8\nBlue,NEC1,0,-1,10\nOrange,NEC1,0,-1,13\nMint,NEC1,0,-1,12\nSaphire,NEC1,0,-1,14\nMango,NEC1,0,-1,21\nMiddle blue,NEC1,0,-1,20\nViolet,NEC1,0,-1,22\nTangerine,NEC1,0,-1,25\nPicton blue,NEC1,0,-1,24\nRose Quartz,NEC1,0,-1,26\nYellow,NEC1,0,-1,17\nCyan,NEC1,0,-1,16\nPink,NEC1,0,-1,18\n"
         ]
-      ]
+      ],
+      "source_tree": {
+        "path": "codes/General/Unknown IR RGB Controller A010/0,-1.csv.csv",
+        "manufacturer": "General",
+        "device_label": "IR RGB Controller A010",
+        "code_set": "0,-1.csv",
+        "identity_basis": "IRDB source directory; not a printed handset model",
+        "model_basis": "A010 controller designation in source directory; exact handset model unknown"
+      }
     }
   },
   "format": "open-ir-remote",
@@ -562,7 +570,7 @@
   "provenance": [
     {
       "imported_at": "2026-09-15",
-      "notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
       "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/General/Unknown%20IR%20RGB%20Controller%20A010/0%2C-1.csv.csv",
       "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
@@ -576,8 +584,15 @@
     ],
     "manufacturer": "General",
     "model": "Unknown",
-    "name": "General Unknown IR RGB Controller A010 remote (0,-1)",
-    "variant": "IRDB 0,-1"
+    "name": "General IR RGB Controller A010 remote (0,-1.csv)",
+    "variant": "IRDB 0,-1",
+    "controlled_devices": [
+      {
+        "manufacturer": "General",
+        "model": "A010",
+        "device_type": "rgb-controller"
+      }
+    ]
   },
   "updated": "2026-09-15",
   "validation": {
