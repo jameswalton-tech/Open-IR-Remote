@@ -799,7 +799,7 @@
   "extensions": {
     "org.openir.sdk.irdb": {
       "header": "strict",
-      "identity_notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "license_text": [
         "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
         "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
@@ -992,7 +992,14 @@
         [
           "functionname,protocol,device,subdevice,function\nBrighter,NEC1,0,-1,92\nDarker,NEC1,0,-1,93\nNext,NEC1,0,-1,65\nOn,NEC1,0,-1,64\nRed,NEC1,0,-1,88\nGreen,NEC1,0,-1,89\nBlue,NEC1,0,-1,69\nWhite,NEC1,0,-1,68\nOrange,NEC1,0,-1,84\nMint,NEC1,0,-1,85\nSaphire,NEC1,0,-1,73\nLight pink 1,NEC1,0,-1,72\nMango,NEC1,0,-1,80\nMiddle blue,NEC1,0,-1,81\nViolet,NEC1,0,-1,77\nLight pink 2,NEC1,0,-1,76\nTangerine,NEC1,0,-1,28\nPicton blue,NEC1,0,-1,29\nRose Quartz,NEC1,0,-1,30\nLight blue 1,NEC1,0,-1,31\nYellow,NEC1,0,-1,24\nCyan,NEC1,0,-1,25\nPink,NEC1,0,-1,26\nLight blue 2,NEC1,0,-1,27\nRed up,NEC1,0,-1,20\nGreen up,NEC1,0,-1,21\nBlue up,NEC1,0,-1,22\nQuick,NEC1,0,-1,23\nRed down,NEC1,0,-1,16\nGreen down,NEC1,0,-1,17\nBlue down,NEC1,0,-1,18\nSlow,NEC1,0,-1,19\nDIY1,NEC1,0,-1,12\nDIY2,NEC1,0,-1,13\nDIY3,NEC1,0,-1,14\nAUTO,NEC1,0,-1,15\nDIY4,NEC1,0,-1,8\nDIY5,NEC1,0,-1,9\nDIY6,NEC1,0,-1,10\nFlash,NEC1,0,-1,11\nJump 3,NEC1,0,-1,4\nJump 7,NEC1,0,-1,5\nFade 3,NEC1,0,-1,6\nFade 7,NEC1,0,-1,7\n"
         ]
-      ]
+      ],
+      "source_tree": {
+        "path": "codes/Dymond/RGB LED Strip/0,-1.csv",
+        "manufacturer": "Dymond",
+        "device_label": "RGB LED Strip",
+        "code_set": "0,-1",
+        "identity_basis": "IRDB source directory; not a printed handset model"
+      }
     }
   },
   "format": "open-ir-remote",
@@ -1002,7 +1009,7 @@
   "provenance": [
     {
       "imported_at": "2026-09-15",
-      "notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
       "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/Dymond/RGB%20LED%20Strip/0%2C-1.csv",
       "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
