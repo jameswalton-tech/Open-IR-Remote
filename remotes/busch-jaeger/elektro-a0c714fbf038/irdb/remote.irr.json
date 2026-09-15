@@ -403,7 +403,7 @@
   "extensions": {
     "org.openir.sdk.irdb": {
       "header": "strict",
-      "identity_notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "license_text": [
         "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
         "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
@@ -508,7 +508,14 @@
         [
           "functionname,protocol,device,subdevice,function\nON 4 WS,RC5,29,-1,49\nON 4 WS B,RC5,29,-1,49\nOFF 4 WS,RC5,29,-1,50\nOFF 4 WS B,RC5,29,-1,50\nON 5 WS,RC5,29,-1,53\nON 5 WS B,RC5,29,-1,53\nOFF 5 WS,RC5,29,-1,54\nOFF 5 WS B,RC5,29,-1,54\nMEMO,RC5,29,-1,56\nMEMO B,RC5,29,-1,56\nON 1 WS,RC5,29,-1,57\nON 1 WS B,RC5,29,-1,57\nOFF 1 WS,RC5,29,-1,58\nOFF 1 WS B,RC5,29,-1,58\nON 3 WS,RC5,29,-1,59\nON 3 WS B,RC5,29,-1,59\nOFF 3 WS,RC5,29,-1,60\nOFF 3 WS B,RC5,29,-1,60\nON 2 WS,RC5,29,-1,61\nON 2 WS B,RC5,29,-1,61\nOFF 2 WS,RC5,29,-1,62\nOFF 2 WS B,RC5,29,-1,62\n"
         ]
-      ]
+      ],
+      "source_tree": {
+        "path": "codes/Busch-Jaeger/Elektro/29,-1.csv",
+        "manufacturer": "Busch-Jaeger",
+        "device_label": "Elektro",
+        "code_set": "29,-1",
+        "identity_basis": "IRDB source directory; not a printed handset model"
+      }
     }
   },
   "format": "open-ir-remote",
@@ -518,7 +525,7 @@
   "provenance": [
     {
       "imported_at": "2026-09-15",
-      "notes": "Source directory identifies a brand and equipment category, not a confirmed printed handset model. This is a source-specific code-set listing. No physical handset, complete button inventory or compatible receiver has been verified.",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
       "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
       "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/Busch-Jaeger/Elektro/29%2C-1.csv",
       "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
