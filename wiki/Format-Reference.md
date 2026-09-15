@@ -1,6 +1,6 @@
 # Format reference
 
-The canonical format is UTF-8 JSON named `remote.irr.json`.
+The canonical format is UTF-8 JSON named `remote.irr`.
 
 Applications may include `export_source` with their name, version and optional build identifier. This helps contributors reproduce export bugs without confusing the exporting software with the original source of the readings.
 

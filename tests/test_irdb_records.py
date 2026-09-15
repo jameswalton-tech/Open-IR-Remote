@@ -15,7 +15,7 @@ NOTICE = ('Contains/accesses irdb by Simon Peter and contributors, used under pe
 class IrdbRecordTests(unittest.TestCase):
     def test_source_fields_archive_and_licence(self):
         found = 0
-        for path in (ROOT / 'remotes').glob('**/remote.irr.json'):
+        for path in (ROOT / 'remotes').glob('**/remote.irr'):
             record = json.loads(path.read_text(encoding='utf-8'))
             archive = record.get('extensions', {}).get('org.openir.sdk.irdb')
             if archive is None:

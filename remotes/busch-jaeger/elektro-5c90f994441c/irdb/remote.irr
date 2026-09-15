@@ -1,0 +1,640 @@
+{
+  "commands": [
+    {
+      "id": "irdb.row.2",
+      "labels": {
+        "en": "ON 9 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 49,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.3",
+      "labels": {
+        "en": "ON 9 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 49,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.4",
+      "labels": {
+        "en": "OFF 9 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 50,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.5",
+      "labels": {
+        "en": "OFF 9 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 50,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.6",
+      "labels": {
+        "en": "M1"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 51,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.7",
+      "labels": {
+        "en": "M1 B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 51,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.8",
+      "labels": {
+        "en": "M2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 52,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.9",
+      "labels": {
+        "en": "M2 B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 52,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.10",
+      "labels": {
+        "en": "ON 10 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 53,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.11",
+      "labels": {
+        "en": "ON 10 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 53,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.12",
+      "labels": {
+        "en": "OFF 10 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 54,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.13",
+      "labels": {
+        "en": "OFF 10 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 54,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.14",
+      "labels": {
+        "en": "ON 6 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 57,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.15",
+      "labels": {
+        "en": "ON 6 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 57,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.16",
+      "labels": {
+        "en": "OFF 6 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 58,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.17",
+      "labels": {
+        "en": "OFF 6 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 58,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.18",
+      "labels": {
+        "en": "ON 8 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 59,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.19",
+      "labels": {
+        "en": "ON 8 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 59,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.20",
+      "labels": {
+        "en": "OFF 8 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 60,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.21",
+      "labels": {
+        "en": "OFF 8 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 60,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.22",
+      "labels": {
+        "en": "ON 7 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 61,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.23",
+      "labels": {
+        "en": "ON 7 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 61,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.24",
+      "labels": {
+        "en": "OFF 7 BL"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 62,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.25",
+      "labels": {
+        "en": "OFF 7 BL B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 62,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.26",
+      "labels": {
+        "en": "POWER"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 63,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.27",
+      "labels": {
+        "en": "POWER B"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 30,
+            "function": 63,
+            "subdevice": -1
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    }
+  ],
+  "defaults": {
+    "protocol": "RC5"
+  },
+  "extensions": {
+    "org.openir.sdk.irdb": {
+      "header": "strict",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
+      "license_text": [
+        "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
+        "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      ],
+      "notification_url": "https://github.com/probonopd/irdb/issues/225",
+      "profile": "irdb-source-v1",
+      "rows": [
+        [
+          {
+            "command_id": "irdb.row.2",
+            "source_row": 2
+          },
+          {
+            "command_id": "irdb.row.3",
+            "source_row": 3
+          },
+          {
+            "command_id": "irdb.row.4",
+            "source_row": 4
+          },
+          {
+            "command_id": "irdb.row.5",
+            "source_row": 5
+          },
+          {
+            "command_id": "irdb.row.6",
+            "source_row": 6
+          },
+          {
+            "command_id": "irdb.row.7",
+            "source_row": 7
+          },
+          {
+            "command_id": "irdb.row.8",
+            "source_row": 8
+          },
+          {
+            "command_id": "irdb.row.9",
+            "source_row": 9
+          },
+          {
+            "command_id": "irdb.row.10",
+            "source_row": 10
+          },
+          {
+            "command_id": "irdb.row.11",
+            "source_row": 11
+          },
+          {
+            "command_id": "irdb.row.12",
+            "source_row": 12
+          },
+          {
+            "command_id": "irdb.row.13",
+            "source_row": 13
+          },
+          {
+            "command_id": "irdb.row.14",
+            "source_row": 14
+          },
+          {
+            "command_id": "irdb.row.15",
+            "source_row": 15
+          },
+          {
+            "command_id": "irdb.row.16",
+            "source_row": 16
+          },
+          {
+            "command_id": "irdb.row.17",
+            "source_row": 17
+          },
+          {
+            "command_id": "irdb.row.18",
+            "source_row": 18
+          },
+          {
+            "command_id": "irdb.row.19",
+            "source_row": 19
+          },
+          {
+            "command_id": "irdb.row.20",
+            "source_row": 20
+          },
+          {
+            "command_id": "irdb.row.21",
+            "source_row": 21
+          },
+          {
+            "command_id": "irdb.row.22",
+            "source_row": 22
+          },
+          {
+            "command_id": "irdb.row.23",
+            "source_row": 23
+          },
+          {
+            "command_id": "irdb.row.24",
+            "source_row": 24
+          },
+          {
+            "command_id": "irdb.row.25",
+            "source_row": 25
+          },
+          {
+            "command_id": "irdb.row.26",
+            "source_row": 26
+          },
+          {
+            "command_id": "irdb.row.27",
+            "source_row": 27
+          }
+        ],
+        []
+      ],
+      "source_sha256": "3533f2793ca254d7e101d839f67c75dfaa5b537423aea8cc6c4ceacb15f766f7",
+      "source_text": [
+        [
+          "functionname,protocol,device,subdevice,function\nON 9 BL,RC5,30,-1,49\nON 9 BL B,RC5,30,-1,49\nOFF 9 BL,RC5,30,-1,50\nOFF 9 BL B,RC5,30,-1,50\nM1,RC5,30,-1,51\nM1 B,RC5,30,-1,51\nM2,RC5,30,-1,52\nM2 B,RC5,30,-1,52\nON 10 BL,RC5,30,-1,53\nON 10 BL B,RC5,30,-1,53\nOFF 10 BL,RC5,30,-1,54\nOFF 10 BL B,RC5,30,-1,54\nON 6 BL,RC5,30,-1,57\nON 6 BL B,RC5,30,-1,57\nOFF 6 BL,RC5,30,-1,58\nOFF 6 BL B,RC5,30,-1,58\nON 8 BL,RC5,30,-1,59\nON 8 BL B,RC5,30,-1,59\nOFF 8 BL,RC5,30,-1,60\nOFF 8 BL B,RC5,30,-1,60\nON 7 BL,RC5,30,-1,61\nON 7 BL B,RC5,30,-1,61\nOFF 7 BL,RC5,30,-1,62\nOFF 7 BL B,RC5,30,-1,62\nPOWER,RC5,30,-1,63\nPOWER B,RC5,30,-1,63\n"
+        ]
+      ],
+      "source_tree": {
+        "path": "codes/Busch-Jaeger/Elektro/30,-1.csv",
+        "manufacturer": "Busch-Jaeger",
+        "device_label": "Elektro",
+        "code_set": "30,-1",
+        "identity_basis": "IRDB source directory; not a printed handset model"
+      }
+    }
+  },
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "id": "oir:busch-jaeger:elektro-5c90f994441c:irdb",
+  "locale": "en",
+  "provenance": [
+    {
+      "imported_at": "2026-09-15",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
+      "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
+      "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/Busch-Jaeger/Elektro/30%2C-1.csv",
+      "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
+      "source_type": "csv-import"
+    }
+  ],
+  "record_kind": "legacy-import",
+  "remote": {
+    "device_types": [
+      "lighting"
+    ],
+    "manufacturer": "Busch-Jaeger",
+    "model": "Unknown",
+    "name": "Busch-Jaeger Elektro remote (30,-1)",
+    "variant": "IRDB 30,-1"
+  },
+  "updated": "2026-09-15",
+  "validation": {
+    "issues": [
+      "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."
+    ],
+    "status": "imported-unverified"
+  }
+}

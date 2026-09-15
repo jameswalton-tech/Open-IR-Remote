@@ -41,7 +41,7 @@ try {
 }
 ```
 
-The complete runnable example is examples/quickstart.mjs. Its examples/remote.irr.json contains one decoded representation, one raw representation, a translated label, an unsigned32 parameter, a wider hexadecimal string and an explicit receiver mapping. All readings are synthetic.
+The complete runnable example is examples/quickstart.mjs. Its examples/remote.irr contains one decoded representation, one raw representation, a translated label, an unsigned32 parameter, a wider hexadecimal string and an explicit receiver mapping. All readings are synthetic.
 
 `parse` validates a record before returning it. `validate(value)` returns `{ valid, scope, assets, issues }` without throwing for expected invalid input. `serialize` validates again because the caller may have edited the tree. No function regenerates IDs from names. New application-created IDs must be assigned once and persisted by the application.
 

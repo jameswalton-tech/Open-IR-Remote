@@ -11,8 +11,8 @@ Record the physical remote's printed name or best known name in `remote.name`. D
 ## Create the record
 
 1. Fork and clone the repository.
-2. Copy `examples/example-device/remote.irr.json`.
-3. Place the new file at `remotes/<manufacturer>/<model>/<variant>/remote.irr.json` using lowercase hyphenated paths.
+2. Copy `examples/example-device/remote.irr`.
+3. Place the new file at `remotes/<manufacturer>/<model>/<variant>/remote.irr` using lowercase hyphenated paths.
 4. Replace every example value. Never guess protocol, carrier, licensing or validation.
 5. Use stable semantic command IDs such as `power.toggle`, `power.on`, `volume.up` and `navigation.ok`. Keep printed button wording in `labels`.
 6. Include source provenance and describe how the signal was captured or imported.
@@ -45,7 +45,7 @@ Images remain the property of their respective copyright holders and are used on
 
 If your application exports the JSON file, include `export_source` with its name and version. This helps us reproduce conversion bugs. Include a build identifier when available; do not add personal or device identifiers. Leave the field out for hand-authored files rather than guessing.
 
-The preferred format is `remote.irr.json`. CSV submissions use one command per row with the columns documented in `docs/FORMAT.md`. Include the remote identity, carrier, protocol status, provenance and validation details needed to create a complete record.
+The preferred format is `remote.irr`. CSV submissions use one command per row with the columns documented in `docs/FORMAT.md`. Include the remote identity, carrier, protocol status, provenance and validation details needed to create a complete record.
 
 ## Validate and submit
 

@@ -1,6 +1,6 @@
 # Generic 24-key RGB LED remote
 
-All 24 NEC definitions from mxbchr's standalone ESPHome LED project are included. The original YAML, README and GPL v3 licence are preserved in source/. The imported data retains that licence and is not CC0. The source revision is recorded in remote.irr.json.
+All 24 NEC definitions from mxbchr's standalone ESPHome LED project are included. The original YAML, README and GPL v3 licence are preserved in source/. The imported data retains that licence and is not CC0. The source revision is recorded in remote.irr.
 
 Two entries share the source label Remote GREEN, with commands 0xFA05 and 0xEA15. Both names remain unchanged. The second uses color.green.ea15 rather than guessing a corrected name or physical position. Numbered colour IDs follow source names. Receiver-specific RGB values and effect bindings remain in the original YAML rather than being presented as measured commercial-receiver behaviour.
 

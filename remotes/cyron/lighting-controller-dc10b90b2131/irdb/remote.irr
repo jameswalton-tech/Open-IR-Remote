@@ -1,0 +1,728 @@
+{
+  "commands": [
+    {
+      "id": "irdb.row.2",
+      "labels": {
+        "en": "GREEN +"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 0,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.3",
+      "labels": {
+        "en": "BLUE +"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 1,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.4",
+      "labels": {
+        "en": "SOUND MODE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 2,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.5",
+      "labels": {
+        "en": "GREEN -"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 3,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.6",
+      "labels": {
+        "en": "BLUE -"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 4,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.7",
+      "labels": {
+        "en": "WHITE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 5,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.8",
+      "labels": {
+        "en": "MEMORY 2"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 6,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.9",
+      "labels": {
+        "en": "MEMORY 3"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 7,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.10",
+      "labels": {
+        "en": "MEMORY 4"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 8,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.11",
+      "labels": {
+        "en": "MEMORY 6"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 9,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.12",
+      "labels": {
+        "en": "PAUSE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 10,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.13",
+      "labels": {
+        "en": "STEP"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 11,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.14",
+      "labels": {
+        "en": "100 %"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 13,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.15",
+      "labels": {
+        "en": "RED +"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 14,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.16",
+      "labels": {
+        "en": "MEMORY 1"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 15,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.17",
+      "labels": {
+        "en": "SLEEP TIMER"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 16,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.18",
+      "labels": {
+        "en": "COLOR"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 17,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.19",
+      "labels": {
+        "en": "FAST SPEED (1 SEC)"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 19,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.20",
+      "labels": {
+        "en": "POWER: OFF"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 20,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.21",
+      "labels": {
+        "en": "FADE"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 21,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.22",
+      "labels": {
+        "en": "MEMORY 7"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 22,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.23",
+      "labels": {
+        "en": "MEMORY"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 23,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.24",
+      "labels": {
+        "en": "SLOW SPEED (60 SEC)"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 24,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.25",
+      "labels": {
+        "en": "POWER: ON"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 25,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.26",
+      "labels": {
+        "en": "MEMORY 5"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 26,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.27",
+      "labels": {
+        "en": "25%"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 27,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.28",
+      "labels": {
+        "en": "MEDIUM SPEED (5 SEC)"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 28,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.29",
+      "labels": {
+        "en": "75%"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 29,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.30",
+      "labels": {
+        "en": "50%"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 30,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    },
+    {
+      "id": "irdb.row.31",
+      "labels": {
+        "en": "RED -"
+      },
+      "signals": [
+        {
+          "kind": "decoded",
+          "parameters": {
+            "device": 2,
+            "function": 31,
+            "subdevice": 189
+          },
+          "primary": true,
+          "source_complete": false
+        }
+      ]
+    }
+  ],
+  "defaults": {
+    "protocol": "NEC1"
+  },
+  "extensions": {
+    "org.openir.sdk.irdb": {
+      "header": "strict",
+      "identity_notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
+      "license_text": [
+        "# License\n\nirdb\nCopyright (c) 2013-15 Simon Peter and contributors\n\nYou may include this database and derivative works with your software (e.g., app) and/or \naccess this database over network from your commercial or non-commercial\nsoftware (e.g., app) or embedded hardware (subsequently called \"your product\")\nprovided that:\n\n1. Prior to using this database in your product, you will inform the irdb \n   project about your product by opening an issue on\n   https://github.com/probonopd/irdb/issues\n\n2. The following notice shall be included in your product:\n   `Contains/accesses irdb by Simon Peter and contributors, used under permission.\n   For licensing details and for information on how to contribute to the database, see \n   https://github.com/probonopd/irdb`\n\n3. You will make available up to three fully licensed copies/units of your product \n   to the irdb team, represented by Simon Peter, free of charge \n   (incuding shipping and handling) upon request.\n\nIf you fail to comply with the t",
+        "erms of the license above, your permission to\ninclude or access this database is revoked.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      ],
+      "notification_url": "https://github.com/probonopd/irdb/issues/225",
+      "profile": "irdb-source-v1",
+      "rows": [
+        [
+          {
+            "command_id": "irdb.row.2",
+            "source_row": 2
+          },
+          {
+            "command_id": "irdb.row.3",
+            "source_row": 3
+          },
+          {
+            "command_id": "irdb.row.4",
+            "source_row": 4
+          },
+          {
+            "command_id": "irdb.row.5",
+            "source_row": 5
+          },
+          {
+            "command_id": "irdb.row.6",
+            "source_row": 6
+          },
+          {
+            "command_id": "irdb.row.7",
+            "source_row": 7
+          },
+          {
+            "command_id": "irdb.row.8",
+            "source_row": 8
+          },
+          {
+            "command_id": "irdb.row.9",
+            "source_row": 9
+          },
+          {
+            "command_id": "irdb.row.10",
+            "source_row": 10
+          },
+          {
+            "command_id": "irdb.row.11",
+            "source_row": 11
+          },
+          {
+            "command_id": "irdb.row.12",
+            "source_row": 12
+          },
+          {
+            "command_id": "irdb.row.13",
+            "source_row": 13
+          },
+          {
+            "command_id": "irdb.row.14",
+            "source_row": 14
+          },
+          {
+            "command_id": "irdb.row.15",
+            "source_row": 15
+          },
+          {
+            "command_id": "irdb.row.16",
+            "source_row": 16
+          },
+          {
+            "command_id": "irdb.row.17",
+            "source_row": 17
+          },
+          {
+            "command_id": "irdb.row.18",
+            "source_row": 18
+          },
+          {
+            "command_id": "irdb.row.19",
+            "source_row": 19
+          },
+          {
+            "command_id": "irdb.row.20",
+            "source_row": 20
+          },
+          {
+            "command_id": "irdb.row.21",
+            "source_row": 21
+          },
+          {
+            "command_id": "irdb.row.22",
+            "source_row": 22
+          },
+          {
+            "command_id": "irdb.row.23",
+            "source_row": 23
+          },
+          {
+            "command_id": "irdb.row.24",
+            "source_row": 24
+          },
+          {
+            "command_id": "irdb.row.25",
+            "source_row": 25
+          },
+          {
+            "command_id": "irdb.row.26",
+            "source_row": 26
+          },
+          {
+            "command_id": "irdb.row.27",
+            "source_row": 27
+          },
+          {
+            "command_id": "irdb.row.28",
+            "source_row": 28
+          },
+          {
+            "command_id": "irdb.row.29",
+            "source_row": 29
+          },
+          {
+            "command_id": "irdb.row.30",
+            "source_row": 30
+          },
+          {
+            "command_id": "irdb.row.31",
+            "source_row": 31
+          }
+        ],
+        []
+      ],
+      "source_sha256": "54fd1fc358995d5f34e4995dcaf4fe082e6d9f7c2e341f8a926cb38c8fe6c6e4",
+      "source_text": [
+        [
+          "functionname,protocol,device,subdevice,function\nGREEN +,NEC1,2,189,0\nBLUE +,NEC1,2,189,1\nSOUND MODE,NEC1,2,189,2\nGREEN -,NEC1,2,189,3\nBLUE -,NEC1,2,189,4\nWHITE,NEC1,2,189,5\nMEMORY 2,NEC1,2,189,6\nMEMORY 3,NEC1,2,189,7\nMEMORY 4,NEC1,2,189,8\nMEMORY 6,NEC1,2,189,9\nPAUSE,NEC1,2,189,10\nSTEP,NEC1,2,189,11\n100 %,NEC1,2,189,13\nRED +,NEC1,2,189,14\nMEMORY 1,NEC1,2,189,15\nSLEEP TIMER,NEC1,2,189,16\nCOLOR,NEC1,2,189,17\nFAST SPEED (1 SEC),NEC1,2,189,19\nPOWER: OFF,NEC1,2,189,20\nFADE,NEC1,2,189,21\nMEMORY 7,NEC1,2,189,22\nMEMORY,NEC1,2,189,23\nSLOW SPEED (60 SEC),NEC1,2,189,24\nPOWER: ON,NEC1,2,189,25\nMEMORY 5,NEC1,2,189,26\n25%,NEC1,2,189,27\nMEDIUM SPEED (5 SEC),NEC1,2,189,28\n75%,NEC1,2,189,29\n50%,NEC1,2,189,30\nRED -,NEC1,2,189,31\n"
+        ]
+      ],
+      "source_tree": {
+        "path": "codes/Cyron/Lighting Controller/2,189.csv",
+        "manufacturer": "Cyron",
+        "device_label": "Lighting Controller",
+        "code_set": "2,189",
+        "identity_basis": "IRDB source directory; not a printed handset model"
+      }
+    }
+  },
+  "format": "open-ir-remote",
+  "format_version": "1.0.0",
+  "id": "oir:cyron:lighting-controller-dc10b90b2131:irdb",
+  "locale": "en",
+  "provenance": [
+    {
+      "imported_at": "2026-09-15",
+      "notes": "Manufacturer and display name are derived from the archived IRDB path. Product designations, where present, describe the controlled device, not a confirmed handset model. All source rows are included. Accepted as source-complete for library review; physical button inventory and playback have not been independently verified. Signal source_complete remains false because no transmit mapping has been qualified.",
+      "rights": "Contains/accesses irdb by Simon Peter and contributors, used under permission.\nFor licensing details and for information on how to contribute to the database, see\nhttps://github.com/probonopd/irdb\nCopyright (c) 2013-15 Simon Peter and contributors. Terms: https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/LICENSE.md",
+      "source_path": "https://github.com/probonopd/irdb/blob/11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e/codes/Cyron/Lighting%20Controller/2%2C189.csv",
+      "source_revision": "11aa5eb3ad9fec9e5c03f170c29c1467733d9f3e",
+      "source_type": "csv-import"
+    }
+  ],
+  "record_kind": "legacy-import",
+  "remote": {
+    "device_types": [
+      "lighting"
+    ],
+    "manufacturer": "Cyron",
+    "model": "Unknown",
+    "name": "Cyron Lighting Controller remote (2,189)",
+    "variant": "IRDB 2,189"
+  },
+  "updated": "2026-09-15",
+  "validation": {
+    "issues": [
+      "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."
+    ],
+    "status": "imported-unverified"
+  }
+}
