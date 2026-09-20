@@ -4,7 +4,7 @@
   "format_version": "1.0.0",
   "record_kind": "canonical",
   "id": "oir:generic:number-navigation-remote:default",
-  "updated": "2026-09-12",
+  "updated": "2026-09-20",
   "remote": {
     "name": "Generic Number and Navigation Remote",
     "manufacturer": "Generic",
@@ -16,7 +16,7 @@
   },
   "locale": "en",
   "defaults": {
-    "protocol": "unknown",
+    "protocol": "NEC",
     "carrier_hz": 38000
   },
   "commands": [
@@ -34,7 +34,7 @@
             "command_hex": "0x45",
             "code_hex": "0x0045"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -53,7 +53,7 @@
             "command_hex": "0x46",
             "code_hex": "0x0046"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -72,7 +72,7 @@
             "command_hex": "0x47",
             "code_hex": "0x0047"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -91,7 +91,7 @@
             "command_hex": "0x44",
             "code_hex": "0x0044"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -110,7 +110,7 @@
             "command_hex": "0x40",
             "code_hex": "0x0040"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -129,7 +129,7 @@
             "command_hex": "0x43",
             "code_hex": "0x0043"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -148,7 +148,7 @@
             "command_hex": "0x07",
             "code_hex": "0x0007"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -167,7 +167,7 @@
             "command_hex": "0x15",
             "code_hex": "0x0015"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -186,7 +186,7 @@
             "command_hex": "0x09",
             "code_hex": "0x0009"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -205,7 +205,7 @@
             "command_hex": "0x16",
             "code_hex": "0x0016"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -224,7 +224,7 @@
             "command_hex": "0x0D",
             "code_hex": "0x000D"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -243,7 +243,7 @@
             "command_hex": "0x18",
             "code_hex": "0x0018"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -262,7 +262,7 @@
             "command_hex": "0x08",
             "code_hex": "0x0008"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -281,7 +281,7 @@
             "command_hex": "0x1C",
             "code_hex": "0x001C"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -300,7 +300,7 @@
             "command_hex": "0x5A",
             "code_hex": "0x005A"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -319,7 +319,7 @@
             "command_hex": "0x52",
             "code_hex": "0x0052"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -331,7 +331,14 @@
       "source_path": "Generic_Number_Remote/lightly-ir-remote_generic_number_remote.csv",
       "imported_at": "2026-09-12",
       "rights": "unknown",
-      "notes": "Imported from contributed CSV readings. The source does not identify the IR protocol or carrier frequency."
+      "notes": "Imported from contributed CSV readings. The source CSV did not identify the IR protocol; NEC was subsequently matched against the complete published command table for this 17-button handset."
+    },
+    {
+      "source_type": "upstream-reference",
+      "source_path": "https://protosupplies.com/product/ir-remote-control-kit/",
+      "imported_at": "2026-09-20",
+      "rights": "Reference documentation remains copyright of ProtoSupplies.",
+      "notes": "The product documentation identifies NEC and publishes the same address-zero commands for all 16 numbered, symbol and navigation buttons in this record."
     }
   ],
   "validation": {
@@ -339,11 +346,10 @@
     "tested_at": "2026-09-12",
     "tester": "Repository contributor",
     "evidence": [
-      "Verified in the contributor's test setup using a 38 kHz carrier."
+      "Verified in the contributor's test setup using a 38 kHz carrier.",
+      "All 16 address and command pairs match the published NEC table for the photographed 17-button number and navigation handset."
     ],
-    "issues": [
-      "IR protocol is not recorded in the source CSV."
-    ]
+    "issues": []
   },
   "image": {
     "path": "remote.webp",
