@@ -1,9 +1,9 @@
 {
-  "revision": "b21e49173b9b22702a47342e56e6e36b32d01a38",
+  "revision": "c5bfc76d57db609aaeefd5397b3afb83a0c0db1c",
   "source": "https://github.com/jameswalton-tech/Open-IR-Remote",
   "sha256": {
     "schema/open-ir-remote-v1.schema.json": "fe9832ba58b14c4f810bdc17ae9816d67b0cf64669512fe6b22894926ad717a1",
-    "tools/validate.py": "8b648ba455014dc25f8378e971b19a1c5e93c50fe4f30324414d3db1b8507d8a",
+    "tools/validate.py": "6890e0c391eb7f7cd39e776fe6253c058201499418562e7d005e8898d5eb8aca",
     "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
   }
 }
