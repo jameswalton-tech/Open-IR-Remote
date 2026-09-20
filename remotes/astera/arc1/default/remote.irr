@@ -4,7 +4,7 @@
   "format_version": "1.0.0",
   "record_kind": "canonical",
   "id": "oir:astera:arc1:default",
-  "updated": "2026-09-12",
+  "updated": "2026-09-20",
   "remote": {
     "name": "Astera ARC1",
     "manufacturer": "Astera",
@@ -16,7 +16,7 @@
   },
   "locale": "en",
   "defaults": {
-    "protocol": "unknown",
+    "protocol": "NEC",
     "carrier_hz": 38000
   },
   "commands": [
@@ -34,7 +34,7 @@
             "command_hex": "0x10",
             "code_hex": "0x0010"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -53,7 +53,7 @@
             "command_hex": "0x03",
             "code_hex": "0x0003"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -72,7 +72,7 @@
             "command_hex": "0x01",
             "code_hex": "0x0001"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -91,7 +91,7 @@
             "command_hex": "0x06",
             "code_hex": "0x0006"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -110,7 +110,7 @@
             "command_hex": "0x09",
             "code_hex": "0x0009"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -129,7 +129,7 @@
             "command_hex": "0x1D",
             "code_hex": "0x001D"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -148,7 +148,7 @@
             "command_hex": "0x1F",
             "code_hex": "0x001F"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -167,7 +167,7 @@
             "command_hex": "0x0D",
             "code_hex": "0x000D"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -186,7 +186,7 @@
             "command_hex": "0x19",
             "code_hex": "0x0019"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -205,7 +205,7 @@
             "command_hex": "0x17",
             "code_hex": "0x0017"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -224,7 +224,7 @@
             "command_hex": "0x40",
             "code_hex": "0x0040"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -243,7 +243,7 @@
             "command_hex": "0x02",
             "code_hex": "0x0002"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -262,7 +262,7 @@
             "command_hex": "0x0A",
             "code_hex": "0x000A"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -281,7 +281,7 @@
             "command_hex": "0x1B",
             "code_hex": "0x001B"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -300,7 +300,7 @@
             "command_hex": "0x12",
             "code_hex": "0x0012"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -319,7 +319,7 @@
             "command_hex": "0x48",
             "code_hex": "0x0048"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -338,7 +338,7 @@
             "command_hex": "0x05",
             "code_hex": "0x0005"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -357,7 +357,7 @@
             "command_hex": "0x1E",
             "code_hex": "0x001E"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -376,7 +376,7 @@
             "command_hex": "0x0E",
             "code_hex": "0x000E"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -395,7 +395,7 @@
             "command_hex": "0x54",
             "code_hex": "0x0054"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -414,7 +414,7 @@
             "command_hex": "0x04",
             "code_hex": "0x0004"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -433,7 +433,7 @@
             "command_hex": "0x16",
             "code_hex": "0x0016"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -452,7 +452,7 @@
             "command_hex": "0x11",
             "code_hex": "0x0011"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -471,7 +471,7 @@
             "command_hex": "0x15",
             "code_hex": "0x0015"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -490,7 +490,7 @@
             "command_hex": "0x4C",
             "code_hex": "0x004C"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -509,7 +509,7 @@
             "command_hex": "0x00",
             "code_hex": "0x0000"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -528,7 +528,7 @@
             "command_hex": "0x4D",
             "code_hex": "0x004D"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -547,7 +547,7 @@
             "command_hex": "0x1A",
             "code_hex": "0x001A"
           },
-          "source_complete": false,
+          "source_complete": true,
           "primary": true
         }
       ]
@@ -559,7 +559,7 @@
       "source_path": "Astera_ARC1_Remote/lightly-ir-remote-Astera ARC1.csv",
       "imported_at": "2026-09-12",
       "rights": "unknown",
-      "notes": "Imported from contributed CSV readings. The source does not identify the IR protocol or carrier frequency."
+      "notes": "Imported from contributed CSV readings. NEC protocol was subsequently confirmed by the repository contributor; the source CSV did not record protocol or carrier frequency."
     }
   ],
   "validation": {
@@ -567,11 +567,10 @@
     "tested_at": "2026-09-12",
     "tester": "Repository contributor",
     "evidence": [
-      "Verified in the contributor's test setup using a 38 kHz carrier."
+      "Verified in the contributor's test setup using a 38 kHz carrier.",
+      "NEC protocol confirmed by the repository contributor on 2026-09-20."
     ],
-    "issues": [
-      "IR protocol is not recorded in the source CSV."
-    ]
+    "issues": []
   },
   "image": {
     "path": "remote.webp",

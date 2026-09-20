@@ -146,7 +146,8 @@
     }
   ],
   "defaults": {
-    "protocol": "RC5"
+    "protocol": "RC5",
+    "carrier_hz": 38000
   },
   "extensions": {
     "org.openir.sdk.irdb": {

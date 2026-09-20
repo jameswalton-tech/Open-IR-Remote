@@ -43,6 +43,22 @@ class FormatTests(unittest.TestCase):
                 self.assertNotRegex(controlled['manufacturer'], r'(?i)\bunknown\b', f'{path}: controlled manufacturer')
                 self.assertNotRegex(controlled['model'], r'(?i)\bunknown\b', f'{path}: controlled model')
 
+    def test_documented_protocol_resolutions(self):
+        for model in ('arc1', 'arc3'):
+            path = ROOT / f'remotes/astera/{model}/default/remote.irr'
+            record = json.loads(path.read_text(encoding='utf-8'))
+            self.assertEqual(record['defaults'], {'protocol': 'NEC', 'carrier_hz': 38000})
+            self.assertTrue(all(signal['source_complete'] for command in record['commands'] for signal in command['signals']))
+            csv_text = path.with_name('remote.csv').read_text(encoding='utf-8')
+            self.assertNotIn(',unknown,38000,', csv_text)
+        crestron = json.loads((ROOT / 'remotes/crestron/lighting-controller-a1bc82f06f6b/irdb/remote.irr').read_text(encoding='utf-8'))
+        self.assertEqual(crestron['defaults'], {'protocol': 'RC5', 'carrier_hz': 38000})
+        generic_path = ROOT / 'remotes/generic/number-navigation-remote/default/remote.irr'
+        generic = json.loads(generic_path.read_text(encoding='utf-8'))
+        self.assertEqual(generic['defaults'], {'protocol': 'NEC', 'carrier_hz': 38000})
+        self.assertTrue(all(signal['source_complete'] for command in generic['commands'] for signal in command['signals']))
+        self.assertNotIn(',unknown,38000,', generic_path.with_name('remote.csv').read_text(encoding='utf-8'))
+
     def test_compact_encoding_preserves_values(self):
         value = {'label': 'Brightness + / éclair', 'parameters': {'value': 4294967295, 'code_hex': '0x0045'}, 'flags': [True, False]}
         compact = encode_record(value)
