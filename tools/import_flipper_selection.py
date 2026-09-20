@@ -46,6 +46,7 @@ def load_selection():
             'introduced_commit': added[1],
             'manufacturer': remote['manufacturer'],
             'model': remote['model'],
+            'remote_model_number': remote.get('remote_model_number'),
             'name': remote['name'],
             'device_type': remote['device_types'][0],
             'controlled_model': devices[0]['model'] if devices else None,
@@ -127,16 +128,16 @@ def make_record(entry, manifest):
     remote = {k:entry[k] for k in ['name','manufacturer','model']}
     remote.update(variant='default',device_types=[entry['device_type']])
     issues = ['Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred.']
-    if entry['model'] == 'Unknown':
-        issues.append('The source identifies the controlled equipment, not a printed handset model number.')
+    if entry['remote_model_number']:
+        remote['remote_model_number'] = entry['remote_model_number']
     else:
-        remote['remote_model_number'] = entry['model']
+        issues.append('The model is a browsable functional name because the source does not establish a printed handset model number.')
     if entry['controlled_model']:
         remote['controlled_devices'] = [{'manufacturer':entry['controlled_manufacturer'],'model':entry['controlled_model'],'device_type':entry['device_type']}]
     if 'Hilton' in entry['name']:
-        issues.append('Upstream describes a Connected Room edge computer, not direct control of every hotel TV. The handset is listed under the Hilton brand; its printed model number is unknown. Compatibility with other rooms is not established.')
+        issues.append('Upstream describes a Connected Room edge computer, not direct control of every hotel TV. The handset is listed under the Hilton brand; a printed model number is not recorded. Compatibility with other rooms is not established.')
     if entry['manufacturer'] == 'Nakamichi':
-        issues.append('The source calls this RM-4TA but does not clearly distinguish handset and equipment identity. The handset model is left unknown pending confirmation.')
+        issues.append('The source calls this RM-4TA but does not clearly distinguish handset and equipment identity. RM-4TA is retained as the browsable source identity, not claimed as a verified printed handset number.')
     if entry['manufacturer'] == 'Dimplex':
         issues.append('This source has only fire on/off commands. Its comments list several Optiflame models; compatibility and any other functions remain unverified.')
     if entry['controlled_model'] == 'ZH3':

@@ -34,6 +34,15 @@ class FormatTests(unittest.TestCase):
                     validation_module.main()
                 self.assertIn('rename this record', str(stderr.write.call_args_list))
 
+    def test_library_identities_are_browsable(self):
+        for path in (ROOT / 'remotes').rglob('remote.irr'):
+            remote = json.loads(path.read_text(encoding='utf-8'))['remote']
+            for field in ('name', 'manufacturer', 'model'):
+                self.assertNotRegex(remote[field], r'(?i)\bunknown\b', f'{path}: remote.{field}')
+            for controlled in remote.get('controlled_devices', []):
+                self.assertNotRegex(controlled['manufacturer'], r'(?i)\bunknown\b', f'{path}: controlled manufacturer')
+                self.assertNotRegex(controlled['model'], r'(?i)\bunknown\b', f'{path}: controlled model')
+
     def test_compact_encoding_preserves_values(self):
         value = {'label': 'Brightness + / éclair', 'parameters': {'value': 4294967295, 'code_hex': '0x0045'}, 'flags': [True, False]}
         compact = encode_record(value)

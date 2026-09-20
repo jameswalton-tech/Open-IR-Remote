@@ -4,11 +4,11 @@
   "format_version": "1.0.0",
   "record_kind": "canonical",
   "id": "oir:nakamichi:rm-4ta:default",
-  "updated": "2026-09-13",
+  "updated": "2026-09-20",
   "remote": {
-    "name": "Nakamichi RM-4TA source listing",
+    "name": "Nakamichi RM-4TA",
     "manufacturer": "Nakamichi",
-    "model": "Unknown",
+    "model": "RM-4TA",
     "variant": "default",
     "device_types": [
       "av-receiver"
@@ -745,8 +745,8 @@
     "status": "imported-unverified",
     "issues": [
       "Imported decoded parameters have not been tested on hardware by Open IR contributors. Protocol names and packed parameters follow the source Flipper convention; target adapters must support that convention. No carrier frequency was measured or inferred.",
-      "The source identifies the controlled equipment, not a printed handset model number.",
-      "The source calls this RM-4TA but does not clearly distinguish handset and equipment identity. The handset model is left unknown pending confirmation."
+      "The model is a browsable functional name because the source does not establish a printed handset model number.",
+      "The source calls this RM-4TA but does not clearly distinguish handset and equipment identity. RM-4TA is retained as the browsable source identity, not claimed as a verified printed handset number."
     ]
   },
   "extensions": {

@@ -58,8 +58,9 @@ class FlipperSelectionTests(unittest.TestCase):
         record = make_record(entry, self.manifest)
         self.assertEqual(record['remote']['manufacturer'], 'Hilton')
         self.assertEqual(record['id'], 'oir:unknown:hilton-connected-room:default')
-        self.assertEqual(record['remote']['controlled_devices'][0]['manufacturer'], 'Unknown')
-        self.assertEqual(record['updated'], '2026-09-15')
+        self.assertEqual(record['remote']['model'], 'Connected Room Remote')
+        self.assertNotIn('controlled_devices', record['remote'])
+        self.assertEqual(record['updated'], '2026-09-20')
         self.assertEqual(record['provenance'][0]['imported_at'], '2026-09-13')
 
     def test_unsupported_input_is_not_silently_dropped(self):

@@ -8,6 +8,8 @@ Search the repository by manufacturer, remote name, model number and command has
 
 Record the physical remote's printed name or best known name in `remote.name`. Do not use only the television, lamp or receiver model as the remote name. Put alternate names and retailer labels in `remote.aliases`.
 
+Do not submit `Unknown` as a library-facing remote name, manufacturer or model. When the exact handset model is unavailable, use an honest functional name and explain the limitation in provenance. A useful descriptive identity is preferable to an unusable placeholder, but it must not be presented as a verified model number.
+
 ## Create the record
 
 1. Fork and clone the repository.

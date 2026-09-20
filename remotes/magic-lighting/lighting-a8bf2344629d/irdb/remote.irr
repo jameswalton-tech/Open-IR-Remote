@@ -582,11 +582,11 @@
       "lighting"
     ],
     "manufacturer": "MAGIC LIGHTING",
-    "model": "Unknown",
-    "name": "MAGIC LIGHTING Lighting remote (0,-1)",
+    "model": "24-key RGB Remote",
+    "name": "MAGIC LIGHTING 24-key RGB Remote",
     "variant": "IRDB 0,-1"
   },
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "validation": {
     "issues": [
       "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."

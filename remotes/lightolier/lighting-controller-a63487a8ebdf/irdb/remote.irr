@@ -164,11 +164,11 @@
       "lighting"
     ],
     "manufacturer": "Lightolier",
-    "model": "Unknown",
-    "name": "Lightolier Lighting Controller remote (0,-1)",
+    "model": "Four-Scene Lighting Remote",
+    "name": "Lightolier Four-Scene Lighting Remote",
     "variant": "IRDB 0,-1"
   },
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "validation": {
     "issues": [
       "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."

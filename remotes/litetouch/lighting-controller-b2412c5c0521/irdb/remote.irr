@@ -252,11 +252,11 @@
       "lighting"
     ],
     "manufacturer": "LiteTouch",
-    "model": "Unknown",
-    "name": "LiteTouch Lighting Controller remote (145,-1)",
+    "model": "Lighting Controller Remote 145",
+    "name": "LiteTouch Lighting Controller Remote 145",
     "variant": "IRDB 145,-1"
   },
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "validation": {
     "issues": [
       "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."

@@ -209,8 +209,8 @@
       "lighting"
     ],
     "manufacturer": "Trio",
-    "model": "Unknown",
-    "name": "Trio MoonLight remote (4,172)",
+    "model": "MoonLight Remote",
+    "name": "Trio MoonLight Remote",
     "variant": "IRDB 4,172",
     "controlled_devices": [
       {
@@ -220,7 +220,7 @@
       }
     ]
   },
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "validation": {
     "issues": [
       "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."

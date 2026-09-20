@@ -934,11 +934,11 @@
       "lighting"
     ],
     "manufacturer": "Generic",
-    "model": "Unknown",
-    "name": "Generic LED Curtain remote (0,255)",
+    "model": "LED Curtain Remote",
+    "name": "Generic LED Curtain Remote",
     "variant": "IRDB 0,255"
   },
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "validation": {
     "issues": [
       "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."

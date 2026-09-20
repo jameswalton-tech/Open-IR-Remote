@@ -583,8 +583,8 @@
       "lighting"
     ],
     "manufacturer": "General",
-    "model": "Unknown",
-    "name": "General IR RGB Controller A010 remote (0,-1)",
+    "model": "A010 RGB Controller Remote",
+    "name": "General A010 RGB Controller Remote",
     "variant": "IRDB 0,-1",
     "controlled_devices": [
       {
@@ -594,7 +594,7 @@
       }
     ]
   },
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "validation": {
     "issues": [
       "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."

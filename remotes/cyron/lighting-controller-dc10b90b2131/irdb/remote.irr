@@ -714,11 +714,11 @@
       "lighting"
     ],
     "manufacturer": "Cyron",
-    "model": "Unknown",
-    "name": "Cyron Lighting Controller remote (2,189)",
+    "model": "Multicolor Lighting Remote",
+    "name": "Cyron Multicolor Lighting Remote",
     "variant": "IRDB 2,189"
   },
-  "updated": "2026-09-15",
+  "updated": "2026-09-20",
   "validation": {
     "issues": [
       "irdb device/subdevice/function fields preserved. Protocol spelling is unchanged. No transmit mapping or handset identity has been verified."

@@ -173,6 +173,14 @@ def main():
         instance = validate_record(path, errors, validator)
         if instance is not None and path in records:
             remote_ids.append(instance['id'])
+            identity = instance['remote']
+            for field in ('name', 'manufacturer', 'model'):
+                if re.search(r'\bunknown\b', identity[field], re.IGNORECASE):
+                    fail(f'{path}: remote.{field} must use a browsable identity, not Unknown', errors)
+            for controlled in identity.get('controlled_devices', []):
+                for field in ('manufacturer', 'model'):
+                    if re.search(r'\bunknown\b', controlled[field], re.IGNORECASE):
+                        fail(f'{path}: controlled_devices {field} must be omitted or identified, not Unknown', errors)
     if len(remote_ids) != len(set(remote_ids)):
         fail('Duplicate remote IDs', errors)
     if errors:

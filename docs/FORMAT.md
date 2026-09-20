@@ -2,7 +2,7 @@
 
 ## Canonical file
 
-The canonical record is UTF-8 JSON named `remote.irr`. It validates against `schema/open-ir-remote-v1.schema.json`. Unknown information must be represented explicitly and must never be inferred merely to satisfy an exporter.
+The canonical record is UTF-8 JSON named `remote.irr`. It validates against `schema/open-ir-remote-v1.schema.json`. Unknown technical information must be represented explicitly and must never be inferred merely to satisfy an exporter.
 
 Exporters should use the `.irr` extension, for example `living-room.irr`. This is a filename change, not a new encoding or schema version. Importers must parse the JSON and validate its `format` and `format_version`; a filename alone does not establish validity. Applications may accept older `.irr.json` files for compatibility, but new exports and repository submissions use `.irr`.
 
@@ -13,6 +13,8 @@ Required top-level fields are `format`, `format_version`, `record_kind`, `id`, `
 `id` is stable across renames and path corrections. Repository records use an `oir:` identifier. A third-party product creating an export before it knows the canonical library ID may use a UUID URN. `record_kind` distinguishes canonical library records, product exports, preserved legacy imports and documentation examples.
 
 `remote.name` is the required human-facing identity of the physical handset. `remote.manufacturer`, `remote.model`, `remote.variant` and `remote.device_types` support browsing and matching. Paths are lowercase hyphenated indexes; they are not the permanent identity of a record.
+
+Library records must not expose `Unknown` as a remote name, manufacturer or model. Use the printed handset model when it is supported by the source. If no handset model can be established, use a concise functional model such as `Connected Room Remote` or `Four-Scene Lighting Remote`, and state in provenance that it is descriptive. Do not copy a controlled-device model into the handset model unless the source identifies the handset that way. Keep protocol addresses and source code-set numbers in `variant`, not in `remote.model`, except when needed to distinguish otherwise identical browsable records.
 
 ## Compact storage and embedded devices
 
